@@ -1,0 +1,844 @@
+
+    /* ==================================================
+       MOBILE MENU
+    ================================================== */
+
+    const homeBtn = document.getElementById("home-btn");
+    const homeDropdown = document.getElementById("home-dropdown");
+
+    function closeDesktopHome() {
+        if (!homeDropdown || !homeBtn) return;
+        homeDropdown.classList.remove("active");
+        homeBtn.setAttribute("aria-expanded", "false");
+    }
+
+    if (homeBtn && homeDropdown) {
+        homeBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const isOpen = homeDropdown.classList.toggle("active");
+            homeBtn.setAttribute("aria-expanded", String(isOpen));
+        });
+    }
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".home-wrapper")) closeDesktopHome();
+    });
+
+    /* ==================================================
+       ACTIVE NAVIGATION LINK
+    ================================================== */
+
+    function setActiveNavigation() {
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll("#desktop-nav a, #mobile-nav a");
+
+        navLinks.forEach(function (link) {
+            const linkPage = link.getAttribute("href").split("/").pop();
+            const isPortfolioPage = ["portfolio.html", "weddings.html", "fashion.html", "food.html", "corporate.html"].includes(currentPage);
+            const isCurrent = linkPage === currentPage || (isPortfolioPage && linkPage === "categories.html");
+
+            link.classList.toggle("nav-current", isCurrent);
+            link.querySelectorAll("i").forEach(function (icon) {
+                icon.classList.toggle("nav-current", isCurrent);
+            });
+
+            if (isCurrent) link.setAttribute("aria-current", "page");
+        });
+
+        const isHome = currentPage === "index.html" || currentPage === "home2.html";
+        [homeBtn, document.getElementById("mobile-home-btn")].forEach(function (button) {
+            if (button) button.classList.toggle("nav-current", isHome);
+        });
+    }
+
+    setActiveNavigation();
+
+    /* ==================================================
+       PAGE TRANSITION LOADER
+    ================================================== */
+
+    const pageLoader = document.createElement("div");
+    pageLoader.id = "site-loader";
+    pageLoader.setAttribute("aria-hidden", "true");
+    pageLoader.setAttribute("role", "status");
+    pageLoader.setAttribute("aria-label", "Loading page");
+    pageLoader.innerHTML = '<span class="site-loader-ring" aria-hidden="true"></span>';
+    document.body.appendChild(pageLoader);
+
+    document.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const href = link.getAttribute("href");
+            const opensNewTab = link.target === "_blank" || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey;
+
+            if (href && !href.startsWith("#") && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("javascript:") && !opensNewTab) {
+                pageLoader.setAttribute("aria-hidden", "false");
+                pageLoader.classList.add("active");
+            }
+        });
+    });
+
+    window.addEventListener("pageshow", function () {
+        pageLoader.classList.remove("active");
+        pageLoader.setAttribute("aria-hidden", "true");
+    });
+
+    const menuBtn =
+        document.getElementById("menu-btn");
+
+    const mobileMenu =
+        document.getElementById("mobile-menu");
+
+    const menuIcon =
+        document.getElementById("menu-icon");
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.setAttribute("aria-controls", "mobile-menu");
+    }
+
+    function closeMobileMenu() {
+        if (!mobileMenu || !menuBtn || !menuIcon) return;
+
+        mobileMenu.classList.remove("active");
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open menu");
+        document.body.classList.remove("menu-open");
+    }
+
+
+    if (menuBtn && mobileMenu && menuIcon) menuBtn.addEventListener(
+        "click",
+        function () {
+
+
+            const isOpen =
+                mobileMenu.classList.contains("active");
+
+
+            if (isOpen) {
+                closeMobileMenu();
+
+
+            } else {
+
+                mobileMenu.classList.add("active");
+
+                menuIcon.classList.remove(
+                    "fa-bars"
+                );
+
+                menuIcon.classList.add(
+                    "fa-xmark"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                menuBtn.setAttribute("aria-label", "Close menu");
+                document.body.classList.add("menu-open");
+
+            }
+
+        }
+    );
+
+
+    /* ==================================================
+       MOBILE HOME DROPDOWN
+    ================================================== */
+
+    const mobileHomeBtn =
+        document.getElementById(
+            "mobile-home-btn"
+        );
+
+    const mobileHomeMenu =
+        document.getElementById(
+            "mobile-home-menu"
+        );
+
+    const mobileHomeIcon =
+        document.getElementById(
+            "mobile-home-icon"
+        );
+
+    if (mobileHomeBtn && mobileHomeMenu) {
+        mobileHomeBtn.setAttribute("aria-controls", "mobile-home-menu");
+        mobileHomeBtn.setAttribute("aria-expanded", "false");
+    }
+
+
+    if (mobileHomeBtn && mobileHomeMenu && mobileHomeIcon) mobileHomeBtn.addEventListener(
+        "click",
+        function () {
+
+
+            mobileHomeMenu.classList.toggle(
+                "active"
+            );
+
+            mobileHomeBtn.setAttribute(
+                "aria-expanded",
+                String(mobileHomeMenu.classList.contains("active"))
+            );
+
+
+            mobileHomeIcon.classList.toggle(
+                "rotate-180"
+            );
+
+        }
+    );
+
+
+    /* ==================================================
+       DARK MODE
+    ================================================== */
+
+    const themeToggle =
+        document.getElementById(
+            "theme-toggle"
+        );
+
+    const mobileThemeToggle =
+        document.getElementById(
+            "mobile-theme-toggle"
+        );
+
+    const themeIcon =
+        document.getElementById(
+            "theme-icon"
+        );
+
+    const mobileThemeIcon =
+        document.getElementById(
+            "mobile-theme-icon"
+        );
+
+
+    function updateThemeIcons() {
+
+        if (!themeIcon || !mobileThemeIcon) return;
+
+
+        const isDark =
+            document.documentElement
+                .classList
+                .contains("dark");
+
+
+        if (isDark) {
+
+            themeIcon.classList.remove(
+                "fa-moon"
+            );
+
+            themeIcon.classList.add(
+                "fa-sun"
+            );
+
+
+            mobileThemeIcon.classList.remove(
+                "fa-moon"
+            );
+
+            mobileThemeIcon.classList.add(
+                "fa-sun"
+            );
+
+            const label = document.getElementById("mobile-theme-label");
+            if (label) label.textContent = "Light mode";
+
+
+        } else {
+
+            themeIcon.classList.remove(
+                "fa-sun"
+            );
+
+            themeIcon.classList.add(
+                "fa-moon"
+            );
+
+
+            mobileThemeIcon.classList.remove(
+                "fa-sun"
+            );
+
+            mobileThemeIcon.classList.add(
+                "fa-moon"
+            );
+
+            const label = document.getElementById("mobile-theme-label");
+            if (label) label.textContent = "Dark mode";
+
+        }
+
+    }
+
+
+    function toggleTheme() {
+
+
+        document.documentElement
+            .classList
+            .toggle("dark");
+
+
+        const theme =
+            document.documentElement
+                .classList
+                .contains("dark")
+                ? "dark"
+                : "light";
+
+
+        localStorage.setItem(
+            "theme",
+            theme
+        );
+
+
+        updateThemeIcons();
+
+    }
+
+
+    if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
+    if (mobileThemeToggle) mobileThemeToggle.addEventListener("click", toggleTheme);
+
+
+    /* ==================================================
+       LOAD SAVED THEME
+    ================================================== */
+
+    if (
+        localStorage.getItem("theme") === "dark"
+    ) {
+
+        document.documentElement
+            .classList
+            .add("dark");
+
+    }
+
+
+    updateThemeIcons();
+
+
+    /* ==================================================
+       RTL / LTR
+    ================================================== */
+
+    const directionToggle =
+        document.getElementById(
+            "direction-toggle"
+        );
+
+    const mobileDirectionToggle =
+        document.getElementById(
+            "mobile-direction-toggle"
+        );
+
+    const directionIcon =
+        document.getElementById(
+            "direction-icon"
+        );
+
+    const mobileDirectionIcon =
+        document.getElementById(
+            "mobile-direction-icon"
+        );
+
+
+    function updateDirectionIcons() {
+
+        if (!directionIcon || !mobileDirectionIcon) return;
+
+
+        const isRTL =
+            document.documentElement.dir === "rtl";
+
+
+        if (isRTL) {
+
+            directionIcon.classList.remove(
+                "fa-arrow-right-arrow-left"
+            );
+
+            directionIcon.classList.add(
+                "fa-arrow-left"
+            );
+
+
+            mobileDirectionIcon.classList.remove(
+                "fa-arrow-right-arrow-left"
+            );
+
+            mobileDirectionIcon.classList.add(
+                "fa-arrow-left"
+            );
+
+            const label = document.getElementById("mobile-direction-label");
+            if (label) label.textContent = "LTR";
+
+
+        } else {
+
+            directionIcon.classList.remove(
+                "fa-arrow-left"
+            );
+
+            directionIcon.classList.add(
+                "fa-arrow-right-arrow-left"
+            );
+
+
+            mobileDirectionIcon.classList.remove(
+                "fa-arrow-left"
+            );
+
+            mobileDirectionIcon.classList.add(
+                "fa-arrow-right-arrow-left"
+            );
+
+            const label = document.getElementById("mobile-direction-label");
+            if (label) label.textContent = "RTL";
+
+        }
+
+    }
+
+
+    function toggleDirection() {
+
+
+        const currentDirection =
+            document.documentElement.dir;
+
+
+        if (currentDirection === "rtl") {
+
+            document.documentElement.dir =
+                "ltr";
+
+
+            localStorage.setItem(
+                "direction",
+                "ltr"
+            );
+
+
+        } else {
+
+            document.documentElement.dir =
+                "rtl";
+
+
+            localStorage.setItem(
+                "direction",
+                "rtl"
+            );
+
+        }
+
+
+        updateDirectionIcons();
+
+    }
+
+
+    if (directionToggle) directionToggle.addEventListener("click", toggleDirection);
+    if (mobileDirectionToggle) mobileDirectionToggle.addEventListener("click", toggleDirection);
+
+
+    /* ==================================================
+       LOAD SAVED DIRECTION
+    ================================================== */
+
+    const savedDirection =
+        localStorage.getItem("direction");
+
+
+    if (savedDirection) {
+
+        document.documentElement.dir =
+            savedDirection;
+
+    } else {
+
+        document.documentElement.dir =
+            "ltr";
+
+    }
+
+
+    updateDirectionIcons();
+
+
+    /* ==================================================
+       CLOSE MOBILE MENU
+    ================================================== */
+
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
+
+
+    mobileLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    closeMobileMenu();
+
+                }
+            );
+
+        }
+    );
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMobileMenu();
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) closeMobileMenu();
+    });
+
+
+
+    function findPhotographer() {
+
+    const location =
+        document.querySelectorAll("select")[0].value;
+
+    const specialty =
+        document.querySelectorAll("select")[1].value;
+
+
+    if (!location && !specialty) {
+
+        window.location.href = "photographers.html";
+
+        return;
+
+    }
+
+
+    const params = new URLSearchParams();
+
+
+    if (location) {
+
+        params.append("city", location);
+
+    }
+
+
+    if (specialty) {
+
+        params.append("specialty", specialty);
+
+    }
+
+
+    window.location.href =
+        "photographers.html?" + params.toString();
+
+}
+
+
+
+
+// <!-- ====================================================== -->
+// <!-- NEWSLETTER SCRIPT -->
+// <!-- ====================================================== -->
+
+
+
+function subscribeNewsletter(event) {
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("footerEmail").value.trim();
+
+
+    if (!email) {
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you! You are now subscribed."
+    );
+
+
+    document
+        .getElementById("footerEmail")
+        .value = "";
+
+}
+
+
+
+// <!-- ====================================================== -->
+// <!-- HOVER SCRIPT -->
+// <!-- ====================================================== -->
+
+
+
+document
+    .querySelectorAll(".category-row")
+    .forEach(row => {
+
+        const title =
+            row.querySelector(".category-title");
+
+        const arrow =
+            row.querySelector(".category-arrow");
+
+
+        row.addEventListener("mouseenter", () => {
+
+            title.classList.add(
+                "translate-x-3",
+                "text-amber-500"
+            );
+
+            arrow.classList.add(
+                "bg-amber-500",
+                "border-amber-500",
+                "text-black",
+                "rotate-[-45deg]"
+            );
+
+        });
+
+
+        row.addEventListener("mouseleave", () => {
+
+            title.classList.remove(
+                "translate-x-3",
+                "text-amber-500"
+            );
+
+            arrow.classList.remove(
+                "bg-amber-500",
+                "border-amber-500",
+                "text-black",
+                "rotate-[-45deg]"
+            );
+
+        });
+
+    });
+
+
+
+
+//     <!-- ====================================================== -->
+// <!-- HOVER SCRIPT -->
+// <!-- ====================================================== -->
+
+
+
+document
+    .querySelectorAll(".toolkit-row")
+    .forEach(row => {
+
+        const title =
+            row.querySelector(".toolkit-title");
+
+
+        row.addEventListener("mouseenter", () => {
+
+            title.classList.add(
+                "translate-x-3",
+                "text-amber-400"
+            );
+
+        });
+
+
+        row.addEventListener("mouseleave", () => {
+
+            title.classList.remove(
+                "translate-x-3",
+                "text-amber-400"
+            );
+
+        });
+
+    });
+
+
+
+
+
+//     <!-- ====================================================== -->
+// <!-- TESTIMONIAL INTERACTION -->
+// <!-- ====================================================== -->
+
+
+
+const testimonialData = [
+
+    {
+        image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=85",
+
+        name:
+        "Priya & Karthik",
+
+        location:
+        "Wedding · Chennai",
+
+        quote:
+        "Finding our photographer felt effortless. We didn't just find someone who could take beautiful photos — we found someone who understood our story."
+    },
+
+    {
+        image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=85",
+
+        name:
+        "Aditya & Rhea",
+
+        location:
+        "Engagement · Bengaluru",
+
+        quote:
+        "The portfolio made our decision incredibly easy. We knew the moment we saw the work that this was the visual style we wanted."
+    },
+
+    {
+        image:
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=85",
+
+        name:
+        "Ananya Rao",
+
+        location:
+        "Brand Shoot · Mumbai",
+
+        quote:
+        "We found exactly the creative direction our brand needed. The whole experience was simple, professional and inspiring."
+    },
+
+    {
+        image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=85",
+
+        name:
+        "Vikram Shah",
+
+        location:
+        "Corporate · Hyderabad",
+
+        quote:
+        "Instead of searching through hundreds of random profiles, LensFind helped us shortlist photographers who actually matched our requirements."
+    }
+
+];
+
+
+const testimonialDots =
+    document.querySelectorAll(".testimonial-dot");
+
+
+const testimonialImage =
+    document.querySelector(
+        ".lg\\:col-span-3 img"
+    );
+
+
+const testimonialName =
+    document.querySelector(
+        ".lg\\:col-span-3 .text-sm"
+    );
+
+
+const testimonialLocation =
+    document.querySelector(
+        ".lg\\:col-span-3 .text-xs"
+    );
+
+
+const testimonialQuote =
+    document.querySelector(
+        "blockquote"
+    );
+
+
+testimonialDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        const data =
+            testimonialData[index];
+
+
+        testimonialImage.src =
+            data.image;
+
+
+        testimonialName.textContent =
+            data.name;
+
+
+        testimonialLocation.textContent =
+            data.location;
+
+
+        testimonialQuote.textContent =
+            data.quote;
+
+
+        testimonialDots.forEach(btn => {
+
+            btn.classList.remove(
+                "bg-black",
+                "dark:bg-white",
+                "text-white",
+                "dark:text-black"
+            );
+
+            btn.classList.add(
+                "border",
+                "border-gray-200",
+                "dark:border-white/10",
+                "text-gray-400"
+            );
+
+        });
+
+
+        dot.classList.remove(
+            "border",
+            "border-gray-200",
+            "dark:border-white/10",
+            "text-gray-400"
+        );
+
+
+        dot.classList.add(
+            "bg-black",
+            "dark:bg-white",
+            "text-white",
+            "dark:text-black"
+        );
+
+    });
+
+});
+
+
+
+

@@ -1,0 +1,3302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LensFind - Freelance Photographer Directory</title>
+
+
+    <!-- ================================================= -->
+    <!-- TAILWIND CSS -->
+    <!-- ================================================= -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+            darkMode: "class"
+        };
+
+    </script>
+
+
+    <!-- ================================================= -->
+    <!-- FONT AWESOME -->
+    <!-- ================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- ================================================= -->
+    <!-- GOOGLE FONT -->
+    <!-- ================================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+   
+</head>
+
+
+<body
+    class="bg-white
+           dark:bg-[#090909]
+           text-gray-900
+           dark:text-white
+           transition-colors
+           duration-300">
+
+
+<!-- ====================================================== -->
+<!-- HEADER -->
+<!-- ====================================================== -->
+
+<header
+    class="sticky
+           top-0
+           z-50
+           bg-white/95
+           dark:bg-[#0b0b0b]/95
+           backdrop-blur-xl
+           border-b
+           border-gray-200
+           dark:border-white/10">
+
+
+    <!-- ================================================= -->
+    <!-- HEADER CONTAINER -->
+    <!-- ================================================= -->
+
+    <div
+        class="max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <div
+            class="h-[76px]
+                   flex
+                   items-center
+                   justify-between">
+
+
+            <!-- ================================================= -->
+            <!-- LOGO -->
+            <!-- ================================================= -->
+
+            <a
+                href="../index.html"
+                class="flex
+                       items-center
+                       gap-3
+                       shrink-0
+                       group">
+
+
+                <!-- Logo Icon -->
+
+                <div
+                    class="w-11
+                           h-11
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           flex
+                           items-center
+                           justify-center
+                           shadow-lg
+                           group-hover:bg-amber-500
+                           dark:group-hover:bg-amber-500
+                           transition-all
+                           duration-300">
+
+
+                    <i
+                        class="fa-solid
+                               fa-camera
+                               text-white
+                               dark:text-black
+                               group-hover:text-white
+                               text-lg">
+
+                    </i>
+
+
+                </div>
+
+
+                <!-- Logo Text -->
+
+                <div class="block">
+
+
+                    <h1
+                        class="text-[18px]
+                               font-bold
+                               tracking-tight
+                               leading-none
+                               text-gray-900
+                               dark:text-white">
+
+
+                        Lens
+
+                        <span class="text-amber-500">
+
+                            Find
+
+                        </span>
+
+
+                    </h1>
+
+
+                    <p
+                        class="text-[8px] sm:text-[9px]
+                               text-gray-400
+                               dark:text-gray-500
+                               uppercase
+                               tracking-[2px]
+                               mt-1">
+
+                        Photography Directory
+
+                    </p>
+
+
+                </div>
+
+
+            </a>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP NAV -->
+            <!-- ================================================= -->
+
+            <nav
+                id="desktop-nav"
+                class="hidden
+                       lg:flex
+                       items-center
+                       gap-7
+                       ml-10">
+
+
+                <!-- ================================================= -->
+                <!-- HOME DROPDOWN -->
+                <!-- ================================================= -->
+
+                <div
+                    class="relative
+                           home-wrapper">
+
+
+                    <button
+                        id="home-btn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="home-dropdown"
+                        class="flex
+                               items-center
+                               gap-2
+                               py-2
+                               text-sm
+                               font-medium
+                               text-gray-900
+                               dark:text-white
+                               hover:text-amber-500
+                               transition">
+
+
+                        Home
+
+
+                        <i
+                            class="fa-solid
+                                   fa-chevron-down
+                                   text-[9px]">
+
+                        </i>
+
+
+                    </button>
+
+
+                    <!-- Home Dropdown -->
+
+                    <div
+                        id="home-dropdown"
+                        class="home-dropdown
+                               absolute
+                               left-0
+                               top-full
+                               pt-4">
+
+
+                        <div
+                            class="w-52
+                                   p-2
+                                   rounded-2xl
+                                   bg-white
+                                   dark:bg-[#151515]
+                                   border
+                                   border-gray-200
+                                   dark:border-white/10
+                                   shadow-2xl">
+
+
+                            <!-- HOME 1 -->
+
+                            <a
+                                href="../index.html"
+                                class="flex
+                                       items-center
+                                       gap-3
+                                       px-4
+                                       py-3
+                                       rounded-xl
+                                       text-sm
+                                       font-medium
+                                       text-gray-700
+                                       dark:text-gray-300
+                                       hover:bg-gray-100
+                                       dark:hover:bg-white/5
+                                       hover:text-amber-500
+                                       transition">
+
+
+                                <i
+                                    class="fa-solid
+                                           fa-house
+                                           w-5
+                                           text-amber-500">
+
+                                </i>
+
+
+                                Home 1
+
+
+                            </a>
+
+
+                            <!-- HOME 2 -->
+
+                            <a
+                                href="home2.html"
+                                class="flex
+                                       items-center
+                                       gap-3
+                                       px-4
+                                       py-3
+                                       rounded-xl
+                                       text-sm
+                                       font-medium
+                                       text-gray-700
+                                       dark:text-gray-300
+                                       hover:bg-gray-100
+                                       dark:hover:bg-white/5
+                                       hover:text-amber-500
+                                       transition">
+
+
+                                <i
+                                    class="fa-solid
+                                           fa-house-chimney
+                                           w-5
+                                           text-amber-500">
+
+                                </i>
+
+
+                                Home 2
+
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- BROWSE PHOTOGRAPHERS -->
+                <!-- ================================================= -->
+
+                <a
+                    href="photographers.html"
+                    class="py-2
+                           text-sm
+                           font-medium
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           transition">
+
+                    Browse Photographers
+
+                </a>
+
+
+                <!-- ================================================= -->
+                <!-- CATEGORIES -->
+                <!-- ================================================= -->
+
+                <a
+                    href="categories.html"
+                    class="py-2
+                           text-sm
+                           font-medium
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           transition">
+
+                    Categories
+
+                </a>
+
+
+                <!-- ================================================= -->
+                <!-- LIST YOUR SERVICES -->
+                <!-- ================================================= -->
+
+                <a
+                    href="list-services.html"
+                    class="py-2
+                           text-sm
+                           font-medium
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           transition">
+
+                    List Your Services
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP RIGHT SIDE -->
+            <!-- ================================================= -->
+
+            <div
+                class="hidden
+                       lg:flex
+                       items-center
+                       gap-2
+                       ml-auto">
+
+
+                <!-- SEARCH -->
+
+                <button
+                    type="button"
+                    aria-label="Search"
+                    class="w-10
+                           h-10
+                           rounded-xl
+                           flex
+                           items-center
+                           justify-center
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           transition">
+
+
+                    <i
+                        class="fa-solid
+                               fa-magnifying-glass">
+
+                    </i>
+
+
+                </button>
+
+
+                <!-- RTL / LTR -->
+
+                <button
+                    id="direction-toggle"
+                    type="button"
+                    aria-label="Toggle RTL LTR"
+                    title="RTL / LTR"
+                    class="w-10
+                           h-10
+                           rounded-xl
+                           flex
+                           items-center
+                           justify-center
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           transition">
+
+
+                    <i
+                        id="direction-icon"
+                        class="fa-solid
+                               fa-arrow-right-arrow-left">
+
+                    </i>
+
+
+                </button>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    class="w-10
+                           h-10
+                           rounded-xl
+                           flex
+                           items-center
+                           justify-center
+                           text-gray-600
+                           dark:text-gray-300
+                           hover:text-amber-500
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           transition">
+
+
+                    <i
+                        id="theme-icon"
+                        class="fa-solid fa-moon">
+
+                    </i>
+
+
+                </button>
+
+
+                <!-- DIVIDER -->
+
+                <div
+                    class="h-7
+                           w-px
+                           bg-gray-200
+                           dark:bg-white/10
+                           mx-1">
+
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+                    class="px-3
+                           py-2
+                           text-sm
+                           font-semibold
+                           text-gray-700
+                           dark:text-gray-200
+                           hover:text-amber-500
+                           transition">
+
+                    Login
+
+                </a>
+
+
+                <!-- CTA -->
+
+                <a
+                    href="photographers.html"
+                    class="inline-flex
+                           items-center
+                           gap-2
+                           px-5
+                           py-2.5
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           text-white
+                           dark:text-black
+                           text-sm
+                           font-semibold
+                           hover:bg-amber-500
+                           dark:hover:bg-amber-500
+                           dark:hover:text-white
+                           transition-all
+                           duration-300">
+
+
+                    Find Photographer
+
+
+                    <i
+                        class="fa-solid
+                               fa-arrow-right
+                               text-xs">
+
+                    </i>
+
+
+                </a>
+
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE RIGHT -->
+            <!-- ================================================= -->
+
+            <div
+                class="flex
+                       lg:hidden
+                       items-center
+                       gap-2">
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    id="menu-btn"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    class="w-10
+                           h-10
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           text-white
+                           dark:text-black
+                           flex
+                           items-center
+                           justify-center">
+
+
+                    <i
+                        id="menu-icon"
+                        class="fa-solid fa-bars">
+
+                    </i>
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- MOBILE MENU -->
+    <!-- ================================================= -->
+
+    <div
+        id="mobile-menu"
+        class="mobile-menu
+               lg:hidden
+               border-t
+               border-gray-200
+               dark:border-white/10
+               bg-white
+               dark:bg-[#0b0b0b]">
+
+
+        <div
+            class="px-5
+                   py-5">
+
+
+            <!-- MOBILE SEARCH -->
+
+            <div
+                class="relative
+                       mb-4">
+
+
+                <input
+                    type="text"
+                    placeholder="Search photographers..."
+                    class="w-full
+                           h-12
+                           pl-11
+                           pr-4
+                           rounded-xl
+                           bg-gray-100
+                           dark:bg-white/5
+                           border
+                           border-transparent
+                           dark:border-white/10
+                           outline-none
+                           text-sm
+                           text-gray-900
+                           dark:text-white
+                           placeholder-gray-400
+                           focus:border-amber-500">
+
+
+                <i
+                    class="fa-solid
+                           fa-magnifying-glass
+                           absolute
+                           left-4
+                           top-1/2
+                           -translate-y-1/2
+                           text-gray-400">
+
+                </i>
+
+
+            </div>
+
+
+            <!-- MOBILE SETTINGS -->
+
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <button id="mobile-theme-toggle" type="button" aria-label="Toggle dark mode"
+                    class="h-11 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:border-amber-500 hover:text-amber-500 transition">
+                    <i id="mobile-theme-icon" class="fa-solid fa-moon"></i>
+                    <span id="mobile-theme-label">Dark mode</span>
+                </button>
+                <button id="mobile-direction-toggle" type="button" aria-label="Toggle RTL LTR"
+                    class="h-11 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:border-amber-500 hover:text-amber-500 transition">
+                    <i id="mobile-direction-icon" class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <span id="mobile-direction-label">RTL</span>
+                </button>
+            </div>
+
+
+            <!-- MOBILE NAV -->
+
+            <nav
+                id="mobile-nav"
+                class="space-y-1">
+
+
+                <!-- ================================= -->
+                <!-- MOBILE HOME -->
+                <!-- ================================= -->
+
+                <div>
+
+
+                    <button
+                        id="mobile-home-btn"
+                        type="button"
+                        class="w-full
+                               flex
+                               items-center
+                               justify-between
+                               px-4
+                               py-3.5
+                               rounded-xl
+                               text-gray-900
+                               dark:text-white
+                               hover:bg-gray-100
+                               dark:hover:bg-white/5
+                               font-medium">
+
+
+                        <span
+                            class="flex
+                                   items-center
+                                   gap-4">
+
+
+                            <i
+                                class="fa-solid
+                                       fa-house
+                                       w-5
+                                       text-amber-500">
+
+                            </i>
+
+
+                            Home
+
+
+                        </span>
+
+
+                        <i
+                            id="mobile-home-icon"
+                            class="fa-solid
+                                   fa-chevron-down
+                                   text-xs
+                                   transition-transform">
+
+                        </i>
+
+
+                    </button>
+
+
+                    <!-- HOME SUB MENU -->
+
+                    <div
+                        id="mobile-home-menu"
+                        class="mobile-home-menu
+                               ml-9
+                               border-l
+                               border-gray-200
+                               dark:border-white/10
+                               pl-3">
+
+
+                        <!-- HOME 1 -->
+
+                        <a
+                            href="../index.html"
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   px-4
+                                   py-3
+                                   text-sm
+                                   text-gray-600
+                                   dark:text-gray-400
+                                   hover:text-amber-500">
+
+
+                            <i
+                                class="fa-solid
+                                       fa-house
+                                       text-amber-500">
+
+                            </i>
+
+
+                            Home 1
+
+
+                        </a>
+
+
+                        <!-- HOME 2 -->
+
+                        <a
+                            href="home2.html"
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   px-4
+                                   py-3
+                                   text-sm
+                                   text-gray-600
+                                   dark:text-gray-400
+                                   hover:text-amber-500">
+
+
+                            <i
+                                class="fa-solid
+                                       fa-house-chimney
+                                       text-amber-500">
+
+                            </i>
+
+
+                            Home 2
+
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ================================= -->
+                <!-- BROWSE -->
+                <!-- ================================= -->
+
+                <a
+                    href="photographers.html"
+                    class="flex
+                           items-center
+                           gap-4
+                           px-4
+                           py-3.5
+                           rounded-xl
+                           text-gray-700
+                           dark:text-gray-300
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           font-medium">
+
+
+                    <i
+                        class="fa-solid
+                               fa-camera
+                               w-5
+                               text-amber-500">
+
+                    </i>
+
+
+                    Browse Photographers
+
+
+                </a>
+
+
+                <!-- ================================= -->
+                <!-- CATEGORIES -->
+                <!-- ================================= -->
+
+                <a
+                    href="categories.html"
+                    class="flex
+                           items-center
+                           gap-4
+                           px-4
+                           py-3.5
+                           rounded-xl
+                           text-gray-700
+                           dark:text-gray-300
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           font-medium">
+
+
+                    <i
+                        class="fa-solid
+                               fa-layer-group
+                               w-5
+                               text-amber-500">
+
+                    </i>
+
+
+                    Categories
+
+
+                </a>
+
+
+                <!-- ================================= -->
+                <!-- LIST SERVICES -->
+                <!-- ================================= -->
+
+                <a
+                    href="list-services.html"
+                    class="flex
+                           items-center
+                           gap-4
+                           px-4
+                           py-3.5
+                           rounded-xl
+                           text-gray-700
+                           dark:text-gray-300
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           font-medium">
+
+
+                    <i
+                        class="fa-solid
+                               fa-briefcase
+                               w-5
+                               text-amber-500">
+
+                    </i>
+
+
+                    List Your Services
+
+
+                </a>
+
+
+                <!-- ================================= -->
+                <!-- LOGIN -->
+                <!-- ================================= -->
+
+                <a
+                    href="login.html"
+                    class="flex
+                           items-center
+                           gap-4
+                           px-4
+                           py-3.5
+                           rounded-xl
+                           text-gray-700
+                           dark:text-gray-300
+                           hover:bg-gray-100
+                           dark:hover:bg-white/5
+                           font-medium">
+
+
+                    <i
+                        class="fa-solid
+                               fa-right-to-bracket
+                               w-5
+                               text-amber-500">
+
+                    </i>
+
+
+                    Login
+
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- MOBILE CTA -->
+
+            <a
+                href="photographers.html"
+                class="mt-5
+                       w-full
+                       h-12
+                       rounded-xl
+                       bg-amber-500
+                       text-white
+                       flex
+                       items-center
+                       justify-center
+                       gap-2
+                       text-sm
+                       font-semibold
+                       hover:bg-amber-600
+                       transition">
+
+
+                Find a Photographer
+
+
+                <i
+                    class="fa-solid
+                           fa-arrow-right
+                           text-xs">
+
+                </i>
+
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ====================================================== -->
+<!-- PHOTOGRAPHERS PAGE - MAIN SECTIONS ONLY -->
+<!-- ====================================================== -->
+
+
+<main>
+
+
+    <!-- ================================================== -->
+    <!-- 01. BROWSE HERO -->
+    <!-- ================================================== -->
+
+    <section
+        class="bg-[#f5f3ee]
+               dark:bg-[#0d0d0d]
+               py-20
+               lg:py-28">
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8">
+
+            <div
+                class="grid
+                       lg:grid-cols-12
+                       gap-10
+                       items-end">
+
+
+                <!-- LEFT -->
+
+                <div
+                    class="lg:col-span-8">
+
+                    <span
+                        class="inline-flex
+                               items-center
+                               gap-2
+                               text-[10px]
+                               uppercase
+                               tracking-[4px]
+                               text-amber-500">
+
+                        <span
+                            class="w-2
+                                   h-2
+                                   rounded-full
+                                   bg-amber-500">
+
+                        </span>
+
+                        Photographer Directory
+
+                    </span>
+
+<h1
+    class="mt-7
+           text-4xl
+           sm:text-5xl
+           md:text-6xl
+           lg:text-7xl
+           xl:text-[5.5rem]
+           font-semibold
+           leading-[0.95]
+           tracking-[-2px]
+           sm:tracking-[-3px]
+           lg:tracking-[-4px]
+           text-gray-900
+           dark:text-white">
+
+    Find the right
+
+    <br>
+
+    <span
+        class="font-serif
+               italic
+               font-normal
+               text-gray-400
+               dark:text-gray-500">
+
+        photographer.
+
+    </span>
+
+</h1>
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div
+                    class="lg:col-span-4
+                           pb-2">
+
+                    <p
+                        class="text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Discover independent photographers
+                        by city, specialty and budget.
+                        Compare portfolios and connect
+                        directly with the creative behind
+                        the camera.
+
+                    </p>
+
+
+                    <div
+                        class="mt-7
+                               flex
+                               gap-8">
+
+                        <div>
+
+                            <strong
+                                class="text-2xl
+                                       font-semibold">
+
+                                12K+
+
+                            </strong>
+
+                            <p
+                                class="mt-1
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]
+                                       text-gray-400">
+
+                                Photographers
+
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong
+                                class="text-2xl
+                                       font-semibold">
+
+                                120+
+
+                            </strong>
+
+                            <p
+                                class="mt-1
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]
+                                       text-gray-400">
+
+                                Cities
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================== -->
+    <!-- 02. SEARCH + FILTER PANEL -->
+    <!-- ================================================== -->
+
+    <section
+        class="bg-white
+               dark:bg-[#121212]
+               border-y
+               border-black/10
+               dark:border-white/10">
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8
+                   py-7">
+
+            <div
+                class="grid
+                       sm:grid-cols-2
+                       lg:grid-cols-12
+                       gap-3">
+
+
+                <!-- SEARCH -->
+
+                <div
+                    class="lg:col-span-4
+                           relative">
+
+                    <i
+                        class="fa-solid
+                               fa-magnifying-glass
+                               absolute
+                               left-4
+                               top-1/2
+                               -translate-y-1/2
+                               text-gray-400
+                               text-xs">
+
+                    </i>
+
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search photographer..."
+                        class="w-full
+                               h-13
+                               pl-10
+                               pr-4
+                               bg-[#f5f3ee]
+                               dark:bg-white/5
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               outline-none
+                               text-sm
+                               focus:border-amber-500">
+
+                </div>
+
+
+                <!-- CITY -->
+
+                <div
+                    class="lg:col-span-2">
+
+                    <select
+                        id="cityFilter"
+                        class="w-full
+                               h-13
+                               px-4
+                               bg-[#f5f3ee]
+                               dark:bg-white/5
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               outline-none
+                               text-sm">
+
+                        <option value="">
+                            All Cities
+                        </option>
+
+                        <option value="Chennai">
+                            Chennai
+                        </option>
+
+                        <option value="Bengaluru">
+                            Bengaluru
+                        </option>
+
+                        <option value="Mumbai">
+                            Mumbai
+                        </option>
+
+                        <option value="Hyderabad">
+                            Hyderabad
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SPECIALTY -->
+
+                <div
+                    class="lg:col-span-2">
+
+                    <select
+                        id="specialtyFilter"
+                        class="w-full
+                               h-13
+                               px-4
+                               bg-[#f5f3ee]
+                               dark:bg-white/5
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               outline-none
+                               text-sm">
+
+                        <option value="">
+                            All Specialties
+                        </option>
+
+                        <option value="Wedding">
+                            Wedding
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Fashion">
+                            Fashion
+                        </option>
+
+                        <option value="Corporate">
+                            Corporate
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BUDGET -->
+
+                <div
+                    class="lg:col-span-2">
+
+                    <select
+                        id="budgetFilter"
+                        class="w-full
+                               h-13
+                               px-4
+                               bg-[#f5f3ee]
+                               dark:bg-white/5
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               outline-none
+                               text-sm">
+
+                        <option value="">
+                            Any Budget
+                        </option>
+
+                        <option value="low">
+                            Under ₹25K
+                        </option>
+
+                        <option value="medium">
+                            ₹25K - ₹50K
+                        </option>
+
+                        <option value="high">
+                            ₹50K+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RESET -->
+
+                <button
+                    id="resetFilters"
+                    class="lg:col-span-2
+                           h-13
+                           bg-black
+                           dark:bg-white
+                           text-white
+                           dark:text-black
+                           text-sm
+                           font-semibold
+                           hover:bg-amber-500
+                           dark:hover:bg-amber-400
+                           transition">
+
+                    Reset Filters
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================== -->
+    <!-- 03. PHOTOGRAPHER DIRECTORY -->
+    <!-- ================================================== -->
+
+    <section
+        class="py-20
+               lg:py-28
+               bg-[#f5f3ee]
+               dark:bg-[#0d0d0d]">
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8">
+
+
+            <!-- TOP -->
+
+            <div
+                class="flex
+                       flex-col
+                       sm:flex-row
+                       sm:items-center
+                       sm:justify-between
+                       gap-5
+                       mb-12">
+
+                <div>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Available creatives
+
+                    </p>
+
+                    <h2
+                        class="mt-2
+                               text-3xl
+                               font-semibold">
+
+                        Browse photographers
+
+                    </h2>
+
+                </div>
+
+
+                <p
+                    class="text-sm
+                           text-gray-500">
+
+                    <span
+                        id="resultCount"
+                        class="font-semibold
+                               text-black
+                               dark:text-white">
+
+                        6
+
+                    </span>
+
+                    results
+
+                </p>
+
+            </div>
+
+
+
+            <!-- GRID -->
+
+            <div
+                id="photographerGrid"
+                class="grid
+                       sm:grid-cols-2
+                       lg:grid-cols-3
+                       gap-x-6
+                       gap-y-16">
+
+
+                <!-- ======================================== -->
+                <!-- CARD 01 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group
+                           lg:mt-10"
+                    data-name="Arjun Mehta"
+                    data-city="Chennai"
+                    data-specialty="Wedding"
+                    data-budget="medium">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden
+                                   bg-gray-200">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
+                                alt="Arjun Mehta"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Wedding
+
+                            </span>
+
+
+                            <span
+                                class="absolute
+                                       right-5
+                                       bottom-5
+                                       w-12
+                                       h-12
+                                       rounded-full
+                                       bg-black
+                                       text-white
+                                       flex
+                                       items-center
+                                       justify-center
+                                       opacity-0
+                                       group-hover:opacity-100
+                                       transition">
+
+                                <i
+                                    class="fa-solid
+                                           fa-arrow-up-right-from-square
+                                           text-xs">
+
+                                </i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Arjun Mehta
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Chennai · Documentary
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹35K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ======================================== -->
+                <!-- CARD 02 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group"
+                    data-name="Maya Kapoor"
+                    data-city="Mumbai"
+                    data-specialty="Fashion"
+                    data-budget="high">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+                                alt="Maya Kapoor"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Fashion
+
+                            </span>
+
+
+                            <span
+                                class="absolute
+                                       right-5
+                                       bottom-5
+                                       w-12
+                                       h-12
+                                       rounded-full
+                                       bg-black
+                                       text-white
+                                       flex
+                                       items-center
+                                       justify-center
+                                       opacity-0
+                                       group-hover:opacity-100
+                                       transition">
+
+                                <i
+                                    class="fa-solid
+                                           fa-arrow-up-right-from-square
+                                           text-xs">
+
+                                </i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Maya Kapoor
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Mumbai · Editorial
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹65K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ======================================== -->
+                <!-- CARD 03 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group
+                           lg:mt-10"
+                    data-name="Nisha Rao"
+                    data-city="Bengaluru"
+                    data-specialty="Food"
+                    data-budget="low">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+                                alt="Nisha Rao"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Food
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Nisha Rao
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Bengaluru · Food
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹18K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ======================================== -->
+                <!-- CARD 04 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group"
+                    data-name="Rahul Sen"
+                    data-city="Hyderabad"
+                    data-specialty="Corporate"
+                    data-budget="medium">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
+                                alt="Rahul Sen"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Corporate
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Rahul Sen
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Hyderabad · Corporate
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹40K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ======================================== -->
+                <!-- CARD 05 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group
+                           lg:mt-10"
+                    data-name="Ananya Iyer"
+                    data-city="Chennai"
+                    data-specialty="Fashion"
+                    data-budget="high">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85"
+                                alt="Ananya Iyer"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Fashion
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Ananya Iyer
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Chennai · Fashion
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹58K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- ======================================== -->
+                <!-- CARD 06 -->
+                <!-- ======================================== -->
+
+                <article
+                    class="photographer-card
+                           group"
+                    data-name="Vikram Shah"
+                    data-city="Bengaluru"
+                    data-specialty="Wedding"
+                    data-budget="low">
+
+
+                    <a
+                        href="photographer-profile.html">
+
+
+                        <div
+                            class="relative
+                                   h-[450px]
+                                   overflow-hidden">
+
+
+                            <img
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=85"
+                                alt="Vikram Shah"
+                                class="w-full
+                                       h-full
+                                       object-cover
+                                       transition
+                                       duration-700
+                                       group-hover:scale-105">
+
+
+                            <span
+                                class="absolute
+                                       top-5
+                                       left-5
+                                       px-3
+                                       py-2
+                                       bg-white
+                                       text-black
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]">
+
+                                Wedding
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="pt-5
+                                   flex
+                                   justify-between
+                                   gap-4">
+
+                            <div>
+
+                                <h3
+                                    class="text-xl
+                                           font-semibold">
+
+                                    Vikram Shah
+
+                                </h3>
+
+                                <p
+                                    class="mt-1
+                                           text-xs
+                                           text-gray-400">
+
+                                    Bengaluru · Wedding
+
+                                </p>
+
+                            </div>
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                ₹22K+
+
+                            </span>
+
+                        </div>
+
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                id="noResults"
+                class="hidden
+                       text-center
+                       py-20">
+
+                <i
+                    class="fa-solid
+                           fa-camera
+                           text-3xl
+                           text-gray-300">
+
+                </i>
+
+                <h3
+                    class="mt-5
+                           text-2xl
+                           font-semibold">
+
+                    No photographers found
+
+                </h3>
+
+                <p
+                    class="mt-2
+                           text-sm
+                           text-gray-400">
+
+                    Try changing your filters.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================== -->
+    <!-- 04. EXPLORE BY CITY -->
+    <!-- ================================================== -->
+
+    <section
+        class="bg-black
+               text-white
+               py-20
+               lg:py-24">
+
+        <div
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8">
+
+
+            <div
+                class="grid
+                       lg:grid-cols-2
+                       gap-12
+                       items-center">
+
+
+                <div>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[4px]
+                               text-amber-400">
+
+                        Explore locally
+
+                    </p>
+
+                    <h2
+                        class="mt-5
+                               text-4xl
+                               sm:text-5xl
+                               font-semibold
+                               leading-tight">
+
+                        Great photography
+                        is closer than
+                        you think.
+
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="grid
+                           grid-cols-2
+                           border-t
+                           border-white/10">
+
+
+                    <button
+                        onclick="selectCity('Chennai')"
+                        class="text-left
+                               py-6
+                               border-b
+                               border-r
+                               border-white/10
+                               hover:bg-white/5
+                               transition">
+
+                        <span
+                            class="text-2xl
+                                   font-semibold">
+
+                            Chennai
+
+                        </span>
+
+                        <span
+                            class="block
+                                   mt-2
+                                   text-xs
+                                   text-gray-500">
+
+                            Explore creatives →
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectCity('Bengaluru')"
+                        class="text-left
+                               py-6
+                               px-5
+                               border-b
+                               border-white/10
+                               hover:bg-white/5
+                               transition">
+
+                        <span
+                            class="text-2xl
+                                   font-semibold">
+
+                            Bengaluru
+
+                        </span>
+
+                        <span
+                            class="block
+                                   mt-2
+                                   text-xs
+                                   text-gray-500">
+
+                            Explore creatives →
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectCity('Mumbai')"
+                        class="text-left
+                               py-6
+                               border-r
+                               border-white/10
+                               hover:bg-white/5
+                               transition">
+
+                        <span
+                            class="text-2xl
+                                   font-semibold">
+
+                            Mumbai
+
+                        </span>
+
+                        <span
+                            class="block
+                                   mt-2
+                                   text-xs
+                                   text-gray-500">
+
+                            Explore creatives →
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectCity('Hyderabad')"
+                        class="text-left
+                               py-6
+                               px-5
+                               hover:bg-white/5
+                               transition">
+
+                        <span
+                            class="text-2xl
+                                   font-semibold">
+
+                            Hyderabad
+
+                        </span>
+
+                        <span
+                            class="block
+                                   mt-2
+                                   text-xs
+                                   text-gray-500">
+
+                            Explore creatives →
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================== -->
+    <!-- 05. FINAL MATCH SECTION -->
+    <!-- ================================================== -->
+
+    <section
+        class="py-24
+               bg-[#f5f3ee]
+               dark:bg-[#0d0d0d]">
+
+        <div
+            class="max-w-5xl
+                   mx-auto
+                   px-5
+                   text-center">
+
+
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[4px]
+                       text-amber-500">
+
+                Still looking?
+
+            </span>
+
+
+            <h2
+                class="mt-6
+                       text-4xl
+                       sm:text-6xl
+                       font-semibold
+                       leading-tight">
+
+                Let us help you find
+                your perfect match.
+
+            </h2>
+
+
+            <p
+                class="max-w-xl
+                       mx-auto
+                       mt-6
+                       text-sm
+                       leading-7
+                       text-gray-500">
+
+                Tell us what you're shooting,
+                where you're shooting and what
+                you're looking to spend.
+
+            </p>
+
+
+            <a
+                href="contact.html"
+                class="inline-flex
+                       items-center
+                       gap-4
+                       mt-9
+                       px-7
+                       py-4
+                       bg-black
+                       dark:bg-white
+                       text-white
+                       dark:text-black
+                       text-sm
+                       font-semibold
+                       hover:bg-amber-500
+                       dark:hover:bg-amber-400
+                       transition">
+
+                Get Photographer Recommendations
+
+                <i
+                    class="fa-solid
+                           fa-arrow-right
+                           text-xs">
+
+                </i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer
+    class="relative
+           bg-[#0b0b0b]
+           text-white
+           overflow-hidden">
+
+
+    <!-- ================================================= -->
+    <!-- LARGE BACKGROUND TEXT -->
+    <!-- ================================================= -->
+
+    <div
+        class="absolute
+               bottom-[-35px]
+               left-1/2
+               -translate-x-1/2
+               whitespace-nowrap
+               text-[20vw]
+               font-black
+               tracking-[-12px]
+               text-white/[0.025]
+               pointer-events-none
+               select-none">
+
+        LENSFIND
+
+    </div>
+
+
+    <div
+        class="relative
+               z-10
+               max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================================================= -->
+        <!-- TOP FOOTER CTA -->
+        <!-- ================================================= -->
+
+        <div
+            class="py-20
+                   lg:py-24
+                   border-b
+                   border-white/10">
+
+
+            <div
+                class="grid
+                       lg:grid-cols-12
+                       gap-10
+                       items-end">
+
+
+                <!-- Brand -->
+
+                <div
+                    class="lg:col-span-7">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               gap-3
+                               mb-7">
+
+
+                        <div
+                            class="w-11
+                                   h-11
+                                   rounded-full
+                                   bg-amber-500
+                                   flex
+                                   items-center
+                                   justify-center">
+
+
+                            <i
+                                class="fa-solid
+                                       fa-camera
+                                       text-black">
+
+                            </i>
+
+
+                        </div>
+
+
+                        <span
+                            class="text-xl
+                                   font-bold
+                                   tracking-tight">
+
+                            LensFind
+
+                        </span>
+
+
+                    </div>
+
+
+                    <h2
+                        class="text-4xl
+                               sm:text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               leading-[1]
+                               tracking-tight">
+
+
+                        Make your next
+
+
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-amber-400">
+
+                            moment
+
+                        </span>
+
+
+                        <br>
+
+
+                        unforgettable.
+
+                    </h2>
+
+
+                </div>
+
+
+                <!-- Newsletter -->
+
+                <div
+                    class="lg:col-span-5">
+
+
+                    <p
+                        class="text-sm
+                               leading-6
+                               text-white-500
+                               mb-5">
+
+
+                        Get photography inspiration,
+                        new photographer discoveries and
+                        marketplace updates.
+
+
+                    </p>
+
+
+                    <form
+                        onsubmit="subscribeNewsletter(event)"
+                        class="flex
+                               flex-col
+                               sm:flex-row
+                               gap-2">
+
+
+                        <input
+                            id="footerEmail"
+                            type="email"
+                            required
+                            placeholder="Your email address"
+                            class="flex-1
+                                   min-w-0
+                                   px-5
+                                   py-4
+                                   rounded-xl
+                                   bg-white/[0.05]
+                                   border
+                                   border-white/10
+                                   text-white
+                                   placeholder:text-white
+                                   outline-none
+                                   focus:border-amber-500
+                                   transition">
+
+
+                        <button
+                            type="submit"
+                            class="px-6
+                                   py-4
+                                   rounded-xl
+                                   bg-amber-500
+                                   text-black
+                                   text-sm
+                                   font-semibold
+                                   hover:bg-amber-400
+                                   transition">
+
+                            Subscribe
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- NAVIGATION -->
+        <!-- ================================================= -->
+
+        <div
+            class="py-16
+                   grid
+                   grid-cols-2
+                   sm:grid-cols-3
+                   lg:grid-cols-5
+                   gap-10">
+
+
+            <!-- Explore -->
+
+            <div>
+
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[3px]
+                           text-white-500
+                           mb-6">
+
+                    Explore
+
+                </h3>
+
+
+                <ul
+                    class="space-y-4">
+
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Home
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="pages/photographers.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Browse Photographers
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="pages/portfolio.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Portfolios
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="pages/categories.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Categories
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- For Photographers -->
+
+            <div>
+
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[3px]
+                           text-white-500
+                           mb-6">
+
+                    For Creatives
+
+                </h3>
+
+
+                <ul
+                    class="space-y-4">
+
+
+                    <li>
+                        <a
+                            href="list-your-services.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            List Your Services
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="photographer-login.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Photographer Login
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="pricing.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Pricing
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="resources.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Resources
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- Company -->
+
+            <div>
+
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[3px]
+                           text-white-500
+                           mb-6">
+
+                    Company
+
+                </h3>
+
+
+                <ul
+                    class="space-y-4">
+
+
+                    <li>
+                        <a
+                            href="about.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Contact
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="careers.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Careers
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="blog.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Journal
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- Support -->
+
+            <div>
+
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[3px]
+                           text-white-500
+                           mb-6">
+
+                    Support
+
+                </h3>
+
+
+                <ul
+                    class="space-y-4">
+
+
+                    <li>
+                        <a
+                            href="faq.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            FAQ
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="privacy.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Privacy
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="terms.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Terms
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="help.html"
+                            class="text-sm
+                                   text-gray-300
+                                   hover:text-amber-400
+                                   transition">
+
+                            Help Center
+
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+            <!-- Social -->
+
+            <div>
+
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[3px]
+                           text-white-500
+                           mb-6">
+
+                    Follow
+
+                </h3>
+
+
+                <div
+                    class="flex
+                           flex-wrap
+                           gap-3">
+
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-white/10
+                               flex
+                               items-center
+                               justify-center
+                               hover:bg-amber-500
+                               hover:text-black
+                               hover:border-amber-500
+                               transition">
+
+
+                        <i
+                            class="fa-brands
+                                   fa-instagram">
+
+                        </i>
+
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-white/10
+                               flex
+                               items-center
+                               justify-center
+                               hover:bg-amber-500
+                               hover:text-black
+                               hover:border-amber-500
+                               transition">
+
+
+                        <i
+                            class="fa-brands
+                                   fa-facebook-f">
+
+                        </i>
+
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-white/10
+                               flex
+                               items-center
+                               justify-center
+                               hover:bg-amber-500
+                               hover:text-black
+                               hover:border-amber-500
+                               transition">
+
+
+                        <i
+                            class="fa-brands
+                                   fa-x-twitter">
+
+                        </i>
+
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn"
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-white/10
+                               flex
+                               items-center
+                               justify-center
+                               hover:bg-amber-500
+                               hover:text-black
+                               hover:border-amber-500
+                               transition">
+
+
+                        <i
+                            class="fa-brands
+                                   fa-linkedin-in">
+
+                        </i>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM BAR -->
+        <!-- ================================================= -->
+
+        <div
+            class="relative
+                   z-20
+                   py-6
+                   border-t
+                   border-white/10
+                   flex
+                   flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4">
+
+
+            <p
+                class="text-xs
+                       text-white-600">
+
+                © 2026 LensFind. All rights reserved.
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-5">
+
+
+                <a
+                    href="privacy.html"
+                    class="text-xs
+                           text-gray-600
+                           hover:text-white
+                           transition">
+
+                    Privacy
+
+                </a>
+
+
+                <a
+                    href="terms.html"
+                    class="text-xs
+                           text-gray-600
+                           hover:text-white
+                           transition">
+
+                    Terms
+
+                </a>
+
+
+                <button
+                    onclick="window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    })"
+                    class="w-9
+                           h-9
+                           rounded-full
+                           border
+                           border-white/10
+                           flex
+                           items-center
+                           justify-center
+                           text-gray-400
+                           hover:bg-amber-500
+                           hover:text-black
+                           hover:border-amber-500
+                           transition">
+
+
+                    <i
+                        class="fa-solid
+                               fa-arrow-up
+                               text-xs">
+
+                    </i>
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

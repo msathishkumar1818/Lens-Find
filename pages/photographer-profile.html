@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ananya Rao — Corporate Photographer | LensFind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' };</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { font-family: Poppins, sans-serif; }
+    .serif { font-family: 'DM Serif Display', serif; }
+  </style>
+</head>
+<body class="bg-[#f7f5f1] text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-7">
+      <a href="../index.html" class="flex items-center gap-3" aria-label="LensFind home">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-black text-white"><i class="fa-solid fa-camera"></i></span>
+        <span><span class="block text-lg font-bold tracking-tight">Lens<span class="text-amber-500">Find</span></span><span class="block text-[8px] font-semibold tracking-[.22em] text-slate-400">PHOTOGRAPHY DIRECTORY</span></span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
+        <a class="hover:text-amber-500" href="photographers.html">Browse</a>
+        <a class="hover:text-amber-500" href="categories.html">Categories</a>
+        <a class="hover:text-amber-500" href="portfolio.html">Portfolios</a>
+      </nav>
+      <a href="mailto:ananya.rao@example.com?subject=Corporate%20photography%20enquiry" class="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-500">Contact Ananya</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden bg-slate-950 text-white">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=85" alt="Camera on a dark background" class="h-full w-full object-cover opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/30"></div>
+      </div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-7 sm:py-20 lg:grid-cols-[240px_1fr] lg:items-end lg:py-24">
+        <img id="profile-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=85" alt="Ananya Rao" class="mx-auto h-44 w-44 rounded-3xl object-cover ring-4 ring-white/15 lg:mx-0 lg:h-52 lg:w-52">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[.28em] text-amber-400"><i class="fa-solid fa-circle-check mr-2"></i>Verified LensFind photographer</p>
+          <h1 id="profile-name" class="text-5xl font-semibold tracking-tight sm:text-6xl">Ananya <span class="serif italic text-amber-400">Rao</span></h1>
+          <p id="profile-role" class="mt-4 max-w-2xl text-lg leading-8 text-white/70">Corporate photographer creating polished visual stories for teams, brands and events.</p>
+          <div class="mt-7 flex flex-wrap gap-3 text-sm">
+            <span id="profile-location" class="rounded-full border border-white/15 bg-white/10 px-4 py-2"><i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>Hyderabad, India</span>
+            <span id="profile-rating" class="rounded-full border border-white/15 bg-white/10 px-4 py-2"><i class="fa-solid fa-star mr-2 text-amber-400"></i>4.9 (102 reviews)</span>
+            <span class="rounded-full border border-white/15 bg-white/10 px-4 py-2"><i class="fa-solid fa-camera mr-2 text-amber-400"></i>8 years experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-7 lg:grid-cols-[1fr_310px] lg:py-16">
+      <div class="space-y-14">
+        <section>
+          <p class="text-xs font-semibold uppercase tracking-[.25em] text-amber-600">About Ananya</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Corporate visuals with <span class="serif italic">clarity.</span></h2>
+          <p class="mt-6 max-w-3xl leading-8 text-slate-600">I help organisations present their people, culture and work with confidence. My approach is organised, collaborative and designed around your brand’s visual language.</p>
+          <p class="mt-4 max-w-3xl leading-8 text-slate-600">From leadership portraits and workplace stories to conferences and product launches, every shoot is planned to deliver natural, professional images.</p>
+        </section>
+
+        <section>
+          <div class="flex items-end justify-between gap-4">
+            <div><p class="text-xs font-semibold uppercase tracking-[.25em] text-amber-600">Selected work</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">Recent <span class="serif italic">stories.</span></h2></div>
+            <a href="portfolio.html" class="text-sm font-semibold text-slate-900 hover:text-amber-600">View all work <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+          <div class="mt-7 grid gap-4 sm:grid-cols-2">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-200 sm:col-span-2"><img class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1300&q=85" alt="Wedding couple"><figcaption class="bg-white px-5 py-4 text-sm font-semibold">Rhea & Aditya — Garden wedding</figcaption></figure>
+            <figure class="overflow-hidden rounded-2xl bg-slate-200"><img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85" alt="Fashion portrait"><figcaption class="bg-white px-5 py-4 text-sm font-semibold">Kavya — Editorial portrait</figcaption></figure>
+            <figure class="overflow-hidden rounded-2xl bg-slate-200"><img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=85" alt="Wedding details"><figcaption class="bg-white px-5 py-4 text-sm font-semibold">Meera & Nikhil — Details</figcaption></figure>
+          </div>
+        </section>
+
+        <section>
+          <p class="text-xs font-semibold uppercase tracking-[.25em] text-amber-600">Client notes</p>
+          <blockquote class="mt-4 border-l-4 border-amber-400 pl-6 text-2xl leading-9 text-slate-700 sm:text-3xl sm:leading-10"><span class="serif italic">“</span>Ananya made us feel completely at ease. Every photograph feels natural, joyful and entirely ours.<span class="serif italic">”</span></blockquote>
+          <p class="mt-4 text-sm font-semibold text-slate-500">— Priya & Karthik, Chennai</p>
+        </section>
+      </div>
+
+      <aside class="self-start rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:sticky lg:top-24">
+        <p class="text-xs font-semibold uppercase tracking-[.22em] text-slate-400">Starting from</p>
+        <p id="profile-price" class="mt-2 text-3xl font-bold">₹9,000 <span class="text-sm font-medium text-slate-400">/ session</span></p>
+        <a href="mailto:ananya.rao@example.com?subject=Corporate%20photography%20enquiry" class="mt-6 flex h-12 w-full items-center justify-center rounded-xl bg-amber-500 text-sm font-semibold text-white transition hover:bg-amber-600">Request availability <i class="fa-solid fa-arrow-right ml-2"></i></a>
+        <a href="photographers.html" class="mt-3 flex h-12 w-full items-center justify-center rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 transition hover:border-amber-500 hover:text-amber-600">Browse photographers</a>
+        <div class="my-6 border-t border-slate-100"></div>
+        <h2 class="font-semibold">Specialties</h2>
+        <div id="profile-specialties" class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600"><span class="rounded-lg bg-slate-100 px-3 py-2">Corporate</span><span class="rounded-lg bg-slate-100 px-3 py-2">Events</span><span class="rounded-lg bg-slate-100 px-3 py-2">Headshots</span><span class="rounded-lg bg-slate-100 px-3 py-2">Brand Stories</span></div>
+        <div class="my-6 border-t border-slate-100"></div>
+        <p class="text-sm leading-7 text-slate-500"><i class="fa-solid fa-clock mr-2 text-amber-500"></i>Usually responds within 24 hours</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 px-5 py-10 text-white sm:px-7">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between"><p>© 2026 LensFind. All rights reserved.</p><a href="../index.html" class="font-semibold text-amber-400 hover:text-white">Back to LensFind <i class="fa-solid fa-arrow-right ml-1"></i></a></div>
+  </footer>
+  <script>
+    const profiles = {
+      ananya: { name: 'Ananya Rao', role: 'Corporate Photographer', location: 'Hyderabad, India', rating: '4.9', reviews: '102', price: '₹9,000', specialties: ['Corporate', 'Events', 'Headshots', 'Brand Stories'], image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=85' },
+      arjun: { name: 'Arjun Mehta', role: 'Wedding Photographer', location: 'Chennai, India', rating: '4.9', reviews: '124', price: '₹12,000', specialties: ['Weddings', 'Engagements', 'Couples', 'Pre-wedding'], image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=600&q=85' },
+      priya: { name: 'Priya Sharma', role: 'Fashion Photographer', location: 'Mumbai, India', rating: '5.0', reviews: '89', price: '₹8,500', specialties: ['Fashion', 'Editorial', 'Lookbooks', 'Campaigns'], image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=85' },
+      rahul: { name: 'Rahul Kapoor', role: 'Food Photographer', location: 'Bengaluru, India', rating: '4.8', reviews: '76', price: '₹6,500', specialties: ['Food', 'Restaurants', 'Products', 'Menus'], image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85' }
+    };
+    const profile = profiles[new URLSearchParams(window.location.search).get('photographer')] || profiles.ananya;
+    const [firstName, ...lastName] = profile.name.split(' ');
+    document.title = `${profile.name} — ${profile.role} | LensFind`;
+    document.getElementById('profile-name').innerHTML = `${firstName} <span class="serif italic text-amber-400">${lastName.join(' ')}</span>`;
+    document.getElementById('profile-role').textContent = `${profile.role} creating polished visual stories for clients, brands and events.`;
+    document.getElementById('profile-location').innerHTML = `<i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>${profile.location}`;
+    document.getElementById('profile-rating').innerHTML = `<i class="fa-solid fa-star mr-2 text-amber-400"></i>${profile.rating} (${profile.reviews} reviews)`;
+    document.getElementById('profile-price').innerHTML = `${profile.price} <span class="text-sm font-medium text-slate-400">/ session</span>`;
+    document.getElementById('profile-photo').src = profile.image;
+    document.getElementById('profile-photo').alt = profile.name;
+    document.getElementById('profile-specialties').innerHTML = profile.specialties.map(item => `<span class="rounded-lg bg-slate-100 px-3 py-2">${item}</span>`).join('');
+  </script>
+</body>
+</html>
