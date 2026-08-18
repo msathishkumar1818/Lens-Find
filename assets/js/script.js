@@ -1,5 +1,65 @@
 
     /* ==================================================
+       SHARED HEADER REFINEMENTS
+    ================================================== */
+
+    (function refineSharedHeader() {
+        const inPagesDirectory = window.location.pathname.includes("/pages/");
+        const contactHref = inPagesDirectory ? "contact.html" : "pages/contact.html";
+        const header = document.querySelector("header");
+
+        if (!header) return;
+
+        // The home link is "index.html" on the root page and "../index.html"
+        // on every page inside /pages.
+        const logo = header.querySelector('a[href$="index.html"]');
+        if (logo) {
+            logo.className = "flex items-center gap-3 shrink-0 group";
+            logo.setAttribute("aria-label", "LensFind home");
+            logo.innerHTML = '<span class="lensfind-logo-mark"><i class="fa-solid fa-camera-retro"></i></span><span class="block"><span class="block text-[19px] font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">Lens<span class="text-amber-500">Find</span></span><span class="block mt-1 text-[8px] font-semibold uppercase tracking-[2px] text-gray-500 dark:text-gray-300">Capture what matters</span></span>';
+        }
+
+        header.querySelector('[aria-label="Search"]')?.remove();
+        header.querySelector('input[placeholder="Search photographers..."]')?.closest(".relative")?.remove();
+
+        header.querySelectorAll("a").forEach(function (link) {
+            const label = link.textContent.replace(/\s+/g, " ").trim();
+            if (label === "Find Photographer" || label === "Find a Photographer") link.remove();
+        });
+
+        const desktopNav = document.getElementById("desktop-nav");
+        if (desktopNav && !desktopNav.querySelector('[data-nav-contact]')) {
+            const contact = document.createElement("a");
+            contact.href = contactHref;
+            contact.dataset.navContact = "true";
+            contact.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition";
+            contact.textContent = "Contact";
+            desktopNav.appendChild(contact);
+        }
+
+        const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav && !mobileNav.querySelector('[data-nav-contact]')) {
+            const contact = document.createElement("a");
+            contact.href = contactHref;
+            contact.dataset.navContact = "true";
+            contact.className = "flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium";
+            contact.innerHTML = '<i class="fa-solid fa-envelope w-5 text-amber-500"></i>Contact';
+            const login = [...mobileNav.querySelectorAll("a")].find(function (link) {
+                return link.textContent.replace(/\s+/g, " ").trim() === "Login";
+            });
+            mobileNav.insertBefore(contact, login || null);
+        }
+
+        const directionButton = document.getElementById("direction-toggle");
+        if (directionButton && !document.getElementById("direction-label")) {
+            const label = document.createElement("span");
+            label.id = "direction-label";
+            label.textContent = "RTL";
+            directionButton.appendChild(label);
+        }
+    })();
+
+    /* ==================================================
        MOBILE MENU
     ================================================== */
 
@@ -384,6 +444,8 @@
 
             const label = document.getElementById("mobile-direction-label");
             if (label) label.textContent = "LTR";
+            const desktopLabel = document.getElementById("direction-label");
+            if (desktopLabel) desktopLabel.textContent = "LTR";
 
 
         } else {
@@ -407,6 +469,8 @@
 
             const label = document.getElementById("mobile-direction-label");
             if (label) label.textContent = "RTL";
+            const desktopLabel = document.getElementById("direction-label");
+            if (desktopLabel) desktopLabel.textContent = "RTL";
 
         }
 
