@@ -210,6 +210,183 @@
         }
 
         /* ================================================
+           HOW IT WORKS: LIGHT / DARK MODE
+        ================================================= */
+
+        .how-it-works-section h2,
+        .how-it-works-section h3,
+        .how-it-works-section p:not(.text-xs),
+        .how-it-works-section .text-7xl,
+        .how-it-works-section .text-8xl {
+            color: #111827;
+        }
+
+        .how-it-works-section p.text-xs,
+        .how-it-works-section .text-gray-400,
+        .how-it-works-section .text-gray-500 {
+            color: #4b5563;
+        }
+
+        .how-it-works-section .text-7xl,
+        .how-it-works-section .text-8xl {
+            color: rgba(17, 24, 39, 0.08);
+        }
+
+        .how-it-works-section .process-card {
+            background: #f8fafc;
+            border-color: #e5e7eb;
+        }
+
+        .how-it-works-section .process-card .border-b,
+        .how-it-works-section .border-t,
+        .how-it-works-section .bg-white\/10,
+        .how-it-works-section .bg-white\/5 {
+            border-color: #e5e7eb;
+        }
+
+        .how-it-works-section .bg-white\/5 {
+            background-color: #f3f4f6;
+        }
+
+        .how-it-works-section .bg-white\/10 {
+            background-color: #e5e7eb;
+        }
+
+        .dark .how-it-works-section h2,
+        .dark .how-it-works-section h3,
+        .dark .how-it-works-section p:not(.text-xs) {
+            color: #ffffff;
+        }
+
+        .dark .how-it-works-section p.text-xs,
+        .dark .how-it-works-section .text-gray-400,
+        .dark .how-it-works-section .text-gray-500 {
+            color: #9ca3af;
+        }
+
+        .dark .how-it-works-section .text-7xl,
+        .dark .how-it-works-section .text-8xl {
+            color: rgba(255, 255, 255, 0.06);
+        }
+
+        .dark .how-it-works-section .process-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .how-it-works-section .process-card .border-b,
+        .dark .how-it-works-section .border-t,
+        .dark .how-it-works-section .bg-white\/10 {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .how-it-works-section .bg-white\/5 {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .dark .how-it-works-section .bg-white\/10 {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ================================================
+           HOME 2 TOOLKIT: LIGHT / DARK MODE
+        ================================================= */
+
+        .toolkit-section .text-white,
+        .toolkit-section .text-white-500 {
+            color: #111827;
+        }
+
+        .toolkit-section {
+            background-color: #ffffff !important;
+        }
+
+        .toolkit-section .toolkit-row p,
+        .toolkit-section .text-gray-600 {
+            color: #4b5563;
+        }
+
+        .toolkit-section .border-white\/10 {
+            border-color: #e5e7eb;
+        }
+
+        .toolkit-section .border-white\/\[0\.05\] {
+            border-color: rgba(17, 24, 39, 0.08);
+        }
+
+        .toolkit-section .toolkit-row:hover p {
+            color: #111827;
+        }
+
+        .dark .toolkit-section .text-white {
+            color: #ffffff;
+        }
+
+        .dark .toolkit-section {
+            background-color: #111111 !important;
+        }
+
+        .dark .toolkit-section .text-white-500,
+        .dark .toolkit-section .toolkit-row p,
+        .dark .toolkit-section .text-gray-600 {
+            color: #9ca3af;
+        }
+
+        .dark .toolkit-section .border-white\/10 {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .toolkit-section .border-white\/\[0\.05\] {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .dark .toolkit-section .toolkit-row:hover p {
+            color: #d1d5db;
+        }
+
+        /* ================================================
+           PHOTOGRAPHERS: EXPLORE BY CITY THEME
+        ================================================= */
+
+        .city-explore-section .border-white\/10 {
+            border-color: #e5e7eb;
+        }
+
+        .city-explore-section button:hover {
+            background-color: #f3f4f6;
+        }
+
+        .dark .city-explore-section .border-white\/10 {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .city-explore-section button:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* ================================================
+           CATEGORIES: MORE TO EXPLORE THEME
+        ================================================= */
+
+        .category-strip .border-white\/20 {
+            border-color: #d1d5db;
+        }
+
+        .category-strip a:hover {
+            background-color: #111827;
+            color: #ffffff;
+        }
+
+        .dark .category-strip .border-white\/20 {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .category-strip a:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* ================================================
            HEADER & FOOTER CONSISTENCY
         ================================================= */
 

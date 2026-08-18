@@ -6,6 +6,7 @@
     (function refineSharedHeader() {
         const inPagesDirectory = window.location.pathname.includes("/pages/");
         const contactHref = inPagesDirectory ? "contact.html" : "pages/contact.html";
+        const inspirationHref = inPagesDirectory ? "inspiration.html" : "pages/inspiration.html";
         const header = document.querySelector("header");
 
         if (!header) return;
@@ -28,6 +29,18 @@
         });
 
         const desktopNav = document.getElementById("desktop-nav");
+        if (desktopNav && !desktopNav.querySelector('[data-nav-inspiration]')) {
+            const inspiration = document.createElement("a");
+            inspiration.href = inspirationHref;
+            inspiration.dataset.navInspiration = "true";
+            inspiration.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition";
+            inspiration.textContent = "Inspiration";
+            const listServices = [...desktopNav.querySelectorAll("a")].find(function (link) {
+                return link.textContent.replace(/\s+/g, " ").trim() === "List Your Services";
+            });
+            desktopNav.insertBefore(inspiration, listServices || null);
+        }
+
         if (desktopNav && !desktopNav.querySelector('[data-nav-contact]')) {
             const contact = document.createElement("a");
             contact.href = contactHref;
@@ -38,6 +51,18 @@
         }
 
         const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav && !mobileNav.querySelector('[data-nav-inspiration]')) {
+            const inspiration = document.createElement("a");
+            inspiration.href = inspirationHref;
+            inspiration.dataset.navInspiration = "true";
+            inspiration.className = "flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium";
+            inspiration.innerHTML = '<i class="fa-solid fa-lightbulb w-5 text-amber-500"></i>Inspiration';
+            const listServices = [...mobileNav.querySelectorAll("a")].find(function (link) {
+                return link.textContent.replace(/\s+/g, " ").trim() === "List Your Services";
+            });
+            mobileNav.insertBefore(inspiration, listServices || null);
+        }
+
         if (mobileNav && !mobileNav.querySelector('[data-nav-contact]')) {
             const contact = document.createElement("a");
             contact.href = contactHref;
@@ -94,8 +119,8 @@
 
         navLinks.forEach(function (link) {
             const linkPage = link.getAttribute("href").split("/").pop();
-            const isPortfolioPage = ["portfolio.html", "weddings.html", "fashion.html", "food.html", "corporate.html"].includes(currentPage);
-            const isCurrent = linkPage === currentPage || (isPortfolioPage && linkPage === "categories.html");
+            const isInspirationPage = ["inspiration.html", "weddings.html", "fashion.html", "food.html", "corporate.html"].includes(currentPage);
+            const isCurrent = linkPage === currentPage || (isInspirationPage && link.dataset.navInspiration === "true");
 
             link.classList.toggle("nav-current", isCurrent);
             link.querySelectorAll("i").forEach(function (icon) {
