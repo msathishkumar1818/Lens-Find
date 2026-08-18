@@ -17,7 +17,43 @@
             margin: 0;
             overflow-x: hidden;
             min-width: 320px;
+            color: #1f2937;
+            background: #ffffff;
         }
+
+        .dark body { color: #f9fafb; background: #111827; }
+
+        /* Make every legacy gray text utility use a single, high-contrast color. */
+        .text-gray-100,
+        .text-gray-200,
+        .text-gray-300,
+        .text-gray-400,
+        .text-gray-500,
+        .text-gray-600,
+        .text-gray-700,
+        .text-gray-800,
+        .text-gray-900 { color: #000000 !important; }
+
+        /* Shared readable defaults for legacy utility markup in dark mode. */
+        .dark .text-gray-100,
+        .dark .text-gray-200,
+        .dark .text-gray-300,
+        .dark .text-gray-400 { color: #cbd5e1 !important; }
+        .dark .text-gray-500,
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-800,
+        .dark .text-gray-900,
+        .dark .text-black { color: #ffffff !important; }
+        .dark input, .dark select, .dark textarea { color: #f9fafb; }
+
+        .faq-trigger { width: 100%; text-align: start; cursor: pointer; }
+        .faq-panel[hidden] { display: none; }
+        .faq-trigger .faq-icon { transition: transform .2s ease; }
+        .faq-trigger[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+
+        .directory-toolbar { box-shadow: 0 15px 35px rgba(17, 24, 39, .08); }
+        .dark .directory-toolbar { box-shadow: 0 15px 35px rgba(0, 0, 0, .28); }
 
         img {
             display: block;

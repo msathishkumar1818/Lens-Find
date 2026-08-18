@@ -305,10 +305,6 @@
 
 
     function updateThemeIcons() {
-
-        if (!themeIcon || !mobileThemeIcon) return;
-
-
         const isDark =
             document.documentElement
                 .classList
@@ -317,20 +313,20 @@
 
         if (isDark) {
 
-            themeIcon.classList.remove(
+            themeIcon?.classList.remove(
                 "fa-moon"
             );
 
-            themeIcon.classList.add(
+            themeIcon?.classList.add(
                 "fa-sun"
             );
 
 
-            mobileThemeIcon.classList.remove(
+            mobileThemeIcon?.classList.remove(
                 "fa-moon"
             );
 
-            mobileThemeIcon.classList.add(
+            mobileThemeIcon?.classList.add(
                 "fa-sun"
             );
 
@@ -340,20 +336,20 @@
 
         } else {
 
-            themeIcon.classList.remove(
+            themeIcon?.classList.remove(
                 "fa-sun"
             );
 
-            themeIcon.classList.add(
+            themeIcon?.classList.add(
                 "fa-moon"
             );
 
 
-            mobileThemeIcon.classList.remove(
+            mobileThemeIcon?.classList.remove(
                 "fa-sun"
             );
 
-            mobileThemeIcon.classList.add(
+            mobileThemeIcon?.classList.add(
                 "fa-moon"
             );
 
@@ -927,6 +923,92 @@ testimonialDots.forEach((dot, index) => {
     });
 
 });
+
+    const testimonialPrevious = document.getElementById("testimonial-prev");
+    const testimonialNext = document.getElementById("testimonial-next");
+    if (testimonialDots.length && testimonialPrevious && testimonialNext) {
+        function moveTestimonial(offset) {
+            const current = [...testimonialDots].findIndex(function(dot) {
+                return dot.classList.contains("bg-black");
+            });
+            testimonialDots[(current + offset + testimonialDots.length) % testimonialDots.length].click();
+        }
+        testimonialPrevious.addEventListener("click", function() { moveTestimonial(-1); });
+        testimonialNext.addEventListener("click", function() { moveTestimonial(1); });
+    }
+
+/* ==================================================
+   SITE-WIDE ROUTES, FAVICON & ACCESSIBLE ACCORDIONS
+================================================== */
+(function sitePolish() {
+    const inPages = window.location.pathname.includes('/pages/');
+    const pageRoot = inPages ? '' : 'pages/';
+    const home = inPages ? '../index.html' : 'index.html';
+
+    const icon = document.createElement('link');
+    icon.rel = 'icon';
+    icon.type = 'image/svg+xml';
+    icon.href = inPages ? '../assets/images/lensfind-favicon.svg' : 'assets/images/lensfind-favicon.svg';
+    document.head.appendChild(icon);
+
+    const replacements = {
+        'list-your-services.html': pageRoot + 'list-services.html',
+        'photographer-login.html': pageRoot + 'login.html',
+        'pricing.html': pageRoot + 'list-services.html#plans',
+        'resources.html': pageRoot + 'inspiration.html',
+        'contact.html': pageRoot + 'contact.html',
+        'about.html': home + '#about',
+        'careers.html': pageRoot + 'contact.html#contact-form',
+        'blog.html': pageRoot + 'inspiration.html',
+        'faq.html': pageRoot + 'contact.html#faq',
+        'privacy.html': home + '#privacy',
+        'terms.html': home + '#terms',
+        'help.html': pageRoot + 'contact.html#faq'
+    };
+    document.querySelectorAll('a[href]').forEach(function(link) {
+        const value = link.getAttribute('href');
+        const clean = value.replace(/^\.\.\/\/?pages\//, '').replace(/^pages\//, '');
+        if (replacements[clean]) link.href = replacements[clean];
+        if (inPages && (value === 'index.html' || value.startsWith('pages/'))) {
+            link.href = value === 'index.html' ? home : value.replace(/^pages\//, '');
+        }
+        if (value === '#') {
+            const label = link.textContent.trim().toLowerCase();
+            if (label.includes('create an account')) link.href = 'register.html';
+            else if (label.includes('forgot')) link.href = 'contact.html#contact-form';
+        }
+    });
+
+    document.querySelectorAll('.faq-item, [data-faq-item]').forEach(function(item, index) {
+        const heading = item.querySelector('button, h3, h4');
+        const answer = item.querySelector('p');
+        if (!heading || !answer || heading.tagName === 'P') return;
+        let trigger = heading;
+        if (heading.tagName !== 'BUTTON') {
+            trigger = document.createElement('button');
+            trigger.type = 'button'; trigger.className = 'faq-trigger';
+            trigger.innerHTML = heading.innerHTML + '<span class="faq-icon" aria-hidden="true">+</span>';
+            heading.replaceWith(trigger);
+        }
+        const panelId = 'faq-panel-' + index;
+        answer.id = panelId; answer.classList.add('faq-panel'); answer.hidden = true;
+        trigger.classList.add('faq-trigger'); trigger.setAttribute('aria-expanded', 'false'); trigger.setAttribute('aria-controls', panelId);
+        if (!trigger.querySelector('.faq-icon')) trigger.insertAdjacentHTML('beforeend', '<span class="faq-icon" aria-hidden="true">+</span>');
+        trigger.addEventListener('click', function() {
+            const open = trigger.getAttribute('aria-expanded') === 'true';
+            trigger.setAttribute('aria-expanded', String(!open)); answer.hidden = open;
+        });
+    });
+
+    if (window.location.pathname.endsWith('/login.html')) {
+        document.querySelector('#desktop-nav')?.remove();
+        document.querySelector('#mobile-menu')?.remove();
+        document.querySelector('#menu-btn')?.remove();
+        document.querySelectorAll('header a').forEach(function(link) {
+            if (!link.getAttribute('href')?.includes('index.html')) link.remove();
+        });
+    }
+})();
 
 
 
