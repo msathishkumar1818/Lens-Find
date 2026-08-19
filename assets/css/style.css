@@ -246,6 +246,73 @@
             font-weight: 700;
         }
 
+        /* Make the active page unmistakable in both light and dark navigation. */
+        #desktop-nav a.nav-current,
+        #home-btn.nav-current {
+            position: relative;
+            color: #f59e0b !important;
+        }
+
+        #desktop-nav a.nav-current::after,
+        #home-btn.nav-current::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 2px;
+            border-radius: 999px;
+            background: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, .65);
+        }
+
+        #mobile-nav a.nav-current,
+        #mobile-home-btn.nav-current {
+            color: #fbbf24 !important;
+            background: rgba(245, 158, 11, .14);
+            box-shadow: inset 3px 0 0 #f59e0b;
+        }
+
+        /* A tighter, easier-to-scan photographer directory. */
+        #photographerGrid .photographer-card > div {
+            min-height: 230px !important;
+        }
+
+        #photographerGrid .photographer-card > div > div.relative {
+            height: 240px !important;
+        }
+
+        @media (min-width: 1024px) {
+            #photographerGrid .photographer-card .lg\:p-10 { padding: 1.75rem !important; }
+            #photographerGrid .photographer-card .lg\:p-12 { padding: 2rem !important; }
+            #photographerGrid .photographer-card .lg\:p-14 { padding: 2.25rem !important; }
+            #photographerGrid .photographer-card .lg\:p-8 { padding: 1.5rem !important; }
+        }
+
+        @media (max-width: 1023px) {
+            #photographerGrid .photographer-card > div > div.relative {
+                height: 220px !important;
+            }
+        }
+
+        /* Preserve the complete photograph inside portfolio and directory cards. */
+        .full-card-image {
+            object-fit: contain !important;
+            background: #000 !important;
+            transform: none !important;
+        }
+
+        .cover-card-image {
+            object-fit: cover !important;
+            object-position: center top !important;
+            transform: none !important;
+        }
+
+        /* Keep the subject's face visible in Home 2's wide style showcase. */
+        #categoryImage {
+            object-position: center 12% !important;
+        }
+
         /* ================================================
            HOW IT WORKS: LIGHT / DARK MODE
         ================================================= */

@@ -99,6 +99,28 @@
         image.alt = "LensFind photography";
     }, true);
 
+    /* Keep portfolio-card photos fully visible on the visual directory pages. */
+    (function fitPortfolioCardImages() {
+        const coverImagePages = new Set([
+            "fashion.html",
+            "food.html",
+            "corporate.html",
+            "photographers.html",
+            "categories.html",
+            "inspiration.html",
+            "home2.html",
+            "index.html"
+        ]);
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+        if (!coverImagePages.has(currentPage)) return;
+
+        document.querySelectorAll("#photographerGrid img.object-cover, article img.object-cover, a.group > img.object-cover").forEach(function (image) {
+            image.classList.remove("object-cover", "group-hover:scale-105", "group-hover:scale-110");
+            image.classList.add("cover-card-image");
+        });
+    })();
+
     /* ==================================================
        MOBILE MENU
     ================================================== */

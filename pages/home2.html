@@ -3332,704 +3332,144 @@
 
 
 
+
 <!-- ========================================================= -->
-<!-- HOME 2 - PHOTOGRAPHY MOOD SELECTOR -->
-<!-- UNIQUE INTERACTIVE MOOD SECTION -->
+<!-- CATEGORY SWITCH SCRIPT -->
 <!-- ========================================================= -->
 
-<section
-    class="relative
-           bg-[#f4f1eb]
-           dark:bg-[#0b0b0b]
-           py-24
-           lg:py-32
-           overflow-hidden">
+<script>
 
+const categoryData = {
 
-    <div
-        class="max-w-7xl
-               mx-auto
-               px-5
-               sm:px-6
-               lg:px-8">
+    wedding: {
 
+        image: "../assets/images/p31.jpg",
 
-        <!-- ================================================= -->
-        <!-- HEADER -->
-        <!-- ================================================= -->
+        label: "Celebrations",
 
-        <div
-            class="grid
-                   lg:grid-cols-12
-                   gap-10
-                   items-end">
+        title: "Weddings",
 
+        number: "01 / 04",
 
-            <div
-                class="lg:col-span-8">
+        description:
+        "Capture the emotion, traditions and unforgettable moments that make every celebration unique."
 
+    },
 
-                <p
-                    class="text-[10px]
-                           uppercase
-                           tracking-[4px]
-                           font-semibold
-                           text-amber-500">
+    portrait: {
 
-                    Find Your Visual Language
+        image: "../assets/images/p32.jpg",
 
-                </p>
-
-
-                <h2
-                    class="mt-5
-                           text-5xl
-                           sm:text-6xl
-                           lg:text-8xl
-                           font-semibold
-                           tracking-[-4px]
-                           leading-[0.9]
-                           text-gray-900
-                           dark:text-white">
-
-                    What do you
-                    <span
-                        class="font-serif
-                               italic
-                               font-normal
-                               text-gray-400">
+        label: "People",
 
-                        want to feel?
+        title: "Portraits",
 
-                    </span>
+        number: "02 / 04",
 
-                </h2>
+        description:
+        "Create expressive portraits that reveal personality, character and the little details that make someone unique."
 
-            </div>
+    },
 
+    fashion: {
 
-            <p
-                class="lg:col-span-4
-                       text-sm
-                       leading-7
-                       text-gray-500
-                       dark:text-gray-400
-                       max-w-sm
-                       lg:pb-2">
+        image: "../assets/images/p34.jpg",
 
-                Photography is more than a category.
-                Choose the feeling you want your images
-                to carry, and discover creatives who
-                understand that language.
+        label: "Style",
 
-            </p>
+        title: "Fashion",
 
+        number: "03 / 04",
 
-        </div>
+        description:
+        "Build striking visual stories for campaigns, editorials, designers and modern creative brands."
 
+    },
 
+    food: {
 
-        <!-- ================================================= -->
-        <!-- MAIN EXPERIENCE -->
-        <!-- ================================================= -->
+        image: "../assets/images/p33.jpg",
 
-        <div
-            class="relative
-                   mt-16
-                   lg:mt-24
-                   min-h-[600px]
-                   lg:min-h-[650px]">
+        label: "Culinary",
 
+        title: "Food",
 
-            <!-- ================================================= -->
-            <!-- LARGE VISUAL CIRCLE -->
-            <!-- ================================================= -->
+        number: "04 / 04",
 
-            <div
-                class="absolute
-                       left-1/2
-                       top-1/2
-                       -translate-x-1/2
-                       -translate-y-1/2
-                       w-[300px]
-                       h-[300px]
-                       sm:w-[430px]
-                       sm:h-[430px]
-                       lg:w-[520px]
-                       lg:h-[520px]
-                       rounded-full
-                       bg-gray-900
-                       dark:bg-white
-                       overflow-hidden
-                       shadow-2xl">
+        description:
+        "Make dishes, products and culinary experiences look as memorable as they taste."
 
+    }
 
-                <img
-                    src="../assets/images/p31.jpg"
-                    alt="Photography style"
-                    class="w-full
-                           h-full
-                           object-cover
-                           opacity-90
-                           transition
-                           duration-700">
+};
 
 
-                <div
-                    class="absolute
-                           inset-0
-                           bg-black/20
-                           dark:bg-black/30">
-                </div>
 
+function showCategory(category, button) {
 
-                <!-- CENTER TEXT -->
+    const data = categoryData[category];
 
-                <div
-                    class="absolute
-                           inset-0
-                           flex
-                           items-center
-                           justify-center
-                           text-center
-                           p-10">
+    if (!data) return;
 
 
-                    <div>
+    /* IMAGE */
 
+    const image = document.getElementById("categoryImage");
 
-                        <span
-                            class="text-[9px]
-                                   uppercase
-                                   tracking-[4px]
-                                   text-white/60">
+    image.style.opacity = "0";
 
-                            Selected mood
+    setTimeout(() => {
 
-                        </span>
+        image.src = data.image;
 
+        image.alt = data.title + " Photography";
 
-                        <h3
-                            class="mt-4
-                                   text-4xl
-                                   sm:text-5xl
-                                   font-serif
-                                   italic
-                                   text-white">
+        image.onload = () => {
 
-                            Emotional
+            image.style.opacity = "1";
 
-                        </h3>
+        };
 
+    }, 180);
 
-                        <p
-                            class="mt-3
-                                   text-xs
-                                   text-white/60">
 
-                            128 photographers
 
-                        </p>
+    /* CONTENT */
 
+    document.getElementById("categoryLabel").textContent =
+        data.label;
 
-                    </div>
+    document.getElementById("categoryTitle").textContent =
+        data.title;
 
-                </div>
+    document.getElementById("categoryNumber").textContent =
+        data.number;
 
-            </div>
+    document.getElementById("categoryDescription").textContent =
+        data.description;
 
 
 
-            <!-- ================================================= -->
-            <!-- MOOD 01 -->
-            <!-- ================================================= -->
+    /* ACTIVE BUTTON */
 
-            <a
-               
-                class="absolute
-                       top-0
-                       left-0
-                       sm:left-[5%]
-                       lg:left-[10%]
-                       group">
+    document.querySelectorAll(".category-tab").forEach(tab => {
 
+        tab.classList.remove(
+            "bg-amber-50",
+            "dark:bg-amber-400/10"
+        );
 
-                <div
-                    class="flex
-                           items-center
-                           gap-4">
+    });
 
 
-                    <span
-                        class="w-14
-                               h-14
-                               rounded-full
-                               bg-white
-                               dark:bg-[#181818]
-                               border
-                               border-gray-200
-                               dark:border-white/10
-                               flex
-                               items-center
-                               justify-center
-                               text-gray-700
-                               dark:text-gray-300
-                               group-hover:bg-amber-400
-                               group-hover:text-black
-                               group-hover:border-amber-400
-                               transition">
+    button.classList.add(
+        "bg-amber-50",
+        "dark:bg-amber-400/10"
+    );
 
+}
 
-                        <i
-                            class="fa-solid
-                                   fa-heart
-                                   text-sm">
-                        </i>
-
-
-                    </span>
-
-
-                    <div>
-
-
-                        <p
-                            class="text-xl
-                                   font-semibold
-                                   text-gray-900
-                                   dark:text-white
-                                   group-hover:text-amber-500
-                                   transition">
-
-                            Emotional
-
-                        </p>
-
-
-                        <span
-                            class="text-[10px]
-                                   uppercase
-                                   tracking-[2px]
-                                   text-gray-400">
-
-                            Intimate stories
-
-                        </span>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- ================================================= -->
-            <!-- MOOD 02 -->
-            <!-- ================================================= -->
-
-            <a
-                class="absolute
-                       top-28
-                       right-0
-                       sm:right-[5%]
-                       lg:right-[10%]
-                       group">
-
-
-                <div
-                    class="flex
-                           items-center
-                           gap-4
-                           flex-row-reverse">
-
-
-                    <span
-                        class="w-14
-                               h-14
-                               rounded-full
-                               bg-white
-                               dark:bg-[#181818]
-                               border
-                               border-gray-200
-                               dark:border-white/10
-                               flex
-                               items-center
-                               justify-center
-                               text-gray-700
-                               dark:text-gray-300
-                               group-hover:bg-amber-400
-                               group-hover:text-black
-                               group-hover:border-amber-400
-                               transition">
-
-
-                        <i
-                            class="fa-solid
-                                   fa-sun
-                                   text-sm">
-                        </i>
-
-
-                    </span>
-
-
-                    <div
-                        class="text-right">
-
-
-                        <p
-                            class="text-xl
-                                   font-semibold
-                                   text-gray-900
-                                   dark:text-white
-                                   group-hover:text-amber-500
-                                   transition">
-
-                            Bright
-
-                        </p>
-
-
-                        <span
-                            class="text-[10px]
-                                   uppercase
-                                   tracking-[2px]
-                                   text-gray-400">
-
-                            Light & natural
-
-                        </span>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- ================================================= -->
-            <!-- MOOD 03 -->
-            <!-- ================================================= -->
-
-            <a
-                
-                class="absolute
-                       bottom-24
-                       left-0
-                       sm:left-[5%]
-                       lg:left-[10%]
-                       group">
-
-
-                <div
-                    class="flex
-                           items-center
-                           gap-4">
-
-
-                    <span
-                        class="w-14
-                               h-14
-                               rounded-full
-                               bg-white
-                               dark:bg-[#181818]
-                               border
-                               border-gray-200
-                               dark:border-white/10
-                               flex
-                               items-center
-                               justify-center
-                               text-gray-700
-                               dark:text-gray-300
-                               group-hover:bg-amber-400
-                               group-hover:text-black
-                               group-hover:border-amber-400
-                               transition">
-
-
-                        <i
-                            class="fa-solid
-                                   fa-moon
-                                   text-sm">
-                        </i>
-
-
-                    </span>
-
-
-                    <div>
-
-
-                        <p
-                            class="text-xl
-                                   font-semibold
-                                   text-gray-900
-                                   dark:text-white
-                                   group-hover:text-amber-500
-                                   transition">
-
-                            Moody
-
-                        </p>
-
-
-                        <span
-                            class="text-[10px]
-                                   uppercase
-                                   tracking-[2px]
-                                   text-gray-400">
-
-                            Cinematic atmosphere
-
-                        </span>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- ================================================= -->
-            <!-- MOOD 04 -->
-            <!-- ================================================= -->
-
-            <a
-                
-                class="absolute
-                       bottom-0
-                       right-0
-                       sm:right-[5%]
-                       lg:right-[10%]
-                       group">
-
-
-                <div
-                    class="flex
-                           items-center
-                           gap-4
-                           flex-row-reverse">
-
-
-                    <span
-                        class="w-14
-                               h-14
-                               rounded-full
-                               bg-white
-                               dark:bg-[#181818]
-                               border
-                               border-gray-200
-                               dark:border-white/10
-                               flex
-                               items-center
-                               justify-center
-                               text-gray-700
-                               dark:text-gray-300
-                               group-hover:bg-amber-400
-                               group-hover:text-black
-                               group-hover:border-amber-400
-                               transition">
-
-
-                        <i
-                            class="fa-solid
-                                   fa-wand-magic-sparkles
-                                   text-sm">
-                        </i>
-
-
-                    </span>
-
-
-                    <div
-                        class="text-right">
-
-
-                        <p
-                            class="text-xl
-                                   font-semibold
-                                   text-gray-900
-                                   dark:text-white
-                                   group-hover:text-amber-500
-                                   transition">
-
-                            Artistic
-
-                        </p>
-
-
-                        <span
-                            class="text-[10px]
-                                   uppercase
-                                   tracking-[2px]
-                                   text-gray-400">
-
-                            Bold & experimental
-
-                        </span>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- ================================================= -->
-            <!-- CENTER ORBIT -->
-            <!-- ================================================= -->
-
-            <div
-                class="absolute
-                       left-1/2
-                       top-1/2
-                       -translate-x-1/2
-                       -translate-y-1/2
-                       w-[340px]
-                       h-[340px]
-                       sm:w-[480px]
-                       sm:h-[480px]
-                       lg:w-[590px]
-                       lg:h-[590px]
-                       rounded-full
-                       border
-                       border-gray-300/60
-                       dark:border-white/10
-                       pointer-events-none">
-
-
-                <span
-                    class="absolute
-                           top-1/2
-                           left-0
-                           -translate-x-1/2
-                           w-2
-                           h-2
-                           rounded-full
-                           bg-amber-400">
-                </span>
-
-
-                <span
-                    class="absolute
-                           top-0
-                           left-1/2
-                           -translate-x-1/2
-                           w-2
-                           h-2
-                           rounded-full
-                           bg-gray-400">
-                </span>
-
-
-                <span
-                    class="absolute
-                           bottom-0
-                           left-1/2
-                           -translate-x-1/2
-                           w-2
-                           h-2
-                           rounded-full
-                           bg-gray-400">
-                </span>
-
-
-                <span
-                    class="absolute
-                           top-1/2
-                           right-0
-                           translate-x-1/2
-                           w-2
-                           h-2
-                           rounded-full
-                           bg-gray-400">
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-
-        <!-- ================================================= -->
-        <!-- BOTTOM CTA -->
-        <!-- ================================================= -->
-
-        <div
-            class="mt-10
-                   flex
-                   flex-col
-                   sm:flex-row
-                   items-center
-                   justify-center
-                   gap-5">
-
-
-            <a
-                
-                class="inline-flex
-                       items-center
-                       gap-3
-                       px-7
-                       py-4
-                       rounded-full
-                       bg-gray-900
-                       dark:bg-white
-                       text-white
-                       dark:text-black
-                       text-sm
-                       font-semibold
-                       hover:bg-amber-400
-                       dark:hover:bg-amber-400
-                       transition">
-
-
-                Find your style
-
-
-                <i
-                    class="fa-solid
-                           fa-arrow-right
-                           text-xs">
-                </i>
-
-
-            </a>
-
-
-            <span
-                class="text-xs
-                       text-gray-400">
-
-                Explore 500+ creative profiles
-
-            </span>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
+</script>
 
 <!-- ====================================================== -->
 <!-- HOME 2 - RECENT WORK -->
