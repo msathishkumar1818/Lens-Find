@@ -981,6 +981,8 @@ testimonialDots.forEach((dot, index) => {
     const inPages = window.location.pathname.includes('/pages/');
     const pageRoot = inPages ? '' : 'pages/';
     const home = inPages ? '../index.html' : 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.body.classList.add('page-' + currentPage.replace('.html', '').replace(/[^a-z0-9-]/gi, '-'));
 
     const icon = document.createElement('link');
     icon.rel = 'icon';
@@ -1045,6 +1047,23 @@ testimonialDots.forEach((dot, index) => {
             if (!link.getAttribute('href')?.includes('index.html')) link.remove();
         });
     }
+})();
+
+/* A consistent, accessible return-to-top control for every page. */
+(function addBackToTop() {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'back-to-top';
+    button.setAttribute('aria-label', 'Back to top');
+    button.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(button);
+
+    function updateVisibility() {
+        button.classList.toggle('is-visible', window.scrollY > 360);
+    }
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    button.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    updateVisibility();
 })();
 
 
