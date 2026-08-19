@@ -1595,7 +1595,7 @@
                     </p>
 
                     <a
-                        href="#"
+                       
                         class="mt-4
                                inline-flex
                                items-center
@@ -1630,14 +1630,16 @@
 
 
 <!-- ========================================================= -->
-<!-- 03. PHOTOGRAPHY JOURNAL -->
+<!-- 03. PHOTOGRAPHY JOURNAL - NEW MAGAZINE LAYOUT -->
 <!-- ========================================================= -->
 
 <section
-    class="bg-white
+    class="relative
+           overflow-hidden
+           bg-white
            dark:bg-black
-           dark:text-white
            py-24">
+
 
     <div
         class="max-w-7xl
@@ -1647,13 +1649,19 @@
                lg:px-8">
 
 
+        <!-- ================= HEADER ================= -->
+
         <div
-            class="grid
-                   lg:grid-cols-12
-                   gap-10
+            class="flex
+                   flex-col
+                   lg:flex-row
+                   lg:items-end
+                   lg:justify-between
+                   gap-8
                    mb-14">
 
-            <div class="lg:col-span-5">
+
+            <div>
 
                 <p
                     class="text-xs
@@ -1666,23 +1674,25 @@
 
                 </p>
 
+
                 <h2
                     class="mt-4
                            text-4xl
                            sm:text-5xl
+                           lg:text-6xl
                            font-semibold
                            tracking-tight
                            text-gray-900
                            dark:text-white">
 
-                    Ideas for
+                    Stories behind
                     <span
                         class="font-serif
                                italic
                                font-normal
                                text-gray-400">
 
-                        better frames.
+                        the frame.
 
                     </span>
 
@@ -1690,59 +1700,178 @@
 
             </div>
 
-            <div class="lg:col-span-7 lg:flex lg:justify-end">
 
-                <p
-                    class="max-w-md
-                           text-black-500
+            <div>
+
+                <a
+                    href="journal.html"
+                    class="group
+                           inline-flex
+                           items-center
+                           gap-3
+                           text-sm
+                           font-semibold
+                           text-gray-900
                            dark:text-white
-                           leading-7">
+                           hover:text-amber-500
+                           transition">
 
-                    Practical ideas and creative perspectives
-                    to help you understand photography beyond
-                    the final image.
 
-                </p>
+                    View all stories
+
+
+                    <span
+                        class="flex
+                               h-9
+                               w-9
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-gray-300
+                               dark:border-white/20
+                               transition
+                               group-hover:border-amber-500
+                               group-hover:bg-amber-500
+                               group-hover:text-white">
+
+                        →
+
+                    </span>
+
+                </a>
 
             </div>
 
         </div>
 
 
-        <!-- Editorial List -->
+
+        <!-- ================================================= -->
+        <!-- MAIN JOURNAL AREA -->
+        <!-- ================================================= -->
 
         <div
-            class="border-t
-                   border-black/10
-                   dark:border-white/10">
+            class="grid
+                   lg:grid-cols-12
+                   gap-6">
 
 
-            <!-- Item 1 -->
+            <!-- ================================================= -->
+            <!-- FEATURED ARTICLE -->
+            <!-- ================================================= -->
 
             <article
                 class="group
-                       py-8
-                       border-b
-                       border-black/10
-                       dark:border-white/10
-                       grid
-                       md:grid-cols-12
-                       gap-6
-                       items-center">
+                       relative
+                       lg:col-span-7
+                       min-h-[520px]
+                       overflow-hidden
+                       rounded-3xl
+                       bg-gray-900
+                       dark:bg-gray-900">
 
-                <div class="md:col-span-2">
+
+                <!-- Decorative Background -->
+
+                <div
+                    class="absolute
+                           inset-0
+                           bg-gradient-to-br
+                           from-gray-800
+                           via-gray-900
+                           to-black
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+                </div>
+
+
+                <!-- Abstract Photography Shape -->
+
+                <div
+                    class="absolute
+                           left-10
+                           top-20
+                           h-56
+                           w-56
+                           rounded-full
+                           bg-amber-500/10
+                           blur-3xl">
+                </div>
+
+
+                <div
+                    class="absolute
+                           right-10
+                           bottom-20
+                           h-64
+                           w-64
+                           rounded-full
+                           bg-white/5
+                           blur-3xl">
+                </div>
+
+
+                <!-- Border -->
+
+                <div
+                    class="absolute
+                           inset-5
+                           rounded-2xl
+                           border
+                           border-white/10">
+                </div>
+
+
+                <!-- Top -->
+
+                <div
+                    class="absolute
+                           left-9
+                           right-9
+                           top-9
+                           flex
+                           items-center
+                           justify-between">
+
 
                     <span
-                        class="text-sm
-                               text-gray-400">
+                        class="rounded-full
+                               border
+                               border-white/20
+                               px-4
+                               py-2
+                               text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-white">
 
-                        01
+                        Featured story
+
+                    </span>
+
+
+                    <span
+                        class="text-xs
+                               text-white">
+
+                        01 / 03
 
                     </span>
 
                 </div>
 
-                <div class="md:col-span-7">
+
+
+                <!-- Content -->
+
+                <div
+                    class="absolute
+                           left-9
+                           right-9
+                           bottom-9">
+
 
                     <p
                         class="text-xs
@@ -1754,603 +1883,423 @@
 
                     </p>
 
-                    <h3
-                        class="mt-2
-                               text-2xl
-                               sm:text-3xl
-                               font-medium
-                               text-gray-900
-                               dark:text-white
-                               group-hover:text-amber-500
-                               transition">
 
-                        How natural light changes a portrait
+                    <h3
+                        class="mt-3
+                               max-w-2xl
+                               text-3xl
+                               sm:text-4xl
+                               lg:text-5xl
+                               font-semibold
+                               leading-tight
+                               text-white">
+
+                        How natural light
+                        changes a portrait.
 
                     </h3>
 
-                </div>
-
-                <div
-                    class="md:col-span-3
-                           md:text-right">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        5 min read
-
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- Item 2 -->
-
-            <article
-                class="group
-                       py-8
-                       border-b
-                       border-black/10
-                       dark:border-white/10
-                       grid
-                       md:grid-cols-12
-                       gap-6
-                       items-center">
-
-                <div class="md:col-span-2">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        02
-
-                    </span>
-
-                </div>
-
-                <div class="md:col-span-7">
 
                     <p
-                        class="text-xs
-                               uppercase
-                               tracking-widest
-                               text-amber-500">
+                        class="mt-4
+                               max-w-lg
+                               text-sm
+                               leading-7
+                               text-white">
 
-                        Perspective
+                        Understand how simple changes
+                        in natural light can completely
+                        transform the mood of a photograph.
 
                     </p>
 
-                    <h3
-                        class="mt-2
-                               text-2xl
-                               sm:text-3xl
-                               font-medium
-                               text-gray-900
-                               dark:text-white
-                               group-hover:text-amber-500
-                               transition">
-
-                        Finding beauty in everyday moments
-
-                    </h3>
-
-                </div>
-
-                <div
-                    class="md:col-span-3
-                           md:text-right">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        4 min read
-
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- Item 3 -->
-
-            <article
-                class="group
-                       py-8
-                       border-b
-                       border-black/10
-                       dark:border-white/10
-                       grid
-                       md:grid-cols-12
-                       gap-6
-                       items-center">
-
-                <div class="md:col-span-2">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        03
-
-                    </span>
-
-                </div>
-
-                <div class="md:col-span-7">
-
-                    <p
-                        class="text-xs
-                               uppercase
-                               tracking-widest
-                               text-amber-500">
-
-                        Business
-
-                    </p>
-
-                    <h3
-                        class="mt-2
-                               text-2xl
-                               sm:text-3xl
-                               font-medium
-                               text-gray-900
-                               dark:text-white
-                               group-hover:text-amber-500
-                               transition">
-
-                        Building a photography portfolio people remember
-
-                    </h3>
-
-                </div>
-
-                <div
-                    class="md:col-span-3
-                           md:text-right">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        7 min read
-
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <!-- Item 4 -->
-
-            <article
-                class="group
-                       py-8
-                       grid
-                       md:grid-cols-12
-                       gap-6
-                       items-center">
-
-                <div class="md:col-span-2">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        04
-
-                    </span>
-
-                </div>
-
-                <div class="md:col-span-7">
-
-                    <p
-                        class="text-xs
-                               uppercase
-                               tracking-widest
-                               text-amber-500">
-
-                        Inspiration
-
-                    </p>
-
-                    <h3
-                        class="mt-2
-                               text-2xl
-                               sm:text-3xl
-                               font-medium
-                               text-gray-900
-                               dark:text-white
-                               group-hover:text-amber-500
-                               transition">
-
-                        Why personal style matters behind the camera
-
-                    </h3>
-
-                </div>
-
-                <div
-                    class="md:col-span-3
-                           md:text-right">
-
-                    <span
-                        class="text-sm
-                               text-gray-400">
-
-                        6 min read
-
-                    </span>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- 04. CREATIVE TIPS -->
-<!-- ========================================================= -->
-
-<section
-    class="bg-[#f7f5f0]
-           dark:bg-black
-           dark:text-white
-           py-24">
-
-    <div
-        class="max-w-7xl
-               mx-auto
-               px-5
-               sm:px-6
-               lg:px-8">
-
-        <div
-            class="grid
-                   lg:grid-cols-2
-                   gap-14
-                   items-center">
-
-
-            <!-- Left -->
-
-            <div>
-
-                <p
-                    class="text-xs
-                           uppercase
-                           tracking-[0.25em]
-                           text-amber-500
-                           font-semibold">
-
-                    Quick Notes
-
-                </p>
-
-                <h2
-                    class="mt-5
-                           text-4xl
-                           sm:text-5xl
-                           font-semibold
-                           text-gray-900
-                           dark:text-white">
-
-                    A few things
-                    <br>
-
-                    <span
-                        class="font-serif
-                               italic
-                               font-normal
-                               text-gray-400">
-
-                        worth remembering.
-
-                    </span>
-
-                </h2>
-
-            </div>
-
-
-            <!-- Right -->
-
-            <div
-                class="space-y-0">
-
-
-                <div
-                    class="py-6
-                           border-t
-                           border-black/10
-                           dark:border-white/10">
 
                     <div
-                        class="flex
-                               gap-5">
+                        class="mt-6
+                               flex
+                               items-center
+                               gap-4">
+
 
                         <span
-                            class="text-amber-500
-                                   font-semibold">
+                            class="text-xs
+                                   text-white">
 
-                            01
+                            5 min read
 
                         </span>
 
-                        <p
-                            class="text-black-600
-                                   dark:text-white
-                                   leading-7">
 
-                            The best photograph starts with
-                            understanding the subject.
+                        <span
+                            class="h-px
+                                   w-8
+                                   bg-white/20">
+                        </span>
 
-                        </p>
+
+                        <span
+                            class="text-xs
+                                   text-white">
+
+                            Photography
+
+                        </span>
 
                     </div>
 
                 </div>
 
+            </article>
 
-                <div
-                    class="py-6
-                           border-t
-                           border-black/10
-                           dark:border-white/10">
+
+
+            <!-- ================================================= -->
+            <!-- SIDE ARTICLES -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-5
+                       grid
+                       gap-6">
+
+
+                <!-- ================= ARTICLE 02 ================= -->
+
+                <article
+                    class="group
+                           relative
+                           overflow-hidden
+                           rounded-3xl
+                           border
+                           border-gray-200
+                           bg-gray-50
+                           p-8
+                           dark:border-white/10
+                           dark:bg-gray-900
+                           transition
+                           hover:border-amber-500/40">
+
 
                     <div
                         class="flex
-                               gap-5">
+                               items-start
+                               justify-between">
+
 
                         <span
-                            class="text-amber-500
-                                   font-semibold">
+                            class="text-xs
+                                   uppercase
+                                   tracking-widest
+                                   text-amber-500">
+
+                            Perspective
+
+                        </span>
+
+
+                        <span
+                            class="text-xs
+                                   text-gray-400">
 
                             02
 
                         </span>
 
-                        <p
-                            class="text-black-600
-                                   dark:text-white
-                                   leading-7">
+                    </div>
 
-                            Light matters more than expensive
-                            equipment.
+
+                    <div
+                        class="mt-16">
+
+
+                        <h3
+                            class="text-2xl
+                                   sm:text-3xl
+                                   font-semibold
+                                   leading-tight
+                                   text-gray-900
+                                   dark:text-white
+                                   group-hover:text-amber-500
+                                   transition">
+
+                            Finding beauty in
+                            everyday moments.
+
+                        </h3>
+
+
+                        <p
+                            class="mt-4
+                                   text-sm
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
+
+                            Sometimes the strongest
+                            photograph is hiding in
+                            the most ordinary moment.
 
                         </p>
 
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                4 min read
+
+                            </span>
+
+
+                            <span
+                                class="flex
+                                       h-9
+                                       w-9
+                                       items-center
+                                       justify-center
+                                       rounded-full
+                                       bg-gray-900
+                                       text-white
+                                       dark:bg-white
+                                       dark:text-black
+                                       transition
+                                       group-hover:bg-amber-500
+                                       group-hover:text-white">
+
+                                ↗
+
+                            </span>
+
+                        </div>
+
                     </div>
 
-                </div>
+                </article>
 
 
-                <div
-                    class="py-6
-                           border-t
-                           border-black/10
-                           dark:border-white/10">
+
+                <!-- ================= ARTICLE 03 ================= -->
+
+                <article
+                    class="group
+                           relative
+                           overflow-hidden
+                           rounded-3xl
+                           border
+                           border-gray-200
+                           bg-white
+                           p-8
+                           dark:border-white/10
+                           dark:bg-gray-900
+                           transition
+                           hover:border-amber-500/40">
+
 
                     <div
                         class="flex
-                               gap-5">
+                               items-start
+                               justify-between">
+
 
                         <span
-                            class="text-amber-500
-                                   font-semibold">
+                            class="text-xs
+                                   uppercase
+                                   tracking-widest
+                                   text-amber-500">
+
+                            Business
+
+                        </span>
+
+
+                        <span
+                            class="text-xs
+                                   text-gray-400">
 
                             03
 
                         </span>
 
-                        <p
-                            class="text-black-600
-                                   dark:text-white
-                                   leading-7">
-
-                            Authentic moments are often more
-                            powerful than perfect poses.
-
-                        </p>
-
                     </div>
 
-                </div>
-
-
-                <div
-                    class="py-6
-                           border-y
-                           border-black/10
-                           dark:border-white/10">
 
                     <div
-                        class="flex
-                               gap-5">
+                        class="mt-16">
 
-                        <span
-                            class="text-amber-500
-                                   font-semibold">
 
-                            04
+                        <h3
+                            class="text-2xl
+                                   sm:text-3xl
+                                   font-semibold
+                                   leading-tight
+                                   text-gray-900
+                                   dark:text-white
+                                   group-hover:text-amber-500
+                                   transition">
 
-                        </span>
+                            Building a photography
+                            portfolio people remember.
+
+                        </h3>
+
 
                         <p
-                            class="text-black-600
-                                   dark:text-white
-                                   leading-7">
+                            class="mt-4
+                                   text-sm
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
 
-                            Your unique perspective is what
-                            makes your work memorable.
+                            A strong portfolio is more
+                            than beautiful photographs.
+                            It needs a point of view.
 
                         </p>
 
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-xs
+                                       text-gray-400">
+
+                                7 min read
+
+                            </span>
+
+
+                            <span
+                                class="flex
+                                       h-9
+                                       w-9
+                                       items-center
+                                       justify-center
+                                       rounded-full
+                                       bg-gray-900
+                                       text-white
+                                       dark:bg-white
+                                       dark:text-black
+                                       transition
+                                       group-hover:bg-amber-500
+                                       group-hover:text-white">
+
+                                ↗
+
+                            </span>
+
+                        </div>
+
                     </div>
 
-                </div>
+                </article>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
 
 
-
-<!-- ========================================================= -->
-<!-- 05. QUOTE -->
-<!-- ========================================================= -->
-
-<section
-    class="bg-white
-           dark:bg-black
-           dark:text-white
-           py-28">
-
-    <div
-        class="max-w-4xl
-               mx-auto
-               px-5
-               text-center">
-
-        <i
-            class="fa-solid
-                   fa-quote-left
-                   text-amber-500
-                   text-2xl">
-        </i>
-
-        <blockquote
-            class="mt-7
-                   text-3xl
-                   sm:text-4xl
-                   lg:text-5xl
-                   leading-tight
-                   font-serif
-                   italic
-                   text-gray-900
-                   dark:text-white">
-
-            “Photography is not just about
-            what you see. It is about
-            what you choose to notice.”
-
-        </blockquote>
-
-        <p
-            class="mt-7
-                   text-xs
-                   uppercase
-                   tracking-[0.25em]
-                   text-gray-400">
-
-            The LensFind Perspective
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- ========================================================= -->
-<!-- 06. FINAL CTA -->
-<!-- ========================================================= -->
-
-<section
-    class="bg-[#f7f5f0]
-           dark:bg-black
-           dark:text-white
-           text-black
-           py-24">
-
-    <div
-        class="max-w-7xl
-               mx-auto
-               px-5
-               sm:px-6
-               lg:px-8">
+        <!-- ================================================= -->
+        <!-- BOTTOM TOPICS -->
+        <!-- ================================================= -->
 
         <div
-            class="flex
-                   flex-col
-                   lg:flex-row
-                   lg:items-end
-                   lg:justify-between
-                   gap-10">
+            class="mt-10
+                   flex
+                   flex-wrap
+                   items-center
+                   gap-x-8
+                   gap-y-4
+                   border-t
+                   border-black/10
+                   dark:border-white/10
+                   pt-6">
 
-            <div>
 
-                <p
-                    class="text-xs
-                           uppercase
-                           tracking-[0.3em]
-                           text-amber-500">
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[3px]
+                       text-gray-400">
 
-                    Ready to create?
+                Explore topics
 
-                </p>
-
-                <h2
-                    class="mt-5
-                           text-4xl
-                           sm:text-5xl
-                           lg:text-6xl
-                           font-semibold
-                           leading-tight">
-
-                    Find someone who
-                    <br>
-
-                    sees it like you do.
-
-                </h2>
-
-            </div>
+            </span>
 
 
             <a
-                href="photographers.html"
-                class="inline-flex
-                       items-center
-                       justify-center
-                       gap-3
-                       px-7
-                       py-4
-                       rounded-full
-                       bg-white
-                       text-black
-                       text-sm
-                       font-semibold
-                       hover:bg-amber-500
-                       hover:text-white
-                       transition
-                       w-fit">
+                href="journal.html?category=technique"
+                class="text-xs
+                       text-gray-500
+                       dark:text-gray-400
+                       hover:text-amber-500
+                       transition">
 
-                Browse Photographers
+                Technique
 
-                <i
-                    class="fa-solid
-                           fa-arrow-right
-                           text-xs">
-                </i>
+            </a>
+
+
+            <a
+                href="journal.html?category=perspective"
+                class="text-xs
+                       text-gray-500
+                       dark:text-gray-400
+                       hover:text-amber-500
+                       transition">
+
+                Perspective
+
+            </a>
+
+
+            <a
+                href="journal.html?category=business"
+                class="text-xs
+                       text-gray-500
+                       dark:text-gray-400
+                       hover:text-amber-500
+                       transition">
+
+                Business
+
+            </a>
+
+
+            <a
+                href="journal.html?category=inspiration"
+                class="text-xs
+                       text-gray-500
+                       dark:text-gray-400
+                       hover:text-amber-500
+                       transition">
+
+                Inspiration
+
+            </a>
+
+
+            <a
+                href="journal.html?category=gear"
+                class="text-xs
+                       text-gray-500
+                       dark:text-gray-400
+                       hover:text-amber-500
+                       transition">
+
+                Gear
 
             </a>
 
@@ -2359,6 +2308,1218 @@
     </div>
 
 </section>
+
+<!-- ========================================================= -->
+<!-- 04. CREATIVE TIPS - VISUAL QUOTE STRIP -->
+<!-- ========================================================= -->
+
+<section
+    class="bg-[#f7f5f0]
+           dark:bg-black
+           py-24
+           lg:py-28
+           overflow-hidden">
+
+
+    <div
+        class="max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================= TOP META ================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   border-b
+                   border-black/10
+                   dark:border-white/10
+                   pb-5">
+
+
+            <p
+                class="text-xs
+                       uppercase
+                       tracking-[0.25em]
+                       font-semibold
+                       text-amber-500">
+
+                Creative Notes
+
+            </p>
+
+
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[3px]
+                       text-gray-400">
+
+                04 / Ideas
+
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= MAIN QUOTE ================= -->
+
+        <div
+            class="relative
+                   py-20
+                   lg:py-28">
+
+
+            <!-- Decorative Quote -->
+
+            <span
+                class="absolute
+                       left-0
+                       top-10
+                       text-[120px]
+                       sm:text-[170px]
+                       font-serif
+                       leading-none
+                       text-gray-900/[0.04]
+                       dark:text-white/[0.04]
+                       select-none">
+
+                “
+
+            </span>
+
+
+            <div
+                class="relative
+                       mx-auto
+                       max-w-5xl
+                       text-center">
+
+
+                <p
+                    class="text-[10px]
+                           uppercase
+                           tracking-[4px]
+                           text-gray-400">
+
+                    A photographer's reminder
+
+                </p>
+
+<h2
+    class="mt-8
+           text-4xl
+           sm:text-5xl
+           lg:text-4xl
+           font-semibold
+           leading-[1.3]
+           tracking-tight
+           text-gray-900
+           dark:text-white">
+
+    Don't chase the
+
+    <span
+        class="font-serif
+               italic
+               font-normal
+               text-amber-500">
+
+        perfect
+
+    </span>
+
+    photograph.
+
+    <br class="hidden sm:block">
+
+    Chase the
+
+    <span
+        class="font-serif
+               italic
+               font-normal
+               text-gray-400">
+
+        honest
+
+    </span>
+
+    one.
+
+</h2>
+
+
+                <p
+                    class="mx-auto
+                           mt-8
+                           max-w-2xl
+                           text-sm
+                           leading-7
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    The strongest images often happen
+                    when the photographer stops forcing
+                    the moment and starts paying attention.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- IDEA TABS -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   md:grid-cols-3
+                   border-y
+                   border-black/10
+                   dark:border-white/10">
+
+
+            <!-- IDEA 01 -->
+
+            <div
+                class="group
+                       px-6
+                       sm:px-8
+                       py-8
+                       md:border-r
+                       border-black/10
+                       dark:border-white/10
+                       hover:bg-white
+                       dark:hover:bg-white/5
+                       transition">
+
+
+                <div
+                    class="flex
+                           items-center
+                           justify-between">
+
+
+                    <span
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-amber-500">
+
+                        Look
+
+                    </span>
+
+
+                    <i
+                        class="fa-solid
+                               fa-eye
+                               text-xs
+                               text-gray-300
+                               dark:text-white/20
+                               group-hover:text-amber-500
+                               transition">
+                    </i>
+
+                </div>
+
+
+                <h3
+                    class="mt-5
+                           text-xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Observe before you shoot.
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Notice expressions, shadows,
+                    movement and small details.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IDEA 02 -->
+
+            <div
+                class="group
+                       px-6
+                       sm:px-8
+                       py-8
+                       md:border-r
+                       border-black/10
+                       dark:border-white/10
+                       hover:bg-white
+                       dark:hover:bg-white/5
+                       transition">
+
+
+                <div
+                    class="flex
+                           items-center
+                           justify-between">
+
+
+                    <span
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-amber-500">
+
+                        Wait
+
+                    </span>
+
+
+                    <i
+                        class="fa-regular
+                               fa-clock
+                               text-xs
+                               text-gray-300
+                               dark:text-white/20
+                               group-hover:text-amber-500
+                               transition">
+                    </i>
+
+                </div>
+
+
+                <h3
+                    class="mt-5
+                           text-xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Give the moment space.
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Sometimes the best frame appears
+                    one second after you expect it.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IDEA 03 -->
+
+            <div
+                class="group
+                       px-6
+                       sm:px-8
+                       py-8
+                       hover:bg-white
+                       dark:hover:bg-white/5
+                       transition">
+
+
+                <div
+                    class="flex
+                           items-center
+                           justify-between">
+
+
+                    <span
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-amber-500">
+
+                        Feel
+
+                    </span>
+
+
+                    <i
+                        class="fa-solid
+                               fa-heart
+                               text-xs
+                               text-gray-300
+                               dark:text-white/20
+                               group-hover:text-amber-500
+                               transition">
+                    </i>
+
+                </div>
+
+
+                <h3
+                    class="mt-5
+                           text-xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Capture what matters.
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Technical perfection means less
+                    when the photograph has no feeling.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BOTTOM LINE ================= -->
+
+        <div
+            class="mt-8
+                   flex
+                   flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4">
+
+
+            <p
+                class="text-xs
+                       text-gray-400">
+
+                Photography is observation,
+                patience and perspective.
+
+            </p>
+
+
+            <span
+                class="inline-flex
+                       items-center
+                       gap-2
+                       text-[10px]
+                       uppercase
+                       tracking-[3px]
+                       text-gray-400">
+
+
+                Keep creating
+
+
+                <span
+                    class="text-amber-500">
+
+                    →
+
+                </span>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- 05. QUOTE - EDITORIAL STATEMENT -->
+<!-- ========================================================= -->
+
+<section
+    class="relative
+           overflow-hidden
+           bg-white
+           dark:bg-black
+           py-24
+           lg:py-32">
+
+
+    <div
+        class="max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================= TOP LINE ================= -->
+
+        <div
+            class="flex
+                   items-center
+                   gap-4">
+
+
+            <span
+                class="h-px
+                       w-12
+                       bg-amber-500">
+            </span>
+
+
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[4px]
+                       text-gray-400">
+
+                The LensFind Perspective
+
+            </span>
+
+        </div>
+
+
+
+        <!-- ================= MAIN AREA ================= -->
+
+        <div
+            class="mt-14
+                   grid
+                   lg:grid-cols-12
+                   gap-10
+                   lg:gap-16
+                   items-start">
+
+
+            <!-- ================= LEFT LABEL ================= -->
+
+            <div
+                class="lg:col-span-2">
+
+
+                <span
+                    class="writing-mode-vertical
+                           text-[10px]
+                           uppercase
+                           tracking-[4px]
+                           text-gray-400">
+
+                    A different way to see
+
+                </span>
+
+
+                <div
+                    class="mt-6
+                           hidden
+                           lg:block
+                           h-24
+                           w-px
+                           bg-gray-200
+                           dark:bg-white/10">
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= QUOTE ================= -->
+
+            <div
+                class="lg:col-span-7
+                       relative">
+
+
+                <!-- Large Quote Mark -->
+
+                <span
+                    class="absolute
+                           -left-3
+                           -top-14
+                           text-[150px]
+                           sm:text-[190px]
+                           font-serif
+                           leading-none
+                           text-amber-500/[0.08]
+                           select-none">
+
+                    “
+
+                </span>
+
+
+                <blockquote
+                    class="relative
+                           text-4xl
+                           sm:text-5xl
+                           lg:text-5xl
+                           leading-[1.18]
+                           font-serif
+                           italic
+                           text-gray-900
+                           dark:text-white">
+
+
+                    Photography is not just
+                    about what you see.
+
+
+                    <span
+                        class="not-italic
+                               text-gray-400">
+
+                        It is about what you
+                        choose to notice.
+
+                    </span>
+
+
+                </blockquote>
+
+
+                <!-- Author -->
+
+                <div
+                    class="mt-10
+                           flex
+                           items-center
+                           gap-4">
+
+
+                    <span
+                        class="h-px
+                               w-10
+                               bg-amber-500">
+                    </span>
+
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               font-semibold
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        LensFind
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= RIGHT NOTE ================= -->
+
+            <div
+                class="lg:col-span-3
+                       lg:pt-8">
+
+
+                <div
+                    class="border-l
+                           border-gray-200
+                           dark:border-white/10
+                           pl-6">
+
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-amber-500">
+
+                        Perspective
+
+                    </p>
+
+
+                    <p
+                        class="mt-4
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Every photographer sees
+                        the world differently.
+                        That difference is where
+                        personal style begins.
+
+                    </p>
+
+
+                    <div
+                        class="mt-8
+                               flex
+                               items-center
+                               gap-3">
+
+
+                        <span
+                            class="h-2
+                                   w-2
+                                   rounded-full
+                                   bg-amber-500">
+                        </span>
+
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-gray-400">
+
+                            See differently
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BOTTOM STATEMENT ================= -->
+
+        <div
+            class="mt-20
+                   border-t
+                   border-gray-200
+                   dark:border-white/10
+                   pt-6
+                   flex
+                   flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4">
+
+
+            <p
+                class="text-xs
+                       text-gray-400">
+
+                Every frame begins with attention.
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-3">
+
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[3px]
+                           text-gray-400">
+
+                    05
+
+                </span>
+
+
+                <span
+                    class="h-px
+                           w-8
+                           bg-gray-300
+                           dark:bg-white/20">
+                </span>
+
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[3px]
+                           text-gray-400">
+
+                    Quote
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================================= -->
+<!-- 06. FINAL CTA - PROJECT START BAR -->
+<!-- ========================================================= -->
+
+<section
+    class="bg-[#f7f5f0]
+           dark:bg-black
+           py-20
+           lg:py-24">
+
+
+    <div
+        class="max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================================================= -->
+        <!-- CTA FRAME -->
+        <!-- ================================================= -->
+
+        <div
+            class="relative
+                   overflow-hidden
+                   rounded-[28px]
+                   border
+                   border-gray-200
+                   bg-white
+                   dark:border-white/10
+                   dark:bg-gray-900">
+
+
+            <!-- Top Strip -->
+
+            <div
+                class="flex
+                       items-center
+                       justify-between
+                       border-b
+                       border-gray-200
+                       dark:border-white/10
+                       px-6
+                       sm:px-8
+                       py-4">
+
+
+                <span
+                    class="text-[10px]
+                           uppercase
+                           tracking-[4px]
+                           text-amber-500
+                           font-semibold">
+
+                    Start something memorable
+
+                </span>
+
+
+                <span
+                    class="text-[10px]
+                           uppercase
+                           tracking-[3px]
+                           text-gray-400">
+
+                    LensFind / 06
+
+                </span>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- MAIN CONTENT -->
+            <!-- ================================================= -->
+
+            <div
+                class="grid
+                       lg:grid-cols-12">
+
+
+                <!-- ================= LEFT ================= -->
+
+                <div
+                    class="lg:col-span-4
+                           border-b
+                           lg:border-b-0
+                           lg:border-r
+                           border-gray-200
+                           dark:border-white/10
+                           p-7
+                           sm:p-10">
+
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Your process
+
+                    </p>
+
+
+                    <div
+                        class="mt-8
+                               space-y-5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-4">
+
+
+                            <span
+                                class="flex
+                                       h-8
+                                       w-8
+                                       items-center
+                                       justify-center
+                                       rounded-full
+                                       bg-amber-500
+                                       text-xs
+                                       font-bold
+                                       text-black">
+
+                                01
+
+                            </span>
+
+
+                            <span
+                                class="text-sm
+                                       text-gray-700
+                                       dark:text-gray-300">
+
+                                Share your idea
+
+                            </span>
+
+                        </div>
+
+
+
+                        <div
+                            class="ml-4
+                                   h-7
+                                   border-l
+                                   border-dashed
+                                   border-gray-300
+                                   dark:border-white/20">
+                        </div>
+
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-4">
+
+
+                            <span
+                                class="flex
+                                       h-8
+                                       w-8
+                                       items-center
+                                       justify-center
+                                       rounded-full
+                                       border
+                                       border-gray-300
+                                       text-xs
+                                       text-gray-500
+                                       dark:border-white/20
+                                       dark:text-gray-400">
+
+                                02
+
+                            </span>
+
+
+                            <span
+                                class="text-sm
+                                       text-gray-700
+                                       dark:text-gray-300">
+
+                                Find your match
+
+                            </span>
+
+                        </div>
+
+
+
+                        <div
+                            class="ml-4
+                                   h-7
+                                   border-l
+                                   border-dashed
+                                   border-gray-300
+                                   dark:border-white/20">
+                        </div>
+
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-4">
+
+
+                            <span
+                                class="flex
+                                       h-8
+                                       w-8
+                                       items-center
+                                       justify-center
+                                       rounded-full
+                                       border
+                                       border-gray-300
+                                       text-xs
+                                       text-gray-500
+                                       dark:border-white/20
+                                       dark:text-gray-400">
+
+                                03
+
+                            </span>
+
+
+                            <span
+                                class="text-sm
+                                       text-gray-700
+                                       dark:text-gray-300">
+
+                                Make it happen
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= CENTER ================= -->
+
+                <div
+                    class="lg:col-span-6
+                           p-8
+                           sm:p-10
+                           lg:p-14">
+
+
+                    <p
+                        class="text-xs
+                               uppercase
+                               tracking-[0.25em]
+                               text-amber-500
+                               font-semibold">
+
+                        Ready to begin?
+
+                    </p>
+
+
+                    <h2
+                        class="mt-5
+                               text-4xl
+                               sm:text-5xl
+                               lg:text-6xl
+                               font-semibold
+                               leading-[1.1]
+                               tracking-tight
+                               text-gray-900
+                               dark:text-white">
+
+                        Turn your idea
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-gray-400">
+
+                            into a frame.
+
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="mt-6
+                               max-w-lg
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Whether it is a wedding, portrait,
+                        campaign or something completely
+                        personal, start with the photographer
+                        who understands your vision.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= RIGHT ACTION ================= -->
+
+                <div
+                    class="lg:col-span-2
+                           flex
+                           items-stretch">
+
+
+                    <a
+                        href="photographers.html"
+                        class="group
+                               flex
+                               min-h-[180px]
+                               lg:min-h-full
+                               w-full
+                               flex-col
+                               items-center
+                               justify-center
+                               gap-5
+                               bg-gray-900
+                               text-white
+                               dark:bg-black
+                               lg:border-l
+                               lg:border-white/10
+                               transition
+                               hover:bg-amber-500
+                               hover:text-black">
+
+
+                        <span
+                            class="text-[10px]
+                                   uppercase
+                                   tracking-[3px]">
+
+                            Explore
+
+                        </span>
+
+
+                        <span
+                            class="flex
+                                   h-12
+                                   w-12
+                                   items-center
+                                   justify-center
+                                   rounded-full
+                                   border
+                                   border-white/20
+                                   transition
+                                   group-hover:border-black/20">
+
+
+                            <i
+                                class="fa-solid
+                                       fa-arrow-right
+                                       text-sm
+                                       transition
+                                       group-hover:translate-x-1">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-xs
+                                   font-semibold">
+
+                            Photographers
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- BOTTOM MESSAGE -->
+            <!-- ================================================= -->
+
+            <div
+                class="border-t
+                       border-gray-200
+                       dark:border-white/10
+                       px-6
+                       sm:px-8
+                       py-4
+                       flex
+                       flex-col
+                       sm:flex-row
+                       sm:items-center
+                       sm:justify-between
+                       gap-3">
+
+
+                <span
+                    class="text-[10px]
+                           uppercase
+                           tracking-[2px]
+                           text-gray-400">
+
+                    Your story. Your vision. Your photographer.
+
+                </span>
+
+
+                <span
+                    class="text-amber-500
+                           text-lg">
+
+                    ✦
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>  
   
   
   
@@ -2369,18 +3530,578 @@
   
   
   
+  <!-- ========================================================= -->
+<!-- CREATIVE BRIEF - STUDIO BOARD -->
+<!-- ========================================================= -->
+
+<section
+    class="relative
+           overflow-hidden
+           bg-gray-50
+           dark:bg-black
+           py-24
+           lg:py-28">
+
+
+    <div
+        class="mx-auto
+               max-w-7xl
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================= TOP LABEL ================= -->
+
+        <div
+            class="flex
+                   items-center
+                   gap-4
+                   mb-12">
+
+
+            <span
+                class="h-px
+                       w-10
+                       bg-amber-500">
+            </span>
+
+
+            <p
+                class="text-[10px]
+                       font-semibold
+                       uppercase
+                       tracking-[4px]
+                       text-amber-500">
+
+                Build the brief
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- CREATIVE BOARD -->
+        <!-- ================================================= -->
+
+        <div
+            class="relative
+                   overflow-hidden
+                   rounded-[30px]
+                   border
+                   border-gray-200
+                   bg-white
+                   dark:border-white/10
+                   dark:bg-gray-900">
+
+
+            <!-- Background Grid -->
+
+            <div
+                class="absolute
+                       inset-0
+                       opacity-40
+                       dark:opacity-20"
+                style="
+                    background-image:
+                    linear-gradient(to right, rgba(0,0,0,.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,.05) 1px, transparent 1px);
+                    background-size: 50px 50px;
+                ">
+            </div>
+
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <div
+                class="relative
+                       p-7
+                       sm:p-10
+                       lg:p-14">
+
+
+                <!-- Header -->
+
+                <div
+                    class="flex
+                           flex-col
+                           sm:flex-row
+                           sm:items-start
+                           sm:justify-between
+                           gap-6">
+
+
+                    <div>
+
+
+                        <span
+                            class="inline-flex
+                                   items-center
+                                   gap-2
+                                   text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-gray-400">
+
+
+                            <span
+                                class="h-1.5
+                                       w-1.5
+                                       rounded-full
+                                       bg-amber-500">
+                            </span>
+
+
+                            Creative workspace
+
+                        </span>
+
+
+                        <h2
+                            class="mt-5
+                                   max-w-3xl
+                                   text-4xl
+                                   sm:text-5xl
+                                   lg:text-6xl
+                                   font-semibold
+                                   leading-[1.08]
+                                   tracking-tight
+                                   text-gray-900
+                                   dark:text-white">
+
+                            Give your photographer
+                            <span
+                                class="font-serif
+                                       italic
+                                       font-normal
+                                       text-gray-400">
+
+                                something to see.
+
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        class="text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Creative brief / 01
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- BRIEF ELEMENTS -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-16
+                           grid
+                           sm:grid-cols-2
+                           lg:grid-cols-4
+                           border-t
+                           border-gray-200
+                           dark:border-white/10">
+
+
+                    <!-- Mood -->
+
+                    <div
+                        class="group
+                               border-b
+                               sm:border-r
+                               lg:border-b-0
+                               border-gray-200
+                               dark:border-white/10
+                               p-6
+                               lg:p-7
+                               transition
+                               hover:bg-gray-50
+                               dark:hover:bg-white/5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[3px]
+                                       text-amber-500">
+
+                                Mood
+
+                            </span>
+
+
+                            <i
+                                class="fa-solid
+                                       fa-circle-half-stroke
+                                       text-xs
+                                       text-gray-300
+                                       dark:text-white/20
+                                       group-hover:text-amber-500">
+                            </i>
+
+                        </div>
+
+
+                        <h3
+                            class="mt-8
+                                   text-lg
+                                   font-semibold
+                                   text-gray-900
+                                   dark:text-white">
+
+                            How should it feel?
+
+                        </h3>
+
+
+                        <p
+                            class="mt-2
+                                   text-xs
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
+
+                            Warm · Editorial · Bold
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Location -->
+
+                    <div
+                        class="group
+                               border-b
+                               lg:border-b-0
+                               lg:border-r
+                               border-gray-200
+                               dark:border-white/10
+                               p-6
+                               lg:p-7
+                               transition
+                               hover:bg-gray-50
+                               dark:hover:bg-white/5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[3px]
+                                       text-amber-500">
+
+                                Place
+
+                            </span>
+
+
+                            <i
+                                class="fa-solid
+                                       fa-location-dot
+                                       text-xs
+                                       text-gray-300
+                                       dark:text-white/20
+                                       group-hover:text-amber-500">
+                            </i>
+
+                        </div>
+
+
+                        <h3
+                            class="mt-8
+                                   text-lg
+                                   font-semibold
+                                   text-gray-900
+                                   dark:text-white">
+
+                            Where will it happen?
+
+                        </h3>
+
+
+                        <p
+                            class="mt-2
+                                   text-xs
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
+
+                            Studio · Outdoors · City
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Story -->
+
+                    <div
+                        class="group
+                               border-b
+                               sm:border-r
+                               lg:border-b-0
+                               border-gray-200
+                               dark:border-white/10
+                               p-6
+                               lg:p-7
+                               transition
+                               hover:bg-gray-50
+                               dark:hover:bg-white/5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[3px]
+                                       text-amber-500">
+
+                                Story
+
+                            </span>
+
+
+                            <i
+                                class="fa-regular
+                                       fa-comment
+                                       text-xs
+                                       text-gray-300
+                                       dark:text-white/20
+                                       group-hover:text-amber-500">
+                            </i>
+
+                        </div>
+
+
+                        <h3
+                            class="mt-8
+                                   text-lg
+                                   font-semibold
+                                   text-gray-900
+                                   dark:text-white">
+
+                            What matters most?
+
+                        </h3>
+
+
+                        <p
+                            class="mt-2
+                                   text-xs
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
+
+                            People · Product · Moment
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- References -->
+
+                    <div
+                        class="group
+                               p-6
+                               lg:p-7
+                               transition
+                               hover:bg-gray-50
+                               dark:hover:bg-white/5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   justify-between">
+
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[3px]
+                                       text-amber-500">
+
+                                References
+
+                            </span>
+
+
+                            <i
+                                class="fa-regular
+                                       fa-image
+                                       text-xs
+                                       text-gray-300
+                                       dark:text-white/20
+                                       group-hover:text-amber-500">
+                            </i>
+
+                        </div>
+
+
+                        <h3
+                            class="mt-8
+                                   text-lg
+                                   font-semibold
+                                   text-gray-900
+                                   dark:text-white">
+
+                            What inspires you?
+
+                        </h3>
+
+
+                        <p
+                            class="mt-2
+                                   text-xs
+                                   leading-6
+                                   text-gray-500
+                                   dark:text-gray-400">
+
+                            Save · Share · Refine
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- BOTTOM STATEMENT -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-8
+                           flex
+                           flex-col
+                           md:flex-row
+                           md:items-center
+                           md:justify-between
+                           gap-5">
+
+
+                    <p
+                        class="max-w-xl
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        A clear creative direction helps
+                        the right photographer understand
+                        not only what you want to capture,
+                        but why it matters.
+
+                    </p>
+
+
+                    <div
+                        class="flex
+                               items-center
+                               gap-3
+                               shrink-0">
+
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-gray-400">
+
+                            Idea
+
+                        </span>
+
+
+                        <span
+                            class="h-px
+                                   w-8
+                                   bg-gray-300
+                                   dark:bg-white/20">
+                        </span>
+
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-gray-400">
+
+                            Direction
+
+                        </span>
+
+
+                        <span
+                            class="h-px
+                                   w-8
+                                   bg-amber-500">
+                        </span>
+
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-gray-400">
+
+                            Shoot
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
   
   
   
   
   
   
-  
-  
-  
-    <section class="bg-gray-50 py-20 dark:bg-[#111827]">
-      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8"><div class="grid gap-8 md:grid-cols-2 md:items-center"><div><p class="text-xs font-bold uppercase tracking-[.2em] text-amber-500">Make it yours</p><h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white">Turn inspiration into a shoot brief.</h2><p class="mt-4 leading-7 text-gray-600 dark:text-gray-300">Choose a mood, collect a few references, and share the details that matter most with your photographer.</p></div><div class="grid grid-cols-3 gap-3 text-center"><div class="rounded-2xl bg-white p-5 text-sm font-semibold text-gray-900 shadow-sm dark:bg-white/5 dark:text-white">1<br><span class="text-xs font-normal text-gray-500 dark:text-gray-300">Collect</span></div><div class="rounded-2xl bg-white p-5 text-sm font-semibold text-gray-900 shadow-sm dark:bg-white/5 dark:text-white">2<br><span class="text-xs font-normal text-gray-500 dark:text-gray-300">Connect</span></div><div class="rounded-2xl bg-white p-5 text-sm font-semibold text-gray-900 shadow-sm dark:bg-white/5 dark:text-white">3<br><span class="text-xs font-normal text-gray-500 dark:text-gray-300">Create</span></div></div></div></div>
-    </section>
+    
   </main>
 
 
@@ -2399,613 +4120,107 @@
 
 
 
-  <footer
-    class="relative
-           bg-[#0b0b0b]
-           text-white
-           overflow-hidden">
+ 
+<!-- ========================================================= -->
+<!-- LENSFIND FOOTER -->
+<!-- ========================================================= -->
+
+<footer
+    class="bg-[#111111]
+           dark:bg-black
+           text-white">
 
 
-    <!-- ================================================= -->
-    <!-- LARGE BACKGROUND TEXT -->
-    <!-- ================================================= -->
+   
 
-    <div
-        class="absolute
-               bottom-[-35px]
-               left-1/2
-               -translate-x-1/2
-               whitespace-nowrap
-               text-[20vw]
-               font-black
-               tracking-[-12px]
-               text-white/[0.025]
-               pointer-events-none
-               select-none">
-
-        LENSFIND
-
-    </div>
-
+    <!-- ===================================================== -->
+    <!-- MAIN FOOTER -->
+    <!-- ===================================================== -->
 
     <div
-        class="relative
-               z-10
-               max-w-7xl
+        class="max-w-7xl
                mx-auto
                px-5
                sm:px-6
-               lg:px-8">
-
-
-        <!-- ================================================= -->
-        <!-- TOP FOOTER CTA -->
-        <!-- ================================================= -->
+               lg:px-8
+               py-14">
 
         <div
-            class="py-20
-                   lg:py-24
-                   border-b
-                   border-white/10">
+            class="grid
+                   sm:grid-cols-2
+                   lg:grid-cols-12
+                   gap-12">
 
+
+            <!-- ================================================= -->
+            <!-- BRAND -->
+            <!-- ================================================= -->
 
             <div
-                class="grid
-                       lg:grid-cols-12
-                       gap-10
-                       items-end">
+                class="lg:col-span-5">
 
+                <a
+                    href="index.html"
+                    class="inline-flex
+                           items-center">
 
-                <!-- Brand -->
-
-                <div
-                    class="lg:col-span-7">
-
-
-                    <div
-                        class="flex
-                               items-center
-                               gap-3
-                               mb-7">
-
-
-                        <div
-                            class="w-11
-                                   h-11
-                                   rounded-full
-                                   bg-amber-500
-                                   flex
-                                   items-center
-                                   justify-center">
-
-
-                            <i
-                                class="fa-solid
-                                       fa-camera
-                                       text-black">
-
-                            </i>
-
-
-                        </div>
-
-
-                        <span
-                            class="text-xl
-                                   font-bold
-                                   tracking-tight">
-
-                            LensFind
-
-                        </span>
-
-
-                    </div>
-
-
-                    <h2
-                        class="text-4xl
-                               sm:text-5xl
-                               lg:text-6xl
+                    <span
+                        class="text-2xl
                                font-semibold
-                               leading-[1]
                                tracking-tight">
 
+                        Lens<span
+                            class="text-amber-500">
 
-                        Make your next
-
-
-                        <span
-                            class="font-serif
-                                   italic
-                                   font-normal
-                                   text-amber-400">
-
-                            moment
+                            Find
 
                         </span>
 
+                    </span>
 
-                        <br>
-
-
-                        unforgettable.
-
-                    </h2>
+                </a>
 
 
-                </div>
+                <p
+                    class="mt-5
+                           max-w-sm
+                           text-sm
+                           leading-7
+                           text-gray-500">
+
+                    Discover talented photographers,
+                    explore creative work and find the
+                    perfect visual storyteller for your next project.
+
+                </p>
 
 
-                <!-- Newsletter -->
+                <!-- SOCIAL -->
 
                 <div
-                    class="lg:col-span-5">
-
-
-                    <p
-                        class="text-sm
-                               leading-6
-                               text-white-500
-                               mb-5">
-
-
-                        Get photography inspiration,
-                        new photographer discoveries and
-                        marketplace updates.
-
-
-                    </p>
-
-
-                    <form
-                        onsubmit="subscribeNewsletter(event)"
-                        class="flex
-                               flex-col
-                               sm:flex-row
-                               gap-2">
-
-
-                        <input
-                            id="footerEmail"
-                            type="email"
-                            required
-                            placeholder="Your email address"
-                            class="flex-1
-                                   min-w-0
-                                   px-5
-                                   py-4
-                                   rounded-xl
-                                   bg-white/[0.05]
-                                   border
-                                   border-white/10
-                                   text-white
-                                   placeholder:text-white
-                                   outline-none
-                                   focus:border-amber-500
-                                   transition">
-
-
-                        <button
-                            type="submit"
-                            class="px-6
-                                   py-4
-                                   rounded-xl
-                                   bg-amber-500
-                                   text-black
-                                   text-sm
-                                   font-semibold
-                                   hover:bg-amber-400
-                                   transition">
-
-                            Subscribe
-
-                        </button>
-
-
-                    </form>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <!-- ================================================= -->
-        <!-- NAVIGATION -->
-        <!-- ================================================= -->
-
-        <div
-            class="py-16
-                   grid
-                   grid-cols-2
-                   sm:grid-cols-3
-                   lg:grid-cols-5
-                   gap-10">
-
-
-            <!-- Explore -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Explore
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="index.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Home
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/photographers.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Browse Photographers
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/portfolio.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Portfolios
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/categories.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Categories
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- For Photographers -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    For Creatives
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="list-your-services.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            List Your Services
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="photographer-login.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Photographer Login
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pricing.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Pricing
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="resources.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Resources
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Company -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Company
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="about.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            About Us
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="contact.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Contact
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="careers.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Careers
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="blog.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Journal
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Support -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Support
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="faq.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            FAQ
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="privacy.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Privacy
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="terms.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Terms
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="help.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Help Center
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Social -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Follow
-
-                </h3>
-
-
-                <div
-                    class="flex
-                           flex-wrap
+                    class="mt-7
+                           flex
+                           items-center
                            gap-3">
-
 
                     <a
                         href="#"
                         aria-label="Instagram"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-instagram">
-
-                        </i>
-
+                        <i class="fa-brands fa-instagram"></i>
 
                     </a>
 
@@ -3013,53 +4228,43 @@
                     <a
                         href="#"
                         aria-label="Facebook"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-facebook-f">
-
-                        </i>
-
+                        <i class="fa-brands fa-facebook-f"></i>
 
                     </a>
 
 
                     <a
                         href="#"
-                        aria-label="X"
-                        class="w-11
-                               h-11
+                        aria-label="Pinterest"
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-x-twitter">
-
-                        </i>
-
+                        <i class="fa-brands fa-pinterest-p"></i>
 
                     </a>
 
@@ -3067,60 +4272,308 @@
                     <a
                         href="#"
                         aria-label="LinkedIn"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-linkedin-in">
-
-                        </i>
-
+                        <i class="fa-brands fa-linkedin-in"></i>
 
                     </a>
 
-
                 </div>
-
 
             </div>
 
 
+
+            <!-- ================================================= -->
+            <!-- NAVIGATION -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-3">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.2em]
+                           font-semibold
+                           text-white">
+
+                    Explore
+
+                </h3>
+
+
+                <ul
+                    class="mt-6
+                           space-y-4">
+
+                    <li>
+
+                        <a
+                            href="index.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="photographers.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Browse Photographers
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="categories.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Categories
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="inspiration.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Inspiration
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- FOR PHOTOGRAPHERS -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.1em]
+                           font-semibold
+                           text-white">
+
+                    For Photographers
+
+                </h3>
+
+
+                <ul
+                    class="mt-6
+                           space-y-4">
+
+                    <li>
+
+                        <a
+                            href="list-services.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            List Your Services
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Contact Us
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- CONTACT -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.2em]
+                           font-semibold
+                           text-white">
+
+                    Contact
+
+                </h3>
+
+
+                <div
+                    class="mt-6
+                           space-y-4">
+
+
+                    <a
+                        href="mailto:hello@lensfind.com"
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               text-gray-500
+                               hover:text-amber-500
+                               transition">
+
+                        <i
+                            class="fa-regular
+                                   fa-envelope
+                                   mt-1">
+                        </i>
+
+                        <span>
+                            hello@lensfind.com
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+919876543210"
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               text-gray-500
+                               hover:text-amber-500
+                               transition">
+
+                        <i
+                            class="fa-solid
+                                   fa-phone
+                                   mt-1">
+                        </i>
+
+                        <span>
+                            +91 98765 43210
+                        </span>
+
+                    </a>
+
+
+                    <div
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               leading-6
+                               text-gray-500">
+
+                        <i
+                            class="fa-solid
+                                   fa-location-dot
+                                   mt-1">
+
+                        </i>
+
+                        <span>
+                            Chennai, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
+    </div>
 
-        <!-- ================================================= -->
-        <!-- BOTTOM BAR -->
-        <!-- ================================================= -->
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM BAR -->
+    <!-- ===================================================== -->
+
+    <div
+        class="border-t
+               border-white/10">
 
         <div
-            class="relative
-                   z-20
-                   py-6
-                   border-t
-                   border-white/10
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8
+                   py-5
                    flex
                    flex-col
                    sm:flex-row
-                   sm:items-center
-                   sm:justify-between
+                   items-center
+                   justify-between
                    gap-4">
 
-
             <p
-                class="text-xs
-                       text-white-600">
+                class="text-[11px]
+                       text-gray-600">
 
                 © 2026 LensFind. All rights reserved.
 
@@ -3132,22 +4585,29 @@
                        items-center
                        gap-5">
 
-
                 <a
-                    href="privacy.html"
-                    class="text-xs
+                    href="#"
+                    class="text-[11px]
                            text-gray-600
                            hover:text-white
                            transition">
 
-                    Privacy
+                    Privacy Policy
 
                 </a>
 
 
+                <span
+                    class="w-1
+                           h-1
+                           rounded-full
+                           bg-gray-700">
+                </span>
+
+
                 <a
-                    href="terms.html"
-                    class="text-xs
+                    href="#"
+                    class="text-[11px]
                            text-gray-600
                            hover:text-white
                            transition">
@@ -3157,46 +4617,31 @@
                 </a>
 
 
-                <button
-                    onclick="window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    })"
-                    class="w-9
-                           h-9
+                <span
+                    class="w-1
+                           h-1
                            rounded-full
-                           border
-                           border-white/10
-                           flex
-                           items-center
-                           justify-center
-                           text-gray-400
-                           hover:bg-amber-500
-                           hover:text-black
-                           hover:border-amber-500
-                           transition">
+                           bg-amber-500">
+                </span>
 
 
-                    <i
-                        class="fa-solid
-                               fa-arrow-up
-                               text-xs">
+                <span
+                    class="text-[11px]
+                           text-gray-600">
 
-                    </i>
+                    Made for visual storytellers
 
-
-                </button>
-
+                </span>
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </footer>
+
+
 
 
 

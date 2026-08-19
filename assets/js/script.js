@@ -84,6 +84,21 @@
         }
     })();
 
+    /* Keep the interface polished if an image is moved, renamed, or temporarily unavailable. */
+    document.addEventListener("error", function (event) {
+        const image = event.target;
+
+        if (!(image instanceof HTMLImageElement) || image.dataset.imageFallbackApplied === "true") {
+            return;
+        }
+
+        image.dataset.imageFallbackApplied = "true";
+        image.src = window.location.pathname.includes("/pages/")
+            ? "../assets/images/p1.jpg"
+            : "assets/images/p1.jpg";
+        image.alt = "LensFind photography";
+    }, true);
+
     /* ==================================================
        MOBILE MENU
     ================================================== */
@@ -1013,3 +1028,115 @@ testimonialDots.forEach((dot, index) => {
 
 
 
+// <!-- ========================================================= -->
+// <!-- MATCH CONSOLE JAVASCRIPT -->
+// <!-- ========================================================= -->
+
+const photographerMatches = {
+
+    memory: {
+        number: "01 / 05",
+        tag: "Memory maker",
+        title: "Wedding Photographer",
+        text: "For celebrations where emotion matters more than perfect poses.",
+        style: "Documentary",
+        feeling: "Warm & honest",
+        best: "Weddings",
+        link: "photographers.html?type=wedding"
+    },
+
+    identity: {
+        number: "02 / 05",
+        tag: "Personal vision",
+        title: "Portrait Photographer",
+        text: "For people who want photographs that feel natural, confident and personal.",
+        style: "Editorial",
+        feeling: "Clean & expressive",
+        best: "Portraits",
+        link: "photographers.html?type=portrait"
+    },
+
+    brand: {
+        number: "03 / 05",
+        tag: "Visual identity",
+        title: "Commercial Photographer",
+        text: "For products, campaigns and brands that need a stronger visual language.",
+        style: "Polished",
+        feeling: "Bold & refined",
+        best: "Brands",
+        link: "photographers.html?type=commercial"
+    },
+
+    story: {
+        number: "04 / 05",
+        tag: "Story builder",
+        title: "Editorial Photographer",
+        text: "For projects that need atmosphere, personality and a clear visual narrative.",
+        style: "Cinematic",
+        feeling: "Artful & layered",
+        best: "Editorial",
+        link: "photographers.html?type=editorial"
+    },
+
+    everyday: {
+        number: "05 / 05",
+        tag: "Real moments",
+        title: "Lifestyle Photographer",
+        text: "For everyday stories captured naturally without forcing the moment.",
+        style: "Candid",
+        feeling: "Relaxed & real",
+        best: "Lifestyle",
+        link: "photographers.html?type=lifestyle"
+    }
+
+};
+
+
+function showMatch(type) {
+
+    const data = photographerMatches[type];
+
+    if (!data) return;
+
+
+    document.getElementById("matchNumber").textContent =
+        data.number;
+
+    document.getElementById("matchTag").textContent =
+        data.tag;
+
+    document.getElementById("matchTitle").textContent =
+        data.title;
+
+    document.getElementById("matchText").textContent =
+        data.text;
+
+    document.getElementById("matchStyle").textContent =
+        data.style;
+
+    document.getElementById("matchFeeling").textContent =
+        data.feeling;
+
+    document.getElementById("matchBest").textContent =
+        data.best;
+
+    document.getElementById("matchLink").href =
+        data.link;
+
+
+    document.querySelectorAll(".match-option").forEach(button => {
+
+        button.classList.remove(
+            "bg-[#F5F1EA]",
+            "dark:bg-white/5"
+        );
+
+    });
+
+
+    event.currentTarget.classList.add(
+        "bg-[#F5F1EA]",
+        "dark:bg-white/5"
+    );
+
+}

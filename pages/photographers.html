@@ -1305,663 +1305,1326 @@
                 <a href="categories.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-600">Explore categories <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- GRID -->
+            <!-- ========================================================= -->
+<!-- PHOTOGRAPHER DIRECTORY - CINEMATIC FILM STRIP TEMPLATE -->
+<!-- COMPLETELY NEW MODEL -->
+<!-- ========================================================= -->
+
+<div id="photographerGrid" class="space-y-4">
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 01 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-white
+               dark:bg-[#111]
+               border-y
+               border-gray-200
+               dark:border-white/10
+               transition-all
+               duration-500
+               hover:bg-[#faf8f4]
+               dark:hover:bg-[#171717]"
+        data-name="Arjun Mehta"
+        data-city="Chennai"
+        data-specialty="Wedding"
+        data-budget="medium">
+
+        <div
+            class="grid
+                   lg:grid-cols-[90px_320px_1fr_180px]
+                   min-h-[280px]">
+
+
+            <!-- NUMBER -->
 
             <div
-                id="photographerGrid"
-                class="grid
-                       sm:grid-cols-2
-                       lg:grid-cols-3
-                       gap-x-6
-                       gap-y-16">
+                class="hidden
+                       lg:flex
+                       items-start
+                       justify-center
+                       pt-8
+                       border-r
+                       border-gray-200
+                       dark:border-white/10">
+
+                <span
+                    class="font-mono
+                           text-xs
+                           text-gray-400">
+
+                    01
 
+                </span>
 
-                <!-- ======================================== -->
-                <!-- CARD 01 -->
-                <!-- ======================================== -->
+            </div>
 
-                <article
-                    class="photographer-card
-                           group
-                           lg:mt-10"
-                    data-name="Arjun Mehta"
-                    data-city="Chennai"
-                    data-specialty="Wedding"
-                    data-budget="medium">
 
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[280px]
+                       lg:h-auto
+                       overflow-hidden">
 
-                    <a
-                    >
+                <img
+                    src="../assets/images/p31.jpg"
+                    alt="Arjun Mehta"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
 
 
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden
-                                   bg-gray-200">
+                <div
+                    class="absolute
+                           inset-0
+                           bg-gradient-to-t
+                           from-black/40
+                           to-transparent">
+                </div>
 
 
-                            <img
-                                src="../assets/images/p31.jpg"
-                                alt="Arjun Mehta"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
+                <span
+                    class="absolute
+                           left-4
+                           bottom-4
+                           px-3
+                           py-1.5
+                           bg-white
+                           text-black
+                           text-[9px]
+                           uppercase
+                           tracking-[2px]">
 
+                    Wedding
 
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
+                </span>
 
-                                Wedding
+            </div>
 
-                            </span>
 
+            <!-- DETAILS -->
 
-                            <span
-                                class="absolute
-                                       right-5
-                                       bottom-5
-                                       w-12
-                                       h-12
-                                       rounded-full
-                                       bg-black
-                                       text-white
-                                       flex
-                                       items-center
-                                       justify-center
-                                       opacity-0
-                                       group-hover:opacity-100
-                                       transition">
+            <div
+                class="p-7
+                       lg:p-10
+                       flex
+                       flex-col
+                       justify-center">
 
-                                <i
-                                    class="fa-solid
-                                           fa-arrow-up-right-from-square
-                                           text-xs">
+                <div
+                    class="flex
+                           items-center
+                           gap-3">
 
-                                </i>
+                    <span
+                        class="w-2
+                               h-2
+                               rounded-full
+                               bg-green-500">
+                    </span>
 
-                            </span>
+                    <span
+                        class="text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
 
-                        </div>
+                        Available for bookings
 
+                    </span>
 
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
+                </div>
 
 
-                            <div>
+                <h3
+                    class="mt-5
+                           text-3xl
+                           sm:text-4xl
+                           font-semibold
+                           tracking-[-1.5px]
+                           text-gray-900
+                           dark:text-white">
 
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
+                    Arjun Mehta
 
-                                    Arjun Mehta
+                </h3>
 
-                                </h3>
 
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
+                <p
+                    class="mt-3
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400
+                           max-w-lg">
 
-                                    Chennai · Documentary
+                    Documentary wedding photographer
+                    capturing real emotions, intimate
+                    celebrations and timeless moments.
 
-                                </p>
+                </p>
 
-                            </div>
 
+                <div
+                    class="mt-6
+                           flex
+                           flex-wrap
+                           gap-x-8
+                           gap-y-3">
 
-                            <span
-                                class="text-xs
-                                       text-gray-400">
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
 
-                                ₹35K+
+                        Chennai
 
-                            </span>
+                    </span>
 
-                        </div>
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
 
+                        Documentary
 
-                    </a>
+                    </span>
 
-                </article>
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
 
+                        ★ 4.9
 
+                    </span>
 
-                <!-- ======================================== -->
-                <!-- CARD 02 -->
-                <!-- ======================================== -->
+                </div>
 
-                <article
-                    class="photographer-card
-                           group"
-                    data-name="Maya Kapoor"
-                    data-city="Mumbai"
-                    data-specialty="Fashion"
-                    data-budget="high">
+            </div>
 
 
-                    <a>
+            <!-- ACTION -->
 
+            <div
+                class="px-7
+                       pb-7
+                       lg:p-8
+                       flex
+                       lg:flex-col
+                       items-center
+                       justify-between
+                       lg:justify-center
+                       gap-6
+                       border-t
+                       lg:border-t-0
+                       lg:border-l
+                       border-gray-200
+                       dark:border-white/10">
 
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden">
+                <div>
 
+                    <p
+                        class="text-[8px]
+                               uppercase
+                               tracking-[2px]
+                               text-gray-400">
 
-                            <img
-                                src="../assets/images/p32.jpg"
-                                alt="Maya Kapoor"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
+                        Starting
 
+                    </p>
 
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
+                    <p
+                        class="mt-1
+                               text-lg
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
 
-                                Fashion
+                        ₹35K+
 
-                            </span>
+                    </p>
 
+                </div>
 
-                            <span
-                                class="absolute
-                                       right-5
-                                       bottom-5
-                                       w-12
-                                       h-12
-                                       rounded-full
-                                       bg-black
-                                       text-white
-                                       flex
-                                       items-center
-                                       justify-center
-                                       opacity-0
-                                       group-hover:opacity-100
-                                       transition">
-
-                                <i
-                                    class="fa-solid
-                                           fa-arrow-up-right-from-square
-                                           text-xs">
-
-                                </i>
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
-
-
-                            <div>
-
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
-
-                                    Maya Kapoor
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
-
-                                    Mumbai · Editorial
-
-                                </p>
-
-                            </div>
-
-
-                            <span
-                                class="text-xs
-                                       text-gray-400">
-
-                                ₹65K+
-
-                            </span>
-
-                        </div>
-
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- ======================================== -->
-                <!-- CARD 03 -->
-                <!-- ======================================== -->
-
-                <article
-                    class="photographer-card
-                           group
-                           lg:mt-10"
-                    data-name="Nisha Rao"
-                    data-city="Bengaluru"
-                    data-specialty="Food"
-                    data-budget="low">
-
-
-                    <a
-                        >
-
-
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden">
-
-
-                            <img
-                                src="../assets/images/p33.jpg"
-                                alt="Nisha Rao"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
-
-
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
-
-                                Food
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
-
-                            <div>
-
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
-
-                                    Nisha Rao
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
-
-                                    Bengaluru · Food
-
-                                </p>
-
-                            </div>
-
-
-                            <span
-                                class="text-xs
-                                       text-gray-400">
-
-                                ₹18K+
-
-                            </span>
-
-                        </div>
-
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- ======================================== -->
-                <!-- CARD 04 -->
-                <!-- ======================================== -->
-
-                <article
-                    class="photographer-card
-                           group"
-                    data-name="Rahul Sen"
-                    data-city="Hyderabad"
-                    data-specialty="Corporate"
-                    data-budget="medium">
-
-
-                    <a
-                        >
-
-
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden">
-
-
-                            <img
-                                src="../assets/images/p34.jpg"
-                                alt="Rahul Sen"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
-
-
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
-
-                                Corporate
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
-
-                            <div>
-
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
-
-                                    Rahul Sen
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
-
-                                    Hyderabad · Corporate
-
-                                </p>
-
-                            </div>
-
-
-                            <span
-                                class="text-xs
-                                       text-gray-400">
-
-                                ₹40K+
-
-                            </span>
-
-                        </div>
-
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- ======================================== -->
-                <!-- CARD 05 -->
-                <!-- ======================================== -->
-
-                <article
-                    class="photographer-card
-                           group
-                           lg:mt-10"
-                    data-name="Ananya Iyer"
-                    data-city="Chennai"
-                    data-specialty="Fashion"
-                    data-budget="high">
-
-
-                    <a
-                        >
-
-
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden">
-
-
-                            <img
-                                src="../assets/images/p35.jpg"
-                                alt="Ananya Iyer"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
-
-
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
-
-                                Fashion
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
-
-                            <div>
-
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
-
-                                    Ananya Iyer
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
-
-                                    Chennai · Fashion
-
-                                </p>
-
-                            </div>
-
-
-                            <span
-                                class="text-xs
-                                       text-gray-400">
-
-                                ₹58K+
-
-                            </span>
-
-                        </div>
-
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- ======================================== -->
-                <!-- CARD 06 -->
-                <!-- ======================================== -->
-
-                <article
-                    class="photographer-card
-                           group"
-                    data-name="Vikram Shah"
-                    data-city="Bengaluru"
-                    data-specialty="Wedding"
-                    data-budget="low">
-
-
-                    <a
-            >
-
-
-                        <div
-                            class="relative
-                                   h-[450px]
-                                   overflow-hidden">
-
-
-                            <img
-                                src="../assets/images/p36.jpg"
-                                alt="Vikram Shah"
-                                class="w-full
-                                       h-full
-                                       object-cover
-                                       transition
-                                       duration-700
-                                       group-hover:scale-105">
-
-
-                            <span
-                                class="absolute
-                                       top-5
-                                       left-5
-                                       px-3
-                                       py-2
-                                       bg-white
-                                       text-black
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]">
-
-                                Wedding
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            class="pt-5
-                                   flex
-                                   justify-between
-                                   gap-4">
-
-                            <div>
-
-                                <h3
-                                    class="text-xl
-                                           font-semibold">
-
-                                    Vikram Shah
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-gray-400">
-
-                                    Bengaluru · Wedding
-
-                                </p>
-
-                            </div>
-
-
-                            <span
-                                class="text-xs
-                                       text-gray-400">
-
-                                ₹22K+
-
-                            </span>
-
-                        </div>
-
-
-                    </a>
-
-                </article>
 
 
             </div>
 
+        </div>
+
+    </article>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 02 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-[#F3EFE8]
+               dark:bg-[#171717]
+               border-y
+               border-gray-200
+               dark:border-white/10
+               transition-all
+               duration-500
+               hover:bg-[#ebe5db]"
+        data-name="Maya Kapoor"
+        data-city="Mumbai"
+        data-specialty="Fashion"
+        data-budget="high">
+
+        <div
+            class="grid
+                   lg:grid-cols-[180px_1fr_320px_90px]
+                   min-h-[280px]">
+
+
+            <!-- PRICE -->
+
+            <div
+                class="hidden
+                       lg:flex
+                       flex-col
+                       justify-center
+                       px-8
+                       border-r
+                       border-gray-300
+                       dark:border-white/10">
+
+                <p
+                    class="text-[8px]
+                           uppercase
+                           tracking-[2px]
+                           text-gray-400">
+
+                    Starting from
+
+                </p>
+
+                <p
+                    class="mt-2
+                           text-2xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    ₹65K+
+
+                </p>
+
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div
+                class="p-7
+                       lg:p-10
+                       flex
+                       flex-col
+                       justify-center
+                       order-2
+                       lg:order-1">
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[3px]
+                           text-purple-500">
+
+                    Editorial Photographer
+
+                </span>
+
+
+                <h3
+                    class="mt-5
+                           text-3xl
+                           sm:text-4xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Maya
+                    <span
+                        class="font-serif
+                               italic
+                               font-normal
+                               text-gray-500">
+
+                        Kapoor
+
+                    </span>
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           max-w-md
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Bold fashion stories, editorial
+                    portraits and contemporary
+                    campaign photography.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           flex
+                           gap-6">
+
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Mumbai
+
+                    </span>
+
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Fashion
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[280px]
+                       lg:h-auto
+                       overflow-hidden
+                       order-1
+                       lg:order-2">
+
+                <img
+                    src="../assets/images/p32.jpg"
+                    alt="Maya Kapoor"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+
+
+                <span
+                    class="absolute
+                           top-5
+                           right-5
+                           px-3
+                           py-2
+                           bg-white
+                           text-black
+                           text-[8px]
+                           uppercase
+                           tracking-[2px]">
+
+                    Fashion
+
+                </span>
+
+            </div>
+
+
+            <!-- INDEX -->
+
+            <div
+                class="hidden
+                       lg:flex
+                       items-center
+                       justify-center
+                       border-l
+                       border-gray-300
+                       dark:border-white/10">
+
+                <span
+                    class="font-mono
+                           text-xs
+                           text-gray-400">
+
+                    02
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE PRICE -->
+
+        <div
+            class="lg:hidden
+                   px-7
+                   pb-7
+                   flex
+                   items-center
+                   justify-between">
+
+            <span
+                class="text-lg
+                       font-semibold
+                       text-gray-900
+                       dark:text-white">
+
+                ₹65K+
+
+            </span>
+
+
+            
+        </div>
+
+    </article>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 03 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-black
+               text-white
+               overflow-hidden
+               transition-all
+               duration-500
+               hover:bg-[#111]"
+        data-name="Nisha Rao"
+        data-city="Bengaluru"
+        data-specialty="Food"
+        data-budget="low">
+
+        <div
+            class="grid
+                   lg:grid-cols-[90px_1fr_420px_200px]
+                   min-h-[300px]">
+
+
+            <!-- INDEX -->
+
+            <div
+                class="hidden
+                       lg:flex
+                       items-start
+                       justify-center
+                       pt-8
+                       border-r
+                       border-white/10">
+
+                <span
+                    class="font-mono
+                           text-xs
+                           text-white/40">
+
+                    03
+
+                </span>
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div
+                class="p-8
+                       lg:p-12
+                       flex
+                       flex-col
+                       justify-center">
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[3px]
+                           text-amber-400">
+
+                    Food & Product
+
+                </span>
+
+
+                <h3
+                    class="mt-5
+                           text-4xl
+                           sm:text-5xl
+                           font-semibold
+                           tracking-[-2px]">
+
+                    Nisha Rao
+
+                </h3>
+
+
+                <p
+                    class="mt-4
+                           max-w-md
+                           text-sm
+                           leading-7
+                           text-white/50">
+
+                    Food and product imagery designed
+                    for restaurants, lifestyle brands
+                    and modern campaigns.
+
+                </p>
+
+
+                <div
+                    class="mt-7
+                           flex
+                           gap-7">
+
+                    <span
+                        class="text-xs
+                               text-white/50">
+
+                        Bengaluru
+
+                    </span>
+
+                    <span
+                        class="text-xs
+                               text-white/50">
+
+                        ★ 4.8
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[300px]
+                       lg:h-auto
+                       overflow-hidden">
+
+                <img
+                    src="../assets/images/p33.jpg"
+                    alt="Nisha Rao"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+
+
+                <div
+                    class="absolute
+                           inset-0
+                           bg-black/20
+                           group-hover:bg-transparent
+                           transition">
+                </div>
+
+
+                <span
+                    class="absolute
+                           bottom-5
+                           left-5
+                           px-3
+                           py-2
+                           rounded-full
+                           bg-black/70
+                           backdrop-blur
+                           text-[8px]
+                           uppercase
+                           tracking-[2px]">
+
+                    Food
+
+                </span>
+
+            </div>
+
+
+            <!-- CTA -->
+
+            <div
+                class="p-8
+                       flex
+                       flex-col
+                       justify-between
+                       border-l
+                       border-white/10">
+
+                <span
+                    class="text-[8px]
+                           uppercase
+                           tracking-[2px]
+                           text-white/30">
+
+                    Starting
+
+                </span>
+
+
+                <div>
+
+                    <p
+                        class="text-2xl
+                               font-semibold">
+
+                        ₹18K+
+
+                    </p>
+
+
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 04 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-white
+               dark:bg-[#111]
+               border-y
+               border-gray-200
+               dark:border-white/10
+               transition-all
+               duration-500"
+        data-name="Rahul Sen"
+        data-city="Hyderabad"
+        data-specialty="Corporate"
+        data-budget="medium">
+
+        <div
+            class="grid
+                   lg:grid-cols-[300px_1fr_100px]
+                   min-h-[280px]">
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[280px]
+                       lg:h-auto
+                       overflow-hidden">
+
+                <img
+                    src="../assets/images/p34.jpg"
+                    alt="Rahul Sen"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+
+
+                <span
+                    class="absolute
+                           top-5
+                           left-5
+                           px-3
+                           py-2
+                           bg-black
+                           text-white
+                           text-[8px]
+                           uppercase
+                           tracking-[2px]">
+
+                    Corporate
+
+                </span>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div
+                class="p-8
+                       lg:p-10
+                       flex
+                       flex-col
+                       justify-center">
+
+                <div
+                    class="flex
+                           items-center
+                           justify-between">
+
+                    <span
+                        class="text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-amber-500">
+
+                        Commercial Photography
+
+                    </span>
+
+
+                    <span
+                        class="hidden
+                               sm:block
+                               text-xs
+                               text-gray-400">
+
+                        04
+
+                    </span>
+
+                </div>
+
+
+                <h3
+                    class="mt-5
+                           text-3xl
+                           sm:text-4xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Rahul Sen
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           max-w-lg
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Corporate portraits, workplace
+                    stories and polished brand campaigns
+                    for growing businesses.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           flex
+                           flex-wrap
+                           gap-7">
+
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Hyderabad
+
+                    </span>
+
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        ₹40K+
+
+                    </span>
+
+                    <span
+                        class="text-xs
+                               text-amber-500">
+
+                        ★ 4.9
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTION -->
+
+            <div
+                class="flex
+                       items-center
+                       justify-center
+                       border-t
+                       lg:border-t-0
+                       lg:border-l
+                       border-gray-200
+                       dark:border-white/10">
+
+                
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 05 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-[#151515]
+               text-white
+               overflow-hidden
+               transition-all
+               duration-500"
+        data-name="Ananya Iyer"
+        data-city="Chennai"
+        data-specialty="Fashion"
+        data-budget="high">
+
+        <div
+            class="grid
+                   lg:grid-cols-[1fr_360px]
+                   min-h-[330px]">
+
+
+            <!-- CONTENT -->
+
+            <div
+                class="p-8
+                       sm:p-10
+                       lg:p-14
+                       flex
+                       flex-col
+                       justify-between">
+
+                <div>
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between">
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[3px]
+                                   text-amber-400">
+
+                            Featured Talent
+
+                        </span>
+
+
+                        <span
+                            class="text-xs
+                                   font-mono
+                                   text-white/30">
+
+                            05
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="mt-8
+                               text-4xl
+                               sm:text-5xl
+                               font-semibold
+                               tracking-[-2px]">
+
+                        Ananya
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-white/50">
+
+                            Iyer
+
+                        </span>
+
+                    </h3>
+
+
+                    <p
+                        class="mt-4
+                               max-w-lg
+                               text-sm
+                               leading-7
+                               text-white/50">
+
+                        Contemporary fashion imagery with
+                        a strong focus on personality,
+                        movement and visual storytelling.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mt-8
+                           flex
+                           items-center
+                           justify-between
+                           gap-6">
+
+                    <div>
+
+                        <p
+                            class="text-[8px]
+                                   uppercase
+                                   tracking-[2px]
+                                   text-white/30">
+
+                            Chennai · Fashion
+
+                        </p>
+
+                        <p
+                            class="mt-2
+                                   text-lg
+                                   font-semibold">
+
+                            ₹58K+
+
+                        </p>
+
+                    </div>
+
+
+                    
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[330px]
+                       lg:h-auto
+                       overflow-hidden">
+
+                <img
+                    src="../assets/images/p35.jpg"
+                    alt="Ananya Iyer"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+
+
+                <div
+                    class="absolute
+                           inset-0
+                           bg-gradient-to-r
+                           from-[#151515]
+                           via-transparent
+                           to-transparent
+                           lg:block">
+                </div>
+
+
+                <span
+                    class="absolute
+                           top-5
+                           right-5
+                           px-3
+                           py-2
+                           rounded-full
+                           bg-amber-400
+                           text-black
+                           text-[8px]
+                           uppercase
+                           tracking-[2px]">
+
+                    Fashion
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- ===================================================== -->
+    <!-- PHOTOGRAPHER 06 -->
+    <!-- ===================================================== -->
+
+    <article
+        class="photographer-card group
+               relative
+               bg-[#F5F2EC]
+               dark:bg-[#171717]
+               border-y
+               border-gray-200
+               dark:border-white/10
+               transition-all
+               duration-500"
+        data-name="Vikram Shah"
+        data-city="Bengaluru"
+        data-specialty="Wedding"
+        data-budget="low">
+
+        <div
+            class="grid
+                   lg:grid-cols-[120px_280px_1fr_190px]
+                   min-h-[280px]">
+
+
+            <!-- NUMBER -->
+
+            <div
+                class="hidden
+                       lg:flex
+                       items-center
+                       justify-center
+                       border-r
+                       border-gray-200
+                       dark:border-white/10">
+
+                <span
+                    class="text-5xl
+                           font-serif
+                           italic
+                           text-gray-300
+                           dark:text-white/10">
+
+                    06
+
+                </span>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-[280px]
+                       lg:h-auto
+                       overflow-hidden">
+
+                <img
+                    src="../assets/images/p36.jpg"
+                    alt="Vikram Shah"
+                    class="w-full
+                           h-full
+                           object-cover
+                           transition
+                           duration-700
+                           group-hover:scale-105">
+
+
+                <span
+                    class="absolute
+                           bottom-5
+                           left-5
+                           px-3
+                           py-2
+                           bg-black
+                           text-white
+                           text-[8px]
+                           uppercase
+                           tracking-[2px]">
+
+                    Wedding
+
+                </span>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div
+                class="p-8
+                       lg:p-10
+                       flex
+                       flex-col
+                       justify-center">
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[3px]
+                           text-gray-400">
+
+                    Documentary Wedding
+
+                </span>
+
+
+                <h3
+                    class="mt-5
+                           text-3xl
+                           sm:text-4xl
+                           font-semibold
+                           text-gray-900
+                           dark:text-white">
+
+                    Vikram
+                    <span
+                        class="font-serif
+                               italic
+                               font-normal
+                               text-gray-500">
+
+                        Shah
+
+                    </span>
+
+                </h3>
+
+
+                <p
+                    class="mt-3
+                           max-w-md
+                           text-sm
+                           leading-6
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Candid wedding stories built around
+                    real emotions and authentic moments.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           flex
+                           gap-7">
+
+                    <span
+                        class="text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Bengaluru
+
+                    </span>
+
+                    <span
+                        class="text-xs
+                               text-amber-500">
+
+                        ★ 4.8
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTION -->
+
+            <div
+                class="p-7
+                       lg:p-8
+                       flex
+                       items-center
+                       justify-between
+                       lg:flex-col
+                       lg:items-end
+                       lg:justify-center
+                       gap-5
+                       border-t
+                       lg:border-t-0
+                       lg:border-l
+                       border-gray-200
+                       dark:border-white/10">
+
+                <div
+                    class="lg:text-right">
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[2px]
+                               text-gray-400">
+
+                        From
+
+                    </p>
+
+                    <p
+                        class="mt-1
+                               text-xl
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        ₹22K+
+
+                    </p>
+
+                </div>
+
+
+              
+            </div>
+
+        </div>
+
+    </article>
+
+
+</div>
 
             <!-- NO RESULTS -->
 
@@ -2005,188 +2668,926 @@
 
 
 
-    <!-- ================================================== -->
-    <!-- 04. EXPLORE BY CITY -->
-    <!-- ================================================== -->
+<!-- ========================================================= -->
+<!-- CITY DISCOVERY - PHOTOGRAPHER SPOTLIGHT WALL -->
+<!-- WARM PREMIUM THEME -->
+<!-- ========================================================= -->
 
-    <section
-        class="bg-white
-               dark:bg-black
-               text-gray-900
-               dark:text-white
-               city-explore-section
-               py-20
-               lg:py-24">
+<section
+    class="relative
+           overflow-hidden
+           bg-[#F4F0E8]
+           dark:bg-[#171411]
+           py-20
+           lg:py-28">
+
+
+    <div
+        class="max-w-7xl
+               mx-auto
+               px-5
+               sm:px-6
+               lg:px-8">
+
+
+        <!-- ================= HEADER ================= -->
 
         <div
-            class="max-w-7xl
-                   mx-auto
-                   px-5
-                   sm:px-6
-                   lg:px-8">
+            class="mb-14
+                   lg:mb-20">
+
+
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[5px]
+                       text-amber-600
+                       dark:text-amber-400">
+
+                Find your visual storyteller
+
+            </span>
 
 
             <div
-                class="grid
-                       lg:grid-cols-2
-                       gap-12
-                       items-center">
+                class="mt-5
+                       flex
+                       flex-col
+                       lg:flex-row
+                       lg:items-end
+                       lg:justify-between
+                       gap-8">
 
 
-                <div>
+                <h2
+                    class="max-w-3xl
+                           text-4xl
+                           sm:text-5xl
+                           lg:text-7xl
+                           font-semibold
+                           leading-[0.95]
+                           tracking-tight
+                           text-[#171411]
+                           dark:text-white">
 
-                    <p
-                        class="text-[10px]
+                    Start with a city.
+
+                    <span
+                        class="text-[#A39A8D]
+                               dark:text-white/30">
+
+                        End with a story.
+
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="max-w-sm
+                           text-sm
+                           leading-7
+                           text-black
+                           dark:text-white">
+
+                    Browse creative communities and
+                    find photographers who bring a
+                    unique perspective to every frame.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- SPOTLIGHT WALL -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   lg:grid-cols-12
+                   min-h-[620px]
+                   border
+                   border-[#D8D0C4]
+                   dark:border-white/10
+                   rounded-[32px]
+                   overflow-hidden
+                   bg-white
+                   dark:bg-[#211D18]">
+
+
+            <!-- ================================================= -->
+            <!-- LEFT CITY NAVIGATION -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-5
+                       border-b
+                       lg:border-b-0
+                       lg:border-r
+                       border-[#E4DED5]
+                       dark:border-white/10
+                       p-6
+                       sm:p-8
+                       lg:p-10">
+
+
+                <!-- TOP LABEL -->
+
+                <div
+                    class="mb-8
+                           flex
+                           items-center
+                           justify-between">
+
+
+                    <span
+                        class="text-[11px]
                                uppercase
-                               tracking-[4px]
-                               text-amber-400">
+                               tracking-[3px]
+                               text-black
+                               dark:text-white/30">
 
-                        Explore locally
+                        Explore cities
 
-                    </p>
+                    </span>
 
-                    <h2
-                        class="mt-5
-                               text-4xl
-                               sm:text-5xl
-                               font-semibold
-                               leading-tight">
 
-                        Great photography
-                        is closer than
-                        you think.
+                    <span
+                        class="text-xs
+                               text-[#A9A196]
+                               dark:text-white/20">
 
-                    </h2>
+                        04
+
+                    </span>
 
                 </div>
 
 
-                <div
-                    class="grid
-                           grid-cols-2
+
+                <!-- ================================================= -->
+                <!-- CITY 01 - CHENNAI -->
+                <!-- ================================================= -->
+
+                <button
+                    onclick="selectCity('Chennai')"
+                    class="group
+                           city-item
+                           active
+                           w-full
+                           text-left
                            border-t
-                           border-white/10">
+                           border-[#E4DED5]
+                           dark:border-white/10
+                           py-6
+                           sm:py-7"
+                    data-city="Chennai">
 
 
-                    <button
-                        onclick="selectCity('Chennai')"
-                        class="text-left
-                               py-6
-                               border-b
-                               border-r
-                               border-white/10
-                               hover:bg-white/5
-                               transition">
+                    <div
+                        class="flex
+                               items-center
+                               justify-between
+                               gap-5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+
+                            <span
+                                class="text-[10px]
+                                       text-amber-500
+                                       dark:text-amber-400">
+
+                                01
+
+                            </span>
+
+
+                            <h3
+                                class="text-2xl
+                                       sm:text-3xl
+                                       font-medium
+                                       text-[#171411]
+                                       dark:text-white
+                                       transition
+                                       duration-300
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                Chennai
+
+                            </h3>
+
+                        </div>
+
 
                         <span
-                            class="text-2xl
-                                   font-semibold">
+                            class="text-[#B0A79B]
+                                   dark:text-white/20
+                                   transition
+                                   duration-300
+                                   group-hover:text-amber-600
+                                   dark:group-hover:text-amber-400
+                                   group-hover:translate-x-1">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="mt-2
+                               ml-10
+                               text-[10px]
+                               uppercase
+                               tracking-[2px]
+                               text-black
+                               dark:text-white">
+
+                        Weddings · Fashion · Events
+
+                    </p>
+
+                </button>
+
+
+
+                <!-- ================================================= -->
+                <!-- CITY 02 - BENGALURU -->
+                <!-- ================================================= -->
+
+                <button
+                    onclick="selectCity('Bengaluru')"
+                    class="group
+                           city-item
+                           w-full
+                           text-left
+                           border-t
+                           border-[#E4DED5]
+                           dark:border-white/10
+                           py-6
+                           sm:py-7"
+                    data-city="Bengaluru">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between
+                               gap-5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+
+                            <span
+                                class="text-[10px]
+                                       text-black
+                                       dark:text-white/25
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                02
+
+                            </span>
+
+
+                            <h3
+                                class="text-2xl
+                                       sm:text-3xl
+                                       font-medium
+                                       text-[#171411]
+                                       dark:text-white
+                                       transition
+                                       duration-300
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                Bengaluru
+
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="text-[#B0A79B]
+                                   dark:text-white/20
+                                   transition
+                                   duration-300
+                                   group-hover:text-amber-600
+                                   dark:group-hover:text-amber-400
+                                   group-hover:translate-x-1">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="mt-2
+                               ml-10
+                               text-[10px]
+                               uppercase
+                               tracking-[2px]
+                               text-black
+                               dark:text-white">
+
+                        Brands · Portraits · Lifestyle
+
+                    </p>
+
+                </button>
+
+
+
+                <!-- ================================================= -->
+                <!-- CITY 03 - MUMBAI -->
+                <!-- ================================================= -->
+
+                <button
+                    onclick="selectCity('Mumbai')"
+                    class="group
+                           city-item
+                           w-full
+                           text-left
+                           border-t
+                           border-[#E4DED5]
+                           dark:border-white/10
+                           py-6
+                           sm:py-7"
+                    data-city="Mumbai">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between
+                               gap-5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+
+                            <span
+                                class="text-[10px]
+                                       text-black
+                                       dark:text-white/25
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                03
+
+                            </span>
+
+
+                            <h3
+                                class="text-2xl
+                                       sm:text-3xl
+                                       font-medium
+                                       text-[#171411]
+                                       dark:text-white
+                                       transition
+                                       duration-300
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                Mumbai
+
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="text-[#B0A79B]
+                                   dark:text-white/20
+                                   transition
+                                   duration-300
+                                   group-hover:text-amber-600
+                                   dark:group-hover:text-amber-400
+                                   group-hover:translate-x-1">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="mt-2
+                               ml-10
+                               text-[10px]
+                               uppercase
+                               tracking-[2px]
+                               text-black
+                               dark:text-white">
+
+                        Commercial · Film · Fashion
+
+                    </p>
+
+                </button>
+
+
+
+                <!-- ================================================= -->
+                <!-- CITY 04 - HYDERABAD -->
+                <!-- ================================================= -->
+
+                <button
+                    onclick="selectCity('Hyderabad')"
+                    class="group
+                           city-item
+                           w-full
+                           text-left
+                           border-t
+                           border-[#E4DED5]
+                           dark:border-white/10
+                           py-6
+                           sm:py-7"
+                    data-city="Hyderabad">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between
+                               gap-5">
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+
+                            <span
+                                class="text-[10px]
+                                       text-black
+                                       dark:text-white/25
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                04
+
+                            </span>
+
+
+                            <h3
+                                class="text-2xl
+                                       sm:text-3xl
+                                       font-medium
+                                       text-[#171411]
+                                       dark:text-white
+                                       transition
+                                       duration-300
+                                       group-hover:text-amber-600
+                                       dark:group-hover:text-amber-400">
+
+                                Hyderabad
+
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="text-[#B0A79B]
+                                   dark:text-white/20
+                                   transition
+                                   duration-300
+                                   group-hover:text-amber-600
+                                   dark:group-hover:text-amber-400
+                                   group-hover:translate-x-1">
+
+                            ↗
+
+                        </span>
+
+                    </div>
+
+
+                    <p
+                        class="mt-2
+                               ml-10
+                               text-[10px]
+                               uppercase
+                               tracking-[2px]
+                               text-black
+                               dark:text-white">
+
+                        Weddings · Food · Events
+
+                    </p>
+
+                </button>
+
+
+
+                <!-- ================================================= -->
+                <!-- SMALL NOTE -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-8
+                           rounded-2xl
+                           bg-[#F7F4EF]
+                           dark:bg-white/[0.03]
+                           border
+                           border-[#E8E1D8]
+                           dark:border-white/5
+                           p-5">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               gap-3">
+
+
+                        <span
+                            class="flex
+                                   h-8
+                                   w-8
+                                   items-center
+                                   justify-center
+                                   rounded-full
+                                   bg-amber-400
+                                   text-black">
+
+                            <i
+                                class="fa-solid
+                                       fa-camera
+                                       text-xs">
+                            </i>
+
+                        </span>
+
+
+                        <div>
+
+
+                            <p
+                                class="text-xs
+                                       font-semibold
+                                       text-[#27221D]
+                                       dark:text-white">
+
+                                Local talent, global vision
+
+                            </p>
+
+
+                            <p
+                                class="mt-1
+                                       text-[10px]
+                                       text-black
+                                       dark:text-white/30">
+
+                                Discover photographers near you
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT SHOWCASE -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-7
+                       relative
+                       min-h-[480px]
+                       lg:min-h-full
+                       overflow-hidden
+                       bg-[#FAF8F4]
+                       dark:bg-[#211D18]">
+
+
+                <!-- Decorative Glow -->
+
+                <div
+                    class="absolute
+                           -right-32
+                           -top-32
+                           h-96
+                           w-96
+                           rounded-full
+                           bg-amber-300/20
+                           dark:bg-amber-500/10
+                           blur-3xl">
+                </div>
+
+
+                <div
+                    class="absolute
+                           -left-32
+                           bottom-0
+                           h-80
+                           w-80
+                           rounded-full
+                           bg-orange-200/20
+                           dark:bg-orange-500/5
+                           blur-3xl">
+                </div>
+
+
+
+                <!-- Large Number -->
+
+                <span
+                    class="absolute
+                           right-8
+                           top-5
+                           text-[150px]
+                           sm:text-[200px]
+                           font-bold
+                           leading-none
+                           text-[#2B241D]/[0.035]
+                           dark:text-white/[0.025]
+                           select-none">
+
+                    01
+
+                </span>
+
+
+
+                <!-- Main Content -->
+
+                <div
+                    class="relative
+                           z-10
+                           flex
+                           min-h-[480px]
+                           lg:min-h-full
+                           flex-col
+                           justify-between
+                           p-7
+                           sm:p-10
+                           lg:p-14">
+
+
+                    <!-- TOP -->
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between">
+
+
+                        <span
+                            class="rounded-full
+                                   border
+                                   border-[#D9D1C6]
+                                   dark:border-white/10
+                                   px-4
+                                   py-2
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[2px]
+                                   text-black
+                                   dark:text-white/40">
+
+                            Featured location
+
+                        </span>
+
+
+                        <span
+                            class="text-xs
+                                   text-[#A9A196]
+                                   dark:text-white">
+
+                            01 / 04
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- CENTER -->
+
+                    <div>
+
+
+                        <p
+                            class="text-amber-600
+                                   dark:text-amber-400
+                                   text-xs
+                                   uppercase
+                                   tracking-[3px]">
+
+                            Tamil Nadu
+
+                        </p>
+
+
+                        <h3
+                            class="mt-4
+                                   text-6xl
+                                   sm:text-7xl
+                                   lg:text-8xl
+                                   font-semibold
+                                   tracking-tight
+                                   text-[#171411]
+                                   dark:text-white">
 
                             Chennai
 
-                        </span>
-
-                        <span
-                            class="block
-                                   mt-2
-                                   text-xs
-                                   text-gray-500">
-
-                            Explore creatives →
-
-                        </span>
-
-                    </button>
+                        </h3>
 
 
-                    <button
-                        onclick="selectCity('Bengaluru')"
-                        class="text-left
-                               py-6
-                               px-5
-                               border-b
-                               border-white/10
-                               hover:bg-white/5
-                               transition">
+                        <p
+                            class="mt-5
+                                   max-w-md
+                                   text-sm
+                                   leading-7
+                                   text-black
+                                   dark:text-white">
 
-                        <span
-                            class="text-2xl
-                                   font-semibold">
+                            A city full of weddings,
+                            fashion stories, celebrations,
+                            architecture and unforgettable
+                            everyday moments.
 
-                            Bengaluru
-
-                        </span>
-
-                        <span
-                            class="block
-                                   mt-2
-                                   text-xs
-                                   text-gray-500">
-
-                            Explore creatives →
-
-                        </span>
-
-                    </button>
+                        </p>
 
 
-                    <button
-                        onclick="selectCity('Mumbai')"
-                        class="text-left
-                               py-6
-                               border-r
-                               border-white/10
-                               hover:bg-white/5
-                               transition">
+                        <button
+                            onclick="selectCity('Chennai')"
+                            class="mt-8
+                                   inline-flex
+                                   items-center
+                                   gap-4
+                                   rounded-full
+                                   bg-[#171411]
+                                   dark:bg-amber-400
+                                   px-6
+                                   py-3.5
+                                   text-sm
+                                   font-semibold
+                                   text-white
+                                   dark:text-black
+                                   transition
+                                   hover:bg-amber-500
+                                   dark:hover:bg-white">
 
-                        <span
-                            class="text-2xl
-                                   font-semibold">
+                            Explore Chennai
 
-                            Mumbai
+                            <span>→</span>
 
-                        </span>
+                        </button>
 
-                        <span
-                            class="block
-                                   mt-2
-                                   text-xs
-                                   text-gray-500">
-
-                            Explore creatives →
-
-                        </span>
-
-                    </button>
+                    </div>
 
 
-                    <button
-                        onclick="selectCity('Hyderabad')"
-                        class="text-left
-                               py-6
-                               px-5
-                               hover:bg-white/5
-                               transition">
 
-                        <span
-                            class="text-2xl
-                                   font-semibold">
+                    <!-- ================================================= -->
+                    <!-- BOTTOM STATS -->
+                    <!-- ================================================= -->
 
-                            Hyderabad
+                    <div
+                        class="grid
+                               grid-cols-3
+                               max-w-lg
+                               border-t
+                               border-[#DED6CC]
+                               dark:border-white/10
+                               pt-6">
 
-                        </span>
 
-                        <span
-                            class="block
-                                   mt-2
-                                   text-xs
-                                   text-gray-500">
+                        <!-- STAT 01 -->
 
-                            Explore creatives →
+                        <div>
 
-                        </span>
+                            <p
+                                class="text-xl
+                                       font-semibold
+                                       text-[#171411]
+                                       dark:text-white">
 
-                    </button>
+                                120+
+
+                            </p>
+
+
+                            <p
+                                class="mt-1
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]
+                                       text-black
+                                       dark:text-white">
+
+                                Photographers
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- STAT 02 -->
+
+                        <div
+                            class="border-l
+                                   border-[#DED6CC]
+                                   dark:border-white/10
+                                   pl-5">
+
+
+                            <p
+                                class="text-xl
+                                       font-semibold
+                                       text-[#171411]
+                                       dark:text-white">
+
+                                18
+
+                            </p>
+
+
+                            <p
+                                class="mt-1
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]
+                                       text-black
+                                       dark:text-white">
+
+                                Specialties
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- STAT 03 -->
+
+                        <div
+                            class="border-l
+                                   border-[#DED6CC]
+                                   dark:border-white/10
+                                   pl-5">
+
+
+                            <p
+                                class="text-xl
+                                       font-semibold
+                                       text-black
+                                       dark:text-white">
+
+                                4.9
+
+                            </p>
+
+
+                            <p
+                                class="mt-1
+                                       text-[9px]
+                                       uppercase
+                                       tracking-[2px]
+                                       text-black
+                                       dark:text-white">
+
+                                Avg. Rating
+
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -2194,9 +3595,9 @@
 
         </div>
 
-    </section>
+    </div>
 
-
+</section>
 
     <!-- ================================================== -->
     <!-- 05. FINAL MATCH SECTION -->
@@ -2287,13 +3688,883 @@
     </section>
 
 
-    <section class="bg-white py-20 dark:bg-[#111827]">
-        <div class="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 md:grid-cols-3 lg:px-8">
-            <div class="rounded-3xl bg-amber-50 p-7 dark:bg-amber-500/10"><i class="fa-solid fa-sliders text-amber-500"></i><h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-white">Search with confidence</h2><p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-300">Narrow your shortlist by location, occasion and visual style.</p></div>
-            <div class="rounded-3xl bg-gray-50 p-7 dark:bg-white/5"><i class="fa-solid fa-images text-amber-500"></i><h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-white">Review real work</h2><p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-300">Browse portfolios before you start a conversation.</p></div>
-            <div class="rounded-3xl bg-gray-50 p-7 dark:bg-white/5"><i class="fa-solid fa-message text-amber-500"></i><h2 class="mt-4 text-xl font-bold text-gray-900 dark:text-white">Plan together</h2><p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-300">Share your brief and confirm availability directly.</p></div>
+    
+
+
+<!-- ========================================================= -->
+<!-- HOW IT WORKS - WARM IVORY JOURNEY TEMPLATE -->
+<!-- NEW BACKGROUND DESIGN -->
+<!-- ========================================================= -->
+
+<section class="bg-[#F8F6F1] py-24 text-gray-900 dark:bg-black dark:text-white">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <div class="max-w-3xl">
+
+            <span
+                class="inline-flex
+                       items-center
+                       gap-2
+                       rounded-full
+                       border
+                       border-gray-200
+                       bg-white
+                       px-4
+                       py-2
+                       text-[9px]
+                       uppercase
+                       tracking-[3px]
+                       text-amber-500
+                       shadow-sm
+                       dark:border-white/10
+                       dark:bg-white/5">
+
+                <span
+                    class="h-1.5
+                           w-1.5
+                           rounded-full
+                           bg-amber-400">
+                </span>
+
+                How it works
+
+            </span>
+
+
+            <h2
+                class="mt-7
+                       text-4xl
+                       font-semibold
+                       leading-tight
+                       tracking-[-2px]
+                       text-gray-900
+                       sm:text-5xl
+                       lg:text-7xl
+                       dark:text-white">
+
+                Great photography
+
+                <span
+                    class="font-serif
+                           italic
+                           font-normal
+                           text-gray-400
+                           dark:text-gray-500">
+
+                    starts here.
+
+                </span>
+
+            </h2>
+
+
+            <p
+                class="mt-6
+                       max-w-xl
+                       text-sm
+                       leading-7
+                       text-gray-500
+                       dark:text-gray-400">
+
+                Tell us what you are looking for,
+                discover talented photographers and
+                turn your idea into something memorable.
+
+            </p>
+
         </div>
-    </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- JOURNEY -->
+        <!-- ================================================= -->
+
+        <div class="relative mt-20">
+
+
+            <!-- CONNECTING LINE -->
+
+            <div
+                class="absolute
+                       left-[10%]
+                       right-[10%]
+                       top-16
+                       hidden
+                       h-px
+                       bg-gray-300
+                       lg:block
+                       dark:bg-white/10">
+            </div>
+
+
+
+            <!-- CARDS -->
+
+            <div
+                class="grid
+                       gap-6
+                       sm:grid-cols-2
+                       lg:grid-cols-4">
+
+
+                <!-- ================================================= -->
+                <!-- CARD 01 -->
+                <!-- ================================================= -->
+
+                <div
+                    class="group
+                           relative
+                           rounded-[28px]
+                           border
+                           border-gray-200
+                           bg-white
+                           p-7
+                           shadow-sm
+                           transition-all
+                           duration-500
+                           hover:-translate-y-3
+                           hover:border-amber-300
+                           hover:shadow-xl
+                           dark:border-white/10
+                           dark:bg-white/[0.04]
+                           dark:hover:bg-white/[0.07]">
+
+
+                    <!-- ICON -->
+
+                    <div
+                        class="relative
+                               z-10
+                               flex
+                               h-20
+                               w-20
+                               items-center
+                               justify-center
+                               rounded-[24px]
+                               bg-amber-400
+                               text-black
+                               shadow-lg
+                               shadow-amber-400/10
+                               transition
+                               duration-500
+                               group-hover:rotate-6
+                               group-hover:scale-110
+                               dark:bg-black
+                               dark:text-white
+                               ">
+
+                        <i
+                            class="fa-solid
+                                   fa-magnifying-glass
+                                   text-xl">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LABEL -->
+
+                    <p
+                        class="mt-10
+                               text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Step One
+
+                    </p>
+
+
+                    <!-- TITLE -->
+
+                    <h3
+                        class="mt-3
+                               text-2xl
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Tell us your
+
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-gray-400">
+
+                            idea.
+
+                        </span>
+
+                    </h3>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p
+                        class="mt-4
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Choose your location,
+                        occasion and the kind of
+                        visual style you have in mind.
+
+                    </p>
+
+
+                    <!-- BOTTOM -->
+
+                    <div
+                        class="mt-8
+                               border-t
+                               border-gray-200
+                               pt-5
+                               text-xs
+                               text-gray-400
+                               dark:border-white/10">
+
+                        Location · Style · Budget
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 02 -->
+                <!-- ================================================= -->
+
+                <div
+                    class="group
+                           relative
+                           rounded-[28px]
+                           border
+                           border-gray-200
+                           bg-white
+                           p-7
+                           shadow-sm
+                           transition-all
+                           duration-500
+                           hover:-translate-y-3
+                           hover:border-amber-300
+                           hover:shadow-xl
+                           dark:border-white/10
+                           dark:bg-white/[0.04]
+                           dark:hover:bg-white/[0.07]">
+
+
+                    <!-- ICON -->
+
+                    <div
+                        class="relative
+                               z-10
+                               flex
+                               h-20
+                               w-20
+                               items-center
+                               justify-center
+                               rounded-[24px]
+                               bg-gray-100
+                               text-gray-900
+                               transition
+                               duration-500
+                               group-hover:-rotate-6
+                               group-hover:scale-110
+                               dark:bg-black
+                               dark:text-white">
+
+                        <i
+                            class="fa-solid
+                                   fa-compass
+                                   text-xl">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LABEL -->
+
+                    <p
+                        class="mt-10
+                               text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Step Two
+
+                    </p>
+
+
+                    <!-- TITLE -->
+
+                    <h3
+                        class="mt-3
+                               text-2xl
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Discover the
+
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-gray-400">
+
+                            right fit.
+
+                        </span>
+
+                    </h3>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p
+                        class="mt-4
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Explore photographers whose
+                        experience, personality and
+                        portfolio match your project.
+
+                    </p>
+
+
+                    <!-- BOTTOM -->
+
+                    <div
+                        class="mt-8
+                               border-t
+                               border-gray-200
+                               pt-5
+                               text-xs
+                               text-gray-400
+                               dark:border-white/10">
+
+                        Portfolio · Experience · Style
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 03 -->
+                <!-- ================================================= -->
+
+                <div
+                    class="group
+                           relative
+                           rounded-[28px]
+                           border
+                           border-gray-200
+                           bg-white
+                           p-7
+                           shadow-sm
+                           transition-all
+                           duration-500
+                           hover:-translate-y-3
+                           hover:border-amber-300
+                           hover:shadow-xl
+                           dark:border-white/10
+                           dark:bg-white/[0.04]
+                           dark:hover:bg-white/[0.07]">
+
+
+                    <!-- ICON -->
+
+                    <div
+                        class="relative
+                               z-10
+                               flex
+                               h-20
+                               w-20
+                               items-center
+                               justify-center
+                               rounded-[24px]
+                               bg-gray-100
+                               text-gray-900
+                               transition
+                               duration-500
+                               group-hover:rotate-6
+                               group-hover:scale-110
+                               dark:bg-black
+                               dark:text-white">
+
+                        <i
+                            class="fa-regular
+                                   fa-comments
+                                   text-xl">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LABEL -->
+
+                    <p
+                        class="mt-10
+                               text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-gray-400">
+
+                        Step Three
+
+                    </p>
+
+
+                    <!-- TITLE -->
+
+                    <h3
+                        class="mt-3
+                               text-2xl
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Have a real
+
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-gray-400">
+
+                            conversation.
+
+                        </span>
+
+                    </h3>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p
+                        class="mt-4
+                               text-sm
+                               leading-7
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Share your brief, ask questions
+                        and discuss the details before
+                        making your decision.
+
+                    </p>
+
+
+                    <!-- BOTTOM -->
+
+                    <div
+                        class="mt-8
+                               border-t
+                               border-gray-200
+                               pt-5
+                               text-xs
+                               text-gray-400
+                               dark:border-white/10">
+
+                        Brief · Questions · Availability
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- CARD 04 - FEATURE -->
+                <!-- ================================================= -->
+
+                <div
+                    class="group
+                           relative
+                           overflow-hidden
+                           rounded-[28px]
+                           bg-amber-400
+                           p-7
+                           text-black
+                           shadow-sm
+                           transition-all
+                           duration-500
+                           hover:-translate-y-3
+                           hover:shadow-2xl">
+
+
+                    <!-- DECORATION -->
+
+                    <div
+                        class="absolute
+                               -right-12
+                               -top-12
+                               h-32
+                               w-32
+                               rounded-full
+                               border-[18px]
+                               border-black/5">
+                    </div>
+
+
+                    <div
+                        class="absolute
+                               -bottom-16
+                               -left-16
+                               h-40
+                               w-40
+                               rounded-full
+                               border-[20px]
+                               border-black/5">
+                    </div>
+
+
+                    <!-- ICON -->
+
+                    <div
+                        class="relative
+                               flex
+                               h-20
+                               w-20
+                               items-center
+                               justify-center
+                               rounded-[24px]
+                               bg-black
+                               text-white
+                               transition
+                               duration-500
+                               group-hover:scale-110">
+
+                        <i
+                            class="fa-solid
+                                   fa-camera
+                                   text-xl">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LABEL -->
+
+                    <p
+                        class="relative
+                               mt-10
+                               text-[9px]
+                               uppercase
+                               tracking-[3px]
+                               text-black/50">
+
+                        Final Step
+
+                    </p>
+
+
+                    <!-- TITLE -->
+
+                    <h3
+                        class="relative
+                               mt-3
+                               text-2xl
+                               font-semibold">
+
+                        Make it
+
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal">
+
+                            happen.
+
+                        </span>
+
+                    </h3>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p
+                        class="relative
+                               mt-4
+                               text-sm
+                               leading-7
+                               text-black/60">
+
+                        Confirm your photographer,
+                        lock in the details and get
+                        ready to create something special.
+
+                    </p>
+
+
+                    <!-- BUTTON -->
+
+                    <a
+                        href="photographers.html"
+                        class="relative
+                               mt-8
+                               inline-flex
+                               w-full
+                               items-center
+                               justify-between
+                               rounded-2xl
+                               bg-black
+                               px-5
+                               py-4
+                               text-sm
+                               font-semibold
+                               text-white
+                               transition
+                               hover:bg-white
+                               hover:text-black">
+
+                        Find a Photographer
+
+                        <span
+                            class="flex
+                                   h-8
+                                   w-8
+                                   items-center
+                                   justify-center
+                                   rounded-full
+                                   bg-white/10">
+
+                            <i
+                                class="fa-solid
+                                       fa-arrow-right
+                                       text-[10px]">
+                            </i>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM STATS -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-16
+                   grid
+                   gap-5
+                   border-t
+                   border-gray-200
+                   pt-8
+                   sm:grid-cols-3
+                   dark:border-white/10">
+
+
+            <!-- STAT 01 -->
+
+            <div
+                class="flex
+                       items-center
+                       gap-4
+                       rounded-2xl
+                       bg-white
+                       p-4
+                       shadow-sm
+                       dark:bg-white/[0.04]">
+
+                <div
+                    class="flex
+                           h-11
+                           w-11
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-amber-100
+                           text-amber-500
+                           dark:bg-amber-400/10">
+
+                    <i
+                        class="fa-solid
+                               fa-bolt">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Fast discovery
+
+                    </p>
+
+                    <p
+                        class="mt-1
+                               text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Find relevant photographers quickly
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STAT 02 -->
+
+            <div
+                class="flex
+                       items-center
+                       gap-4
+                       rounded-2xl
+                       bg-white
+                       p-4
+                       shadow-sm
+                       dark:bg-white/[0.04]">
+
+                <div
+                    class="flex
+                           h-11
+                           w-11
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-amber-100
+                           text-amber-500
+                           dark:bg-amber-400/10">
+
+                    <i
+                        class="fa-solid
+                               fa-images">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Real portfolios
+
+                    </p>
+
+                    <p
+                        class="mt-1
+                               text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        See their work before connecting
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STAT 03 -->
+
+            <div
+                class="flex
+                       items-center
+                       gap-4
+                       rounded-2xl
+                       bg-white
+                       p-4
+                       shadow-sm
+                       dark:bg-white/[0.04]">
+
+                <div
+                    class="flex
+                           h-11
+                           w-11
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-amber-100
+                           text-amber-500
+                           dark:bg-amber-400/10">
+
+                    <i
+                        class="fa-solid
+                               fa-shield-halved">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <p
+                        class="text-sm
+                               font-semibold
+                               text-gray-900
+                               dark:text-white">
+
+                        Clear decisions
+
+                    </p>
+
+                    <p
+                        class="mt-1
+                               text-xs
+                               text-gray-500
+                               dark:text-gray-400">
+
+                        Compare before you choose
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+    
 </main>
 
 
@@ -2313,618 +4584,106 @@
 
 
 
-
-
-
-
+<!-- ========================================================= -->
+<!-- LENSFIND FOOTER -->
+<!-- ========================================================= -->
 
 <footer
-    class="relative
-           bg-[#0b0b0b]
-           text-white
-           overflow-hidden">
+    class="bg-[#111111]
+           dark:bg-black
+           text-white">
 
 
-    <!-- ================================================= -->
-    <!-- LARGE BACKGROUND TEXT -->
-    <!-- ================================================= -->
+    
 
-    <div
-        class="absolute
-               bottom-[-35px]
-               left-1/2
-               -translate-x-1/2
-               whitespace-nowrap
-               text-[20vw]
-               font-black
-               tracking-[-12px]
-               text-white/[0.025]
-               pointer-events-none
-               select-none">
-
-        LENSFIND
-
-    </div>
-
+    <!-- ===================================================== -->
+    <!-- MAIN FOOTER -->
+    <!-- ===================================================== -->
 
     <div
-        class="relative
-               z-10
-               max-w-7xl
+        class="max-w-7xl
                mx-auto
                px-5
                sm:px-6
-               lg:px-8">
-
-
-        <!-- ================================================= -->
-        <!-- TOP FOOTER CTA -->
-        <!-- ================================================= -->
+               lg:px-8
+               py-14">
 
         <div
-            class="py-20
-                   lg:py-24
-                   border-b
-                   border-white/10">
+            class="grid
+                   sm:grid-cols-2
+                   lg:grid-cols-12
+                   gap-12">
 
+
+            <!-- ================================================= -->
+            <!-- BRAND -->
+            <!-- ================================================= -->
 
             <div
-                class="grid
-                       lg:grid-cols-12
-                       gap-10
-                       items-end">
+                class="lg:col-span-5">
 
+                <a
+                    href="index.html"
+                    class="inline-flex
+                           items-center">
 
-                <!-- Brand -->
-
-                <div
-                    class="lg:col-span-7">
-
-
-                    <div
-                        class="flex
-                               items-center
-                               gap-3
-                               mb-7">
-
-
-                        <div
-                            class="w-11
-                                   h-11
-                                   rounded-full
-                                   bg-amber-500
-                                   flex
-                                   items-center
-                                   justify-center">
-
-
-                            <i
-                                class="fa-solid
-                                       fa-camera
-                                       text-black">
-
-                            </i>
-
-
-                        </div>
-
-
-                        <span
-                            class="text-xl
-                                   font-bold
-                                   tracking-tight">
-
-                            LensFind
-
-                        </span>
-
-
-                    </div>
-
-
-                    <h2
-                        class="text-4xl
-                               sm:text-5xl
-                               lg:text-6xl
+                    <span
+                        class="text-2xl
                                font-semibold
-                               leading-[1]
                                tracking-tight">
 
+                        Lens<span
+                            class="text-amber-500">
 
-                        Make your next
-
-
-                        <span
-                            class="font-serif
-                                   italic
-                                   font-normal
-                                   text-amber-400">
-
-                            moment
+                            Find
 
                         </span>
 
+                    </span>
 
-                        <br>
-
-
-                        unforgettable.
-
-                    </h2>
+                </a>
 
 
-                </div>
+                <p
+                    class="mt-5
+                           max-w-sm
+                           text-sm
+                           leading-7
+                           text-gray-500">
+
+                    Discover talented photographers,
+                    explore creative work and find the
+                    perfect visual storyteller for your next project.
+
+                </p>
 
 
-                <!-- Newsletter -->
+                <!-- SOCIAL -->
 
                 <div
-                    class="lg:col-span-5">
-
-
-                    <p
-                        class="text-sm
-                               leading-6
-                               text-white-500
-                               mb-5">
-
-
-                        Get photography inspiration,
-                        new photographer discoveries and
-                        marketplace updates.
-
-
-                    </p>
-
-
-                    <form
-                        onsubmit="subscribeNewsletter(event)"
-                        class="flex
-                               flex-col
-                               sm:flex-row
-                               gap-2">
-
-
-                        <input
-                            id="footerEmail"
-                            type="email"
-                            required
-                            placeholder="Your email address"
-                            class="flex-1
-                                   min-w-0
-                                   px-5
-                                   py-4
-                                   rounded-xl
-                                   bg-white/[0.05]
-                                   border
-                                   border-white/10
-                                   text-white
-                                   placeholder:text-white
-                                   outline-none
-                                   focus:border-amber-500
-                                   transition">
-
-
-                        <button
-                            type="submit"
-                            class="px-6
-                                   py-4
-                                   rounded-xl
-                                   bg-amber-500
-                                   text-black
-                                   text-sm
-                                   font-semibold
-                                   hover:bg-amber-400
-                                   transition">
-
-                            Subscribe
-
-                        </button>
-
-
-                    </form>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <!-- ================================================= -->
-        <!-- NAVIGATION -->
-        <!-- ================================================= -->
-
-        <div
-            class="py-16
-                   grid
-                   grid-cols-2
-                   sm:grid-cols-3
-                   lg:grid-cols-5
-                   gap-10">
-
-
-            <!-- Explore -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Explore
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="index.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Home
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/photographers.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Browse Photographers
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/portfolio.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Portfolios
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pages/categories.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Categories
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- For Photographers -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    For Creatives
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="list-your-services.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            List Your Services
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="photographer-login.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Photographer Login
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="pricing.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Pricing
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="resources.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Resources
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Company -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Company
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="about.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            About Us
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="contact.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Contact
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="careers.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Careers
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="blog.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Journal
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Support -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Support
-
-                </h3>
-
-
-                <ul
-                    class="space-y-4">
-
-
-                    <li>
-                        <a
-                            href="faq.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            FAQ
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="privacy.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Privacy
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="terms.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Terms
-
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a
-                            href="help.html"
-                            class="text-sm
-                                   text-gray-300
-                                   hover:text-amber-400
-                                   transition">
-
-                            Help Center
-
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-            <!-- Social -->
-
-            <div>
-
-
-                <h3
-                    class="text-xs
-                           uppercase
-                           tracking-[3px]
-                           text-white-500
-                           mb-6">
-
-                    Follow
-
-                </h3>
-
-
-                <div
-                    class="flex
-                           flex-wrap
+                    class="mt-7
+                           flex
+                           items-center
                            gap-3">
-
 
                     <a
                         href="#"
                         aria-label="Instagram"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-instagram">
-
-                        </i>
-
+                        <i class="fa-brands fa-instagram"></i>
 
                     </a>
 
@@ -2932,53 +4691,43 @@
                     <a
                         href="#"
                         aria-label="Facebook"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-facebook-f">
-
-                        </i>
-
+                        <i class="fa-brands fa-facebook-f"></i>
 
                     </a>
 
 
                     <a
                         href="#"
-                        aria-label="X"
-                        class="w-11
-                               h-11
+                        aria-label="Pinterest"
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-x-twitter">
-
-                        </i>
-
+                        <i class="fa-brands fa-pinterest-p"></i>
 
                     </a>
 
@@ -2986,60 +4735,308 @@
                     <a
                         href="#"
                         aria-label="LinkedIn"
-                        class="w-11
-                               h-11
+                        class="w-10
+                               h-10
                                rounded-full
                                border
                                border-white/10
                                flex
                                items-center
                                justify-center
+                               text-gray-400
                                hover:bg-amber-500
-                               hover:text-black
+                               hover:text-white
                                hover:border-amber-500
                                transition">
 
-
-                        <i
-                            class="fa-brands
-                                   fa-linkedin-in">
-
-                        </i>
-
+                        <i class="fa-brands fa-linkedin-in"></i>
 
                     </a>
 
-
                 </div>
-
 
             </div>
 
 
+
+            <!-- ================================================= -->
+            <!-- NAVIGATION -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-3">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.2em]
+                           font-semibold
+                           text-white">
+
+                    Explore
+
+                </h3>
+
+
+                <ul
+                    class="mt-6
+                           space-y-4">
+
+                    <li>
+
+                        <a
+                            href="index.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="photographers.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Browse Photographers
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="categories.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Categories
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="inspiration.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Inspiration
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- FOR PHOTOGRAPHERS -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.1em]
+                           font-semibold
+                           text-white">
+
+                    For Photographers
+
+                </h3>
+
+
+                <ul
+                    class="mt-6
+                           space-y-4">
+
+                    <li>
+
+                        <a
+                            href="list-services.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            List Your Services
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+                            class="text-sm
+                                   text-gray-500
+                                   hover:text-amber-500
+                                   transition">
+
+                            Contact Us
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- CONTACT -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+                <h3
+                    class="text-xs
+                           uppercase
+                           tracking-[0.2em]
+                           font-semibold
+                           text-white">
+
+                    Contact
+
+                </h3>
+
+
+                <div
+                    class="mt-6
+                           space-y-4">
+
+
+                    <a
+                        href="mailto:hello@lensfind.com"
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               text-gray-500
+                               hover:text-amber-500
+                               transition">
+
+                        <i
+                            class="fa-regular
+                                   fa-envelope
+                                   mt-1">
+                        </i>
+
+                        <span>
+                            hello@lensfind.com
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+919876543210"
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               text-gray-500
+                               hover:text-amber-500
+                               transition">
+
+                        <i
+                            class="fa-solid
+                                   fa-phone
+                                   mt-1">
+                        </i>
+
+                        <span>
+                            +91 98765 43210
+                        </span>
+
+                    </a>
+
+
+                    <div
+                        class="flex
+                               items-start
+                               gap-3
+                               text-sm
+                               leading-6
+                               text-gray-500">
+
+                        <i
+                            class="fa-solid
+                                   fa-location-dot
+                                   mt-1">
+
+                        </i>
+
+                        <span>
+                            Chennai, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
+    </div>
 
-        <!-- ================================================= -->
-        <!-- BOTTOM BAR -->
-        <!-- ================================================= -->
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM BAR -->
+    <!-- ===================================================== -->
+
+    <div
+        class="border-t
+               border-white/10">
 
         <div
-            class="relative
-                   z-20
-                   py-6
-                   border-t
-                   border-white/10
+            class="max-w-7xl
+                   mx-auto
+                   px-5
+                   sm:px-6
+                   lg:px-8
+                   py-5
                    flex
                    flex-col
                    sm:flex-row
-                   sm:items-center
-                   sm:justify-between
+                   items-center
+                   justify-between
                    gap-4">
 
-
             <p
-                class="text-xs
-                       text-white-600">
+                class="text-[11px]
+                       text-gray-600">
 
                 © 2026 LensFind. All rights reserved.
 
@@ -3051,22 +5048,29 @@
                        items-center
                        gap-5">
 
-
                 <a
-                    href="privacy.html"
-                    class="text-xs
+                    href="#"
+                    class="text-[11px]
                            text-gray-600
                            hover:text-white
                            transition">
 
-                    Privacy
+                    Privacy Policy
 
                 </a>
 
 
+                <span
+                    class="w-1
+                           h-1
+                           rounded-full
+                           bg-gray-700">
+                </span>
+
+
                 <a
-                    href="terms.html"
-                    class="text-xs
+                    href="#"
+                    class="text-[11px]
                            text-gray-600
                            hover:text-white
                            transition">
@@ -3076,46 +5080,41 @@
                 </a>
 
 
-                <button
-                    onclick="window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    })"
-                    class="w-9
-                           h-9
+                <span
+                    class="w-1
+                           h-1
                            rounded-full
-                           border
-                           border-white/10
-                           flex
-                           items-center
-                           justify-center
-                           text-gray-400
-                           hover:bg-amber-500
-                           hover:text-black
-                           hover:border-amber-500
-                           transition">
+                           bg-amber-500">
+                </span>
 
 
-                    <i
-                        class="fa-solid
-                               fa-arrow-up
-                               text-xs">
+                <span
+                    class="text-[11px]
+                           text-gray-600">
 
-                    </i>
+                    Made for visual storytellers
 
-
-                </button>
-
+                </span>
 
             </div>
 
-
         </div>
-
 
     </div>
 
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
