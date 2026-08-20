@@ -3149,311 +3149,393 @@
 
 
             <!-- ================================================= -->
-            <!-- RIGHT SHOWCASE -->
+<!-- RIGHT SHOWCASE -->
+<!-- ================================================= -->
+
+<div 
+    class="lg:col-span-7 
+           relative 
+           min-h-[460px] 
+           lg:min-h-full 
+           overflow-hidden 
+           bg-[#FAF8F4] 
+           dark:bg-[#211D18]">
+
+
+    <!-- Decorative Glow -->
+
+    <div 
+        class="absolute 
+               -right-32 
+               -top-32 
+               h-96 
+               w-96 
+               rounded-full 
+               bg-amber-300/20 
+               blur-3xl 
+               dark:bg-amber-500/10">
+    </div>
+
+
+    <div 
+        class="absolute 
+               -left-32 
+               bottom-0 
+               h-80 
+               w-80 
+               rounded-full 
+               bg-orange-200/20 
+               blur-3xl 
+               dark:bg-orange-500/5">
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LARGE NUMBER -->
+    <!-- ================================================= -->
+
+    <span 
+        id="cityNumber"
+        class="pointer-events-none 
+               absolute 
+               right-4 
+               top-4 
+               select-none 
+               text-[90px] 
+               font-bold 
+               leading-none 
+               text-[#2B241D]/[0.035] 
+               sm:right-8 
+               sm:text-[200px] 
+               dark:text-white/[0.025]">
+
+        01
+
+    </span>
+
+
+    <!-- ================================================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ================================================= -->
+
+    <div 
+        id="cityContent"
+        class="relative 
+               z-10 
+               flex 
+               min-h-[460px] 
+               flex-col 
+               justify-between 
+               p-6 
+               sm:min-h-[480px] 
+               sm:p-10 
+               lg:min-h-full 
+               lg:p-14 
+               transition-all 
+               duration-500">
+
+
+        <!-- ================================================= -->
+        <!-- TOP -->
+        <!-- ================================================= -->
+
+        <div 
+            class="flex 
+                   w-full 
+                   items-center 
+                   justify-between 
+                   gap-3">
+
+            <!-- Featured -->
+
+            <span 
+                class="shrink-0 
+                       rounded-full 
+                       border 
+                       border-[#D9D1C6] 
+                       px-3 
+                       py-1.5 
+                       text-[8px] 
+                       uppercase 
+                       tracking-[2px] 
+                       text-black 
+                       dark:border-white/10 
+                       dark:text-white/50 
+                       sm:px-4 
+                       sm:py-2 
+                       sm:text-[10px]">
+
+                Featured location
+
+            </span>
+
+
+            <!-- Counter -->
+
+            <span 
+                id="cityCounter"
+                class="shrink-0 
+                       text-[10px] 
+                       text-[#A9A196] 
+                       dark:text-white/40 
+                       sm:text-xs">
+
+                01 / 04
+
+            </span>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER -->
+        <!-- ================================================= -->
+
+        <div 
+            class="mt-8 
+                   min-w-0 
+                   sm:mt-0">
+
+
+            <!-- STATE -->
+
+            <p 
+                id="cityState"
+                class="text-[10px] 
+                       uppercase 
+                       tracking-[3px] 
+                       text-amber-600 
+                       dark:text-amber-400 
+                       sm:text-xs">
+
+                Tamil Nadu
+
+            </p>
+
+
+            <!-- ================================================= -->
+            <!-- CITY NAME -->
             <!-- ================================================= -->
 
-            <div
-                class="lg:col-span-7
-                       relative
-                       min-h-[480px]
-                       lg:min-h-full
-                       overflow-hidden
-                       bg-[#FAF8F4]
-                       dark:bg-[#211D18]">
+            <h3 
+                id="cityName"
+                class="mt-3 
+                       max-w-full 
+                       break-words 
+                       text-[42px] 
+                       font-semibold 
+                       leading-[0.95] 
+                       tracking-[-2px] 
+                       text-[#171411] 
+                       sm:mt-4 
+                       sm:text-7xl 
+                       sm:tracking-tight 
+                       lg:text-8xl 
+                       dark:text-white">
+
+                Chennai
+
+            </h3>
 
 
-                <!-- Decorative Glow -->
+            <!-- DESCRIPTION -->
 
-                <div
-                    class="absolute -right-32 -top-32
-                           h-96 w-96
-                           rounded-full
-                           bg-amber-300/20
-                           dark:bg-amber-500/10
-                           blur-3xl">
-                </div>
+            <p 
+                id="cityDescription"
+                class="mt-4 
+                       max-w-md 
+                       text-[13px] 
+                       leading-6 
+                       text-black 
+                       dark:text-white/70 
+                       sm:mt-5 
+                       sm:text-sm 
+                       sm:leading-7">
+
+                A city full of weddings, 
+                fashion stories, 
+                celebrations, 
+                architecture and unforgettable 
+                everyday moments.
+
+            </p>
 
 
-                <div
-                    class="absolute -left-32 bottom-0
-                           h-80 w-80
-                           rounded-full
-                           bg-orange-200/20
-                           dark:bg-orange-500/5
-                           blur-3xl">
-                </div>
+            <!-- ================================================= -->
+            <!-- EXPLORE BUTTON -->
+            <!-- ================================================= -->
 
+            <button 
+                id="exploreCity"
+                type="button"
+                onclick="exploreSelectedCity()"
+                class="mt-6 
+                       inline-flex 
+                       max-w-full 
+                       items-center 
+                       gap-3 
+                       rounded-full 
+                       bg-[#171411] 
+                       px-5 
+                       py-3 
+                       text-xs 
+                       font-semibold 
+                       text-white 
+                       transition 
+                       hover:bg-amber-500 
+                       dark:bg-amber-400 
+                       dark:text-black 
+                       dark:hover:bg-white 
+                       sm:mt-8 
+                       sm:gap-4 
+                       sm:px-6 
+                       sm:py-3.5 
+                       sm:text-sm">
 
-                <!-- Large Number -->
+                <span 
+                    id="exploreCityText">
 
-                <span
-                    id="cityNumber"
-                    class="absolute right-8 top-5
-                           text-[150px]
-                           sm:text-[200px]
-                           font-bold
-                           leading-none
-                           text-[#2B241D]/[0.035]
-                           dark:text-white/[0.025]
-                           select-none">
-
-                    01
+                    Explore Chennai
 
                 </span>
 
+                <span>
+                    →
+                </span>
 
-                <!-- ================================================= -->
-                <!-- MAIN CONTENT -->
-                <!-- ================================================= -->
+            </button>
 
-                <div
-                    id="cityContent"
-                    class="relative z-10
-                           flex
-                           min-h-[480px]
-                           lg:min-h-full
-                           flex-col
-                           justify-between
-                           p-7
-                           sm:p-10
-                           lg:p-14
-                           transition-all
-                           duration-500">
-
-
-                    <!-- TOP -->
-
-                    <div
-                        class="flex items-center justify-between">
-
-                        <span
-                            class="rounded-full
-                                   border border-[#D9D1C6]
-                                   dark:border-white/10
-                                   px-4 py-2
-                                   text-[10px]
-                                   uppercase
-                                   tracking-[2px]
-                                   text-black
-                                   dark:text-white/40">
-
-                            Featured location
+        </div>
 
-                        </span>
 
+        <!-- ================================================= -->
+        <!-- BOTTOM STATS -->
+        <!-- ================================================= -->
 
-                        <span
-                            id="cityCounter"
-                            class="text-xs
-                                   text-[#A9A196]
-                                   dark:text-white">
-
-                            01 / 04
-
-                        </span>
+        <div 
+            class="mt-8 
+                   grid 
+                   max-w-lg 
+                   grid-cols-3 
+                   border-t 
+                   border-[#DED6CC] 
+                   pt-4 
+                   dark:border-white/10 
+                   sm:mt-0 
+                   sm:pt-6">
 
-                    </div>
 
+            <!-- STAT 01 -->
 
-                    <!-- ================================================= -->
-                    <!-- CENTER -->
-                    <!-- ================================================= -->
+            <div 
+                class="min-w-0">
 
-                    <div>
+                <p 
+                    id="photographerCount"
+                    class="text-lg 
+                           font-semibold 
+                           text-[#171411] 
+                           dark:text-white 
+                           sm:text-xl">
 
-                        <p
-                            id="cityState"
-                            class="text-amber-600
-                                   dark:text-amber-400
-                                   text-xs
-                                   uppercase
-                                   tracking-[3px]">
+                    120+
 
-                            Tamil Nadu
+                </p>
 
-                        </p>
 
+                <p 
+                    class="mt-1 
+                           text-[7px] 
+                           uppercase 
+                           tracking-[1.5px] 
+                           text-black 
+                           dark:text-white/50 
+                           sm:text-[9px] 
+                           sm:tracking-[2px]">
 
-                        <h3
-                            id="cityName"
-                            class="mt-4
-                                   text-6xl
-                                   sm:text-7xl
-                                   lg:text-8xl
-                                   font-semibold
-                                   tracking-tight
-                                   text-[#171411]
-                                   dark:text-white">
+                    Photographers
 
-                            Chennai
+                </p>
 
-                        </h3>
+            </div>
 
 
-                        <p
-                            id="cityDescription"
-                            class="mt-5
-                                   max-w-md
-                                   text-sm
-                                   leading-7
-                                   text-black
-                                   dark:text-white">
+            <!-- STAT 02 -->
 
-                            A city full of weddings,
-                            fashion stories,
-                            celebrations,
-                            architecture and unforgettable
-                            everyday moments.
+            <div 
+                class="min-w-0 
+                       border-l 
+                       border-[#DED6CC] 
+                       pl-3 
+                       dark:border-white/10 
+                       sm:pl-5">
 
-                        </p>
+                <p 
+                    id="specialtyCount"
+                    class="text-lg 
+                           font-semibold 
+                           text-[#171411] 
+                           dark:text-white 
+                           sm:text-xl">
 
+                    18
 
-                        <button
-                            id="exploreCity"
-                            type="button"
-                            onclick="exploreSelectedCity()"
-                            class="mt-8
-                                   inline-flex
-                                   items-center
-                                   gap-4
-                                   rounded-full
-                                   bg-[#171411]
-                                   dark:bg-amber-400
-                                   px-6
-                                   py-3.5
-                                   text-sm
-                                   font-semibold
-                                   text-white
-                                   dark:text-black
-                                   transition
-                                   hover:bg-amber-500
-                                   dark:hover:bg-white">
+                </p>
 
-                            Explore Chennai
 
-                            <span>→</span>
+                <p 
+                    class="mt-1 
+                           text-[7px] 
+                           uppercase 
+                           tracking-[1.5px] 
+                           text-black 
+                           dark:text-white/50 
+                           sm:text-[9px] 
+                           sm:tracking-[2px]">
 
-                        </button>
+                    Specialties
 
-                    </div>
+                </p>
 
+            </div>
 
-                    <!-- ================================================= -->
-                    <!-- BOTTOM STATS -->
-                    <!-- ================================================= -->
 
-                    <div
-                        class="grid grid-cols-3
-                               max-w-lg
-                               border-t
-                               border-[#DED6CC]
-                               dark:border-white/10
-                               pt-6">
-
-
-                        <!-- STAT 01 -->
-
-                        <div>
-
-                            <p
-                                id="photographerCount"
-                                class="text-xl
-                                       font-semibold
-                                       text-[#171411]
-                                       dark:text-white">
-
-                                120+
-
-                            </p>
-
-
-                            <p
-                                class="mt-1
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]
-                                       text-black
-                                       dark:text-white">
-
-                                Photographers
-
-                            </p>
-
-                        </div>
-
-
-                        <!-- STAT 02 -->
-
-                        <div
-                            class="border-l
-                                   border-[#DED6CC]
-                                   dark:border-white/10
-                                   pl-5">
-
-                            <p
-                                id="specialtyCount"
-                                class="text-xl
-                                       font-semibold
-                                       text-[#171411]
-                                       dark:text-white">
-
-                                18
-
-                            </p>
-
-
-                            <p
-                                class="mt-1
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]
-                                       text-black
-                                       dark:text-white">
-
-                                Specialties
-
-                            </p>
-
-                        </div>
-
-
-                        <!-- STAT 03 -->
-
-                        <div
-                            class="border-l
-                                   border-[#DED6CC]
-                                   dark:border-white/10
-                                   pl-5">
-
-                            <p
-                                id="ratingCount"
-                                class="text-xl
-                                       font-semibold
-                                       text-black
-                                       dark:text-white">
-
-                                4.9
-
-                            </p>
-
-
-                            <p
-                                class="mt-1
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]
-                                       text-black
-                                       dark:text-white">
-
-                                Avg. Rating
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
+            <!-- STAT 03 -->
+
+            <div 
+                class="min-w-0 
+                       border-l 
+                       border-[#DED6CC] 
+                       pl-3 
+                       dark:border-white/10 
+                       sm:pl-5">
+
+                <p 
+                    id="ratingCount"
+                    class="text-lg 
+                           font-semibold 
+                           text-[#171411] 
+                           dark:text-white 
+                           sm:text-xl">
+
+                    4.9
+
+                </p>
+
+
+                <p 
+                    class="mt-1 
+                           text-[7px] 
+                           uppercase 
+                           tracking-[1.5px] 
+                           text-black 
+                           dark:text-white/50 
+                           sm:text-[9px] 
+                           sm:tracking-[2px]">
+
+                    Avg. Rating
+
+                </p>
 
             </div>
 
@@ -3461,6 +3543,7 @@
 
     </div>
 
+</div>
 </section>
 
 

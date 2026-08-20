@@ -96,6 +96,16 @@
         <p class="text-sm leading-7 text-slate-500"><i class="fa-solid fa-clock mr-2 text-amber-500"></i>Usually responds within 24 hours</p>
       </aside>
     </section>
+
+
+
+
+
+
+
+
+
+    
   </main>
 
   
@@ -629,59 +639,396 @@
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const profiles = {
+
+        ananya: {
+            name: "Ananya Rao",
+            role: "Corporate Photographer",
+            location: "Hyderabad, India",
+            rating: "4.9",
+            reviews: "102",
+            price: "₹9,000",
+            specialties: [
+                "Corporate",
+                "Events",
+                "Headshots",
+                "Brand Stories"
+            ],
+            image: "../assets/images/p14.jpg",
+            gallery: [
+                {
+                    image: "../assets/images/p43.jpg",
+                    alt: "Corporate conference",
+                    caption: "Annual leadership conference"
+                },
+                {
+                    image: "../assets/images/p64.jpg",
+                    alt: "Business strategy meeting",
+                    caption: "Strategy session"
+                },
+                {
+                    image: "../assets/images/p66.jpg",
+                    alt: "Corporate boardroom meeting",
+                    caption: "Boardroom stories"
+                }
+            ]
+        },
+
+        arjun: {
+            name: "Arjun Mehta",
+            role: "Wedding Photographer",
+            location: "Chennai, India",
+            rating: "4.9",
+            reviews: "124",
+            price: "₹12,000",
+            specialties: [
+                "Weddings",
+                "Engagements",
+                "Couples",
+                "Pre-wedding"
+            ],
+            image: "../assets/images/p11.jpg",
+            gallery: [
+                {
+                    image: "../assets/images/p82.jpg",
+                    alt: "Newlyweds celebrating",
+                    caption: "Aisha & Rohan — Just married"
+                },
+                {
+                    image: "../assets/images/p48.jpg",
+                    alt: "Wedding couple portrait",
+                    caption: "Nisha & Arvind — Golden hour"
+                },
+                {
+                    image: "../assets/images/p51.jpg",
+                    alt: "Traditional wedding ceremony",
+                    caption: "Sana & Vikram — The ceremony"
+                }
+            ]
+        },
+
+        priya: {
+            name: "Priya Sharma",
+            role: "Fashion Photographer",
+            location: "Mumbai, India",
+            rating: "5.0",
+            reviews: "89",
+            price: "₹8,500",
+            specialties: [
+                "Fashion",
+                "Editorial",
+                "Lookbooks",
+                "Campaigns"
+            ],
+            image: "../assets/images/p12.jpg",
+            gallery: [
+                {
+                    image: "../assets/images/p52.jpg",
+                    alt: "Vibrant fashion editorial",
+                    caption: "Colour theory — Fashion editorial"
+                },
+                {
+                    image: "../assets/images/p54.jpg",
+                    alt: "Evening gown fashion portrait",
+                    caption: "Midnight glamour — Campaign"
+                },
+                {
+                    image: "../assets/images/p57.jpg",
+                    alt: "Avant-garde fashion look",
+                    caption: "Sculpted light — Lookbook"
+                }
+            ]
+        },
+
+        rahul: {
+            name: "Rahul Kapoor",
+            role: "Food Photographer",
+            location: "Bengaluru, India",
+            rating: "4.8",
+            reviews: "76",
+            price: "₹6,500",
+            specialties: [
+                "Food",
+                "Restaurants",
+                "Products",
+                "Menus"
+            ],
+            image: "../assets/images/p13.jpg",
+            gallery: [
+                {
+                    image: "../assets/images/p41.jpg",
+                    alt: "Restaurant food spread",
+                    caption: "The harvest table — Restaurant shoot"
+                },
+                {
+                    image: "../assets/images/p58.jpg",
+                    alt: "Restaurant dining interior",
+                    caption: "The Amber Room — Interiors"
+                },
+                {
+                    image: "../assets/images/p62.jpg",
+                    alt: "Chef plating a dish",
+                    caption: "Chef’s table — Menu story"
+                }
+            ]
+        }
+
+    };
+
+
+    /* =====================================================
+       GET SELECTED PHOTOGRAPHER
+    ===================================================== */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const photographerKey =
+        params.get("photographer") || "ananya";
+
+    const profile =
+        profiles[photographerKey] || profiles.ananya;
+
+
+    /* =====================================================
+       NAME
+    ===================================================== */
+
+    const nameParts = profile.name.split(" ");
+
+    const firstName = nameParts.shift();
+
+    const lastName = nameParts.join(" ");
+
+
+    /* =====================================================
+       EMAIL
+    ===================================================== */
+
+    const contactEmail =
+        profile.name
+            .toLowerCase()
+            .replace(/\s+/g, ".") +
+        "@example.com";
+
+
+    const contactLink =
+        `mailto:${contactEmail}?subject=${
+            encodeURIComponent(profile.role + " enquiry")
+        }`;
+
+
+    /* =====================================================
+       PAGE TITLE
+    ===================================================== */
+
+    document.title =
+        `${profile.name} — ${profile.role} | LensFind`;
+
+
+    /* =====================================================
+       HELPER FUNCTION
+    ===================================================== */
+
+    function setHTML(id, value) {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.innerHTML = value;
+        }
+
+    }
+
+
+    function setText(id, value) {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.textContent = value;
+        }
+
+    }
+
+
+    /* =====================================================
+       PROFILE DETAILS
+    ===================================================== */
+
+    setHTML(
+        "profile-name",
+        `${firstName}
+        <span class="serif italic text-amber-400">
+            ${lastName}
+        </span>`
+    );
+
+
+    setText(
+        "profile-role",
+        `${profile.role} creating polished visual stories for clients, brands and events.`
+    );
+
+
+    setHTML(
+        "profile-location",
+        `<i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>
+         ${profile.location}`
+    );
+
+
+    setHTML(
+        "profile-rating",
+        `<i class="fa-solid fa-star mr-2 text-amber-400"></i>
+         ${profile.rating} (${profile.reviews} reviews)`
+    );
+
+
+    setHTML(
+        "profile-price",
+        `${profile.price}
+         <span class="text-sm font-medium text-slate-400">
+            / session
+         </span>`
+    );
+
+
+    /* =====================================================
+       PROFILE IMAGE
+    ===================================================== */
+
+    const profilePhoto =
+        document.getElementById("profile-photo");
+
+    if (profilePhoto) {
+
+        profilePhoto.src = profile.image;
+
+        profilePhoto.alt = profile.name;
+
+        profilePhoto.classList.remove("hidden");
+
+    }
+
+
+    /* =====================================================
+       SPECIALTIES
+    ===================================================== */
+
+    const specialties =
+        document.getElementById("profile-specialties");
+
+    if (specialties) {
+
+        specialties.innerHTML =
+            profile.specialties
+                .map(item => `
+                    <span
+                        class="rounded-full
+                               bg-slate-100
+                               dark:bg-white/10
+                               px-3
+                               py-2
+                               text-xs
+                               text-slate-700
+                               dark:text-white">
+                        ${item}
+                    </span>
+                `)
+                .join("");
+
+    }
+
+
+    /* =====================================================
+       CONTACT BUTTON
+    ===================================================== */
+
+    const contactButton =
+        document.getElementById("contact-photographer");
+
+    if (contactButton) {
+
+        contactButton.textContent =
+            `Contact ${firstName}`;
+
+        contactButton.href =
+            contactLink;
+
+    }
+
+
+    /* =====================================================
+       AVAILABILITY
+    ===================================================== */
+
+    const availability =
+        document.getElementById("availability-link");
+
+    if (availability) {
+
+        availability.href =
+            contactLink;
+
+    }
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    profile.gallery.forEach((work, index) => {
+
+        const number =
+            index + 1;
+
+
+        const image =
+            document.getElementById(
+                `gallery-image-${number}`
+            );
+
+
+        const caption =
+            document.getElementById(
+                `gallery-caption-${number}`
+            );
+
+
+        if (image) {
+
+            image.src =
+                work.image;
+
+            image.alt =
+                work.alt;
+
+            image.classList.remove("hidden");
+
+        }
+
+
+        if (caption) {
+
+            caption.textContent =
+                work.caption;
+
+        }
+
+    });
+
+
+});
+</script>
 
 
 
 
 
   
-  <script>
-    const profiles = {
-      ananya: { name: 'Ananya Rao', role: 'Corporate Photographer', location: 'Hyderabad, India', rating: '4.9', reviews: '102', price: '₹9,000', specialties: ['Corporate', 'Events', 'Headshots', 'Brand Stories'], image: '../assets/images/p14.jpg', gallery: [
-        { image: '../assets/images/p43.jpg', alt: 'Corporate conference', caption: 'Annual leadership conference' },
-        { image: '../assets/images/p64.jpg', alt: 'Business strategy meeting', caption: 'Strategy session' },
-        { image: '../assets/images/p66.jpg', alt: 'Corporate boardroom meeting', caption: 'Boardroom stories' }
-      ] },
-      arjun: { name: 'Arjun Mehta', role: 'Wedding Photographer', location: 'Chennai, India', rating: '4.9', reviews: '124', price: '₹12,000', specialties: ['Weddings', 'Engagements', 'Couples', 'Pre-wedding'], image: '../assets/images/p11.jpg', gallery: [
-        { image: '../assets/images/p82.jpg', alt: 'Newlyweds celebrating', caption: 'Aisha & Rohan — Just married' },
-        { image: '../assets/images/p48.jpg', alt: 'Wedding couple portrait', caption: 'Nisha & Arvind — Golden hour' },
-        { image: '../assets/images/p51.jpg', alt: 'Traditional wedding ceremony', caption: 'Sana & Vikram — The ceremony' }
-      ] },
-      priya: { name: 'Priya Sharma', role: 'Fashion Photographer', location: 'Mumbai, India', rating: '5.0', reviews: '89', price: '₹8,500', specialties: ['Fashion', 'Editorial', 'Lookbooks', 'Campaigns'], image: '../assets/images/p12.jpg', gallery: [
-        { image: '../assets/images/p52.jpg', alt: 'Vibrant fashion editorial', caption: 'Colour theory — Fashion editorial' },
-        { image: '../assets/images/p54.jpg', alt: 'Evening gown fashion portrait', caption: 'Midnight glamour — Campaign' },
-        { image: '../assets/images/p57.jpg', alt: 'Avant-garde fashion look', caption: 'Sculpted light — Lookbook' }
-      ] },
-      rahul: { name: 'Rahul Kapoor', role: 'Food Photographer', location: 'Bengaluru, India', rating: '4.8', reviews: '76', price: '₹6,500', specialties: ['Food', 'Restaurants', 'Products', 'Menus'], image: '../assets/images/p13.jpg', gallery: [
-        { image: '../assets/images/p41.jpg', alt: 'Restaurant food spread', caption: 'The harvest table — Restaurant shoot' },
-        { image: '../assets/images/p58.jpg', alt: 'Restaurant dining interior', caption: 'The Amber Room — Interiors' },
-        { image: '../assets/images/p62.jpg', alt: 'Chef plating a dish', caption: 'Chef’s table — Menu story' }
-      ] }
-    };
-    const profile = profiles[new URLSearchParams(window.location.search).get('photographer')] || profiles.ananya;
-    const [firstName, ...lastName] = profile.name.split(' ');
-    const contactEmail = `${profile.name.toLowerCase().replace(/\s+/g, '.')}@example.com`;
-    const contactLink = `mailto:${contactEmail}?subject=${encodeURIComponent(`${profile.role} enquiry`)}`;
-    document.title = `${profile.name} — ${profile.role} | LensFind`;
-    document.getElementById('profile-name').innerHTML = `${firstName} <span class="serif italic text-amber-400">${lastName.join(' ')}</span>`;
-    document.getElementById('profile-role').textContent = `${profile.role} creating polished visual stories for clients, brands and events.`;
-    document.getElementById('profile-location').innerHTML = `<i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>${profile.location}`;
-    document.getElementById('profile-rating').innerHTML = `<i class="fa-solid fa-star mr-2 text-amber-400"></i>${profile.rating} (${profile.reviews} reviews)`;
-    document.getElementById('profile-price').innerHTML = `${profile.price} <span class="text-sm font-medium text-slate-400">/ session</span>`;
-    document.getElementById('profile-photo').src = profile.image;
-    document.getElementById('profile-photo').alt = profile.name;
-    document.getElementById('profile-specialties').innerHTML = profile.specialties.map(item => `<span class="rounded-lg bg-slate-100 px-3 py-2">${item}</span>`).join('');
-    document.getElementById('contact-photographer').textContent = `Contact ${firstName}`;
-    document.getElementById('contact-photographer').href = contactLink;
-    document.getElementById('availability-link').href = contactLink;
-    profile.gallery.forEach((work, index) => {
-      const image = document.getElementById(`gallery-image-${index + 1}`);
-      image.src = work.image;
-      image.alt = work.alt;
-      document.getElementById(`gallery-caption-${index + 1}`).textContent = work.caption;
-    });
-  </script>
-  <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
