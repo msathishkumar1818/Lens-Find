@@ -1908,247 +1908,967 @@
             </div>
 
 
-            <!-- ============================================= -->
-            <!-- CONTACT FORM -->
-            <!-- ============================================= -->
+           <!-- ============================================= -->
+<!-- CONTACT FORM -->
+<!-- ============================================= -->
 
-            <div class="lg:col-span-8 bg-white dark:bg-[#151515]
-                        rounded-[2rem]
-                        border border-gray-200 dark:border-white/10
-                        p-7 sm:p-10 lg:p-12">
+<div class="lg:col-span-8 bg-white dark:bg-[#151515] 
+            rounded-[2rem] 
+            border border-gray-200 dark:border-white/10 
+            p-7 sm:p-10 lg:p-12">
 
-                <div class="flex items-center justify-between gap-5">
+    <div class="flex items-center justify-between gap-5">
 
-                    <div>
+        <div>
 
-                        <p class="text-xs uppercase tracking-[0.25em]
-                                  text-amber-600 dark:text-amber-500 font-semibold">
+            <p class="text-xs uppercase tracking-[0.25em] 
+                      text-amber-600 dark:text-amber-500 font-semibold">
 
-                            Send a message
+                Send a message
 
-                        </p>
+            </p>
 
-                        <h2 class="mt-3 text-3xl sm:text-4xl
-                                   font-semibold text-gray-900 dark:text-white">
+            <h2 class="mt-3 text-3xl sm:text-4xl 
+                       font-semibold text-gray-900 dark:text-white">
 
-                            Tell us what you need.
+                Tell us what you need.
 
-                        </h2>
+            </h2>
 
-                    </div>
+        </div>
 
-                    <div class="hidden sm:flex w-14 h-14 rounded-full
-                                bg-gray-100 dark:bg-white/10
-                                items-center justify-center
-                                text-gray-700 dark:text-gray-300">
 
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <div class="hidden sm:flex w-14 h-14 rounded-full 
+                    bg-gray-100 dark:bg-white/10 
+                    items-center justify-center 
+                    text-gray-700 dark:text-gray-300">
 
-                    </div>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-                </div>
+        </div>
 
+    </div>
 
-                <!-- Form -->
-                <form class="mt-10 space-y-7">
 
-                    <!-- Name + Email -->
-                    <div class="grid sm:grid-cols-2 gap-6">
+    <!-- ============================================= -->
+    <!-- FORM -->
+    <!-- ============================================= -->
 
-                        <div>
+    <form id="contactForm" class="mt-10 space-y-7" novalidate>
 
-                            <label class="block text-sm font-medium
-                                          text-gray-700 dark:text-gray-300 mb-2">
 
-                                Your Name
+        <!-- ========================================= -->
+        <!-- Name + Email -->
+        <!-- ========================================= -->
 
-                            </label>
+        <div class="grid sm:grid-cols-2 gap-6">
 
-                            <input
-                                type="text"
-                                placeholder="Enter your name"
-                                class="w-full bg-transparent
-                                       border-0 border-b
-                                       border-gray-300 dark:border-white/20
-                                       px-0 py-4
-                                       text-gray-900 dark:text-white
-                                       placeholder-gray-400
-                                       outline-none
-                                       focus:border-amber-500
-                                       transition">
 
-                        </div>
+            <!-- Name -->
 
+            <div>
 
-                        <div>
+                <label
+                    for="contactName"
+                    class="block text-sm font-medium 
+                           text-gray-700 dark:text-gray-300 mb-2">
 
-                            <label class="block text-sm font-medium
-                                          text-gray-700 dark:text-gray-300 mb-2">
+                    Your Name
+                    <span class="text-red-500">*</span>
 
-                                Email Address
+                </label>
 
-                            </label>
 
-                            <input
-                                type="email"
-                                placeholder="you@example.com"
-                                class="w-full bg-transparent
-                                       border-0 border-b
-                                       border-gray-300 dark:border-white/20
-                                       px-0 py-4
-                                       text-gray-900 dark:text-white
-                                       placeholder-gray-400
-                                       outline-none
-                                       focus:border-amber-500
-                                       transition">
+                <input
+                    id="contactName"
+                    type="text"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    class="contact-input w-full bg-transparent 
+                           border-0 border-b 
+                           border-gray-300 dark:border-white/20 
+                           px-0 py-4 
+                           text-gray-900 dark:text-white 
+                           placeholder-gray-400 
+                           outline-none 
+                           focus:border-amber-500 
+                           transition">
 
-                        </div>
 
-                    </div>
+                <p
+                    id="nameError"
+                    class="validation-error">
+                </p>
 
+            </div>
 
-                    <!-- Phone + Subject -->
-                    <div class="grid sm:grid-cols-2 gap-6">
 
-                        <div>
 
-                            <label class="block text-sm font-medium
-                                          text-gray-700 dark:text-gray-300 mb-2">
+            <!-- Email -->
 
-                                Phone Number
+            <div>
 
-                            </label>
-
-                            <input
-                                type="tel"
-                                placeholder="+91 00000 00000"
-                                class="w-full bg-transparent
-                                       border-0 border-b
-                                       border-gray-300 dark:border-white/20
-                                       px-0 py-4
-                                       text-gray-900 dark:text-white
-                                       placeholder-gray-400
-                                       outline-none
-                                       focus:border-amber-500
-                                       transition">
-
-                        </div>
-
-
-                        <div>
-
-                            <label class="block text-sm font-medium
-                                          text-gray-700 dark:text-gray-300 mb-2">
-
-                                I'm Interested In
-
-                            </label>
-
-                            <select
-                                class="w-full bg-transparent
-                                       border-0 border-b
-                                       border-gray-300 dark:border-white/20
-                                       px-0 py-4
-                                       text-gray-900 dark:text-white
-                                       outline-none
-                                       focus:border-amber-500
-                                       transition">
-
-                                <option class="text-black">
-                                    Finding a Photographer
-                                </option>
-
-                                <option class="text-black">
-                                    Listing My Services
-                                </option>
-
-                                <option class="text-black">
-                                    Partnership
-                                </option>
-
-                                <option class="text-black">
-                                    General Enquiry
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Message -->
-                    <div>
-
-                        <label class="block text-sm font-medium
-                                      text-gray-700 dark:text-gray-300 mb-2">
-
-                            Your Message
-
-                        </label>
-
-                        <textarea
-                            rows="5"
-                            placeholder="Tell us a little about your project..."
-                            class="w-full bg-transparent
-                                   border-0 border-b
-                                   border-gray-300 dark:border-white/20
-                                   px-0 py-4
-                                   text-gray-900 dark:text-white
-                                   placeholder-gray-400
-                                   outline-none resize-none
-                                   focus:border-amber-500
-                                   transition"></textarea>
-
-                    </div>
-
-
-                    <!-- Submit -->
-                    <div class="pt-3 flex flex-col sm:flex-row
-                                sm:items-center justify-between gap-5">
-
-                        <p class="text-xs text-gray-500 dark:text-gray-400">
-                            We usually respond within 24 hours.
-                        </p>
-
-                        <button
-                            type="submit"
-                            class="group inline-flex items-center
-                                   justify-center gap-3
-                                   px-7 py-4
-                                   rounded-full
-                                   bg-gray-900 dark:bg-white
-                                   text-white dark:text-black
-                                   font-semibold
-                                   hover:bg-amber-500
-                                   dark:hover:bg-amber-500
-                                   dark:hover:text-white
-                                   transition">
-
-                            Send Message
-
-                            <span
-                                class="w-8 h-8 rounded-full
-                                       bg-white/10 dark:bg-black/10
-                                       flex items-center justify-center
-                                       group-hover:translate-x-1
-                                       transition">
-
-                                <i class="fa-solid fa-arrow-right text-xs"></i>
-
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </form>
+                <label
+                    for="contactEmail"
+                    class="block text-sm font-medium 
+                           text-gray-700 dark:text-gray-300 mb-2">
+
+                    Email Address
+                    <span class="text-red-500">*</span>
+
+                </label>
+
+
+                <input
+                    id="contactEmail"
+                    type="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    class="contact-input w-full bg-transparent 
+                           border-0 border-b 
+                           border-gray-300 dark:border-white/20 
+                           px-0 py-4 
+                           text-gray-900 dark:text-white 
+                           placeholder-gray-400 
+                           outline-none 
+                           focus:border-amber-500 
+                           transition">
+
+
+                <p
+                    id="emailError"
+                    class="validation-error">
+                </p>
 
             </div>
 
         </div>
 
 
+
+        <!-- ========================================= -->
+        <!-- Phone + Subject -->
+        <!-- ========================================= -->
+
+        <div class="grid sm:grid-cols-2 gap-6">
+
+
+            <!-- Phone -->
+
+            <div>
+
+                <label
+                    for="contactPhone"
+                    class="block text-sm font-medium 
+                           text-gray-700 dark:text-gray-300 mb-2">
+
+                    Phone Number
+                    <span class="text-red-500">*</span>
+
+                </label>
+
+
+                <input
+                    id="contactPhone"
+                    type="tel"
+                    placeholder="+91 00000 00000"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    class="contact-input w-full bg-transparent 
+                           border-0 border-b 
+                           border-gray-300 dark:border-white/20 
+                           px-0 py-4 
+                           text-gray-900 dark:text-white 
+                           placeholder-gray-400 
+                           outline-none 
+                           focus:border-amber-500 
+                           transition">
+
+
+                <p
+                    id="phoneError"
+                    class="validation-error">
+                </p>
+
+            </div>
+
+
+
+            <!-- Interested -->
+
+            <div>
+
+                <label
+                    for="contactInterest"
+                    class="block text-sm font-medium 
+                           text-gray-700 dark:text-gray-300 mb-2">
+
+                    I'm Interested In
+                    <span class="text-red-500">*</span>
+
+                </label>
+
+
+                <select
+                    id="contactInterest"
+                    class="contact-input w-full bg-transparent 
+                           border-0 border-b 
+                           border-gray-300 dark:border-white/20 
+                           px-0 py-4 
+                           text-gray-900 dark:text-white 
+                           outline-none 
+                           focus:border-amber-500 
+                           transition">
+
+                    <option value="" class="text-black">
+                        Select an option
+                    </option>
+
+                    <option
+                        value="photographer"
+                        class="text-black">
+
+                        Finding a Photographer
+
+                    </option>
+
+                    <option
+                        value="listing"
+                        class="text-black">
+
+                        Listing My Services
+
+                    </option>
+
+                    <option
+                        value="partnership"
+                        class="text-black">
+
+                        Partnership
+
+                    </option>
+
+                    <option
+                        value="general"
+                        class="text-black">
+
+                        General Enquiry
+
+                    </option>
+
+                </select>
+
+
+                <p
+                    id="interestError"
+                    class="validation-error">
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ========================================= -->
+        <!-- Message -->
+        <!-- ========================================= -->
+
+        <div>
+
+            <label
+                for="contactMessage"
+                class="block text-sm font-medium 
+                       text-gray-700 dark:text-gray-300 mb-2">
+
+                Your Message
+                <span class="text-red-500">*</span>
+
+            </label>
+
+
+            <textarea
+                id="contactMessage"
+                rows="5"
+                maxlength="500"
+                placeholder="Tell us a little about your project..."
+                class="contact-input w-full bg-transparent 
+                       border-0 border-b 
+                       border-gray-300 dark:border-white/20 
+                       px-0 py-4 
+                       text-gray-900 dark:text-white 
+                       placeholder-gray-400 
+                       outline-none resize-none 
+                       focus:border-amber-500 
+                       transition"></textarea>
+
+
+            <div class="flex justify-between items-start">
+
+                <p
+                    id="messageError"
+                    class="validation-error">
+                </p>
+
+                <span
+                    id="messageCount"
+                    class="text-xs text-gray-400 mt-1">
+
+                    0 / 500
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ========================================= -->
+        <!-- Success Message -->
+        <!-- ========================================= -->
+
+        <div
+            id="formSuccess"
+            class="hidden
+                   p-4
+                   rounded-xl
+                   bg-green-50
+                   dark:bg-green-900/20
+                   border
+                   border-green-200
+                   dark:border-green-800
+                   text-sm
+                   text-green-700
+                   dark:text-green-400">
+
+            <i class="fa-solid fa-circle-check mr-2"></i>
+
+            Your message has been submitted successfully.
+
+        </div>
+
+
+
+        <!-- ========================================= -->
+        <!-- Submit -->
+        <!-- ========================================= -->
+
+        <div class="pt-3 flex flex-col sm:flex-row 
+                    sm:items-center justify-between gap-5">
+
+
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+
+                We usually respond within 24 hours.
+
+            </p>
+
+
+            <button
+                type="submit"
+                class="group inline-flex items-center 
+                       justify-center gap-3 
+                       px-7 py-4 
+                       rounded-full 
+                       bg-gray-900 dark:bg-white 
+                       text-white dark:text-black 
+                       font-semibold 
+                       hover:bg-amber-500 
+                       dark:hover:bg-amber-500 
+                       dark:hover:text-white 
+                       transition">
+
+                Send Message
+
+
+                <span
+                    class="w-8 h-8 rounded-full 
+                           bg-white/10 dark:bg-black/10 
+                           flex items-center justify-center 
+                           group-hover:translate-x-1 
+                           transition">
+
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+
+<!-- ============================================= -->
+<!-- VALIDATION CSS -->
+<!-- ============================================= -->
+
+<style>
+
+.validation-error {
+
+    min-height: 18px;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #ef4444;
+
+}
+
+
+.contact-input.validation-error-border {
+
+    border-bottom-color: #ef4444 !important;
+
+}
+
+
+.contact-input.validation-success-border {
+
+    border-bottom-color: #22c55e !important;
+
+}
+
+</style>
+
+
+
+<!-- ============================================= -->
+<!-- FORM VALIDATION JS -->
+<!-- ============================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form =
+        document.getElementById("contactForm");
+
+
+    const name =
+        document.getElementById("contactName");
+
+    const email =
+        document.getElementById("contactEmail");
+
+    const phone =
+        document.getElementById("contactPhone");
+
+    const interest =
+        document.getElementById("contactInterest");
+
+    const message =
+        document.getElementById("contactMessage");
+
+
+    const success =
+        document.getElementById("formSuccess");
+
+
+    const messageCount =
+        document.getElementById("messageCount");
+
+
+    const nameError =
+        document.getElementById("nameError");
+
+    const emailError =
+        document.getElementById("emailError");
+
+    const phoneError =
+        document.getElementById("phoneError");
+
+    const interestError =
+        document.getElementById("interestError");
+
+    const messageError =
+        document.getElementById("messageError");
+
+
+
+    // =============================================
+    // SET ERROR
+    // =============================================
+
+    function setError(input, errorElement, text) {
+
+        input.classList.remove(
+            "validation-success-border"
+        );
+
+        input.classList.add(
+            "validation-error-border"
+        );
+
+        errorElement.textContent = text;
+
+    }
+
+
+
+    // =============================================
+    // SET SUCCESS
+    // =============================================
+
+    function setSuccess(input, errorElement) {
+
+        input.classList.remove(
+            "validation-error-border"
+        );
+
+        input.classList.add(
+            "validation-success-border"
+        );
+
+        errorElement.textContent = "";
+
+    }
+
+
+
+    // =============================================
+    // NAME VALIDATION
+    // =============================================
+
+    function validateName() {
+
+        const value =
+            name.value.trim();
+
+
+        if (value === "") {
+
+            setError(
+                name,
+                nameError,
+                "Please enter your name."
+            );
+
+            return false;
+
+        }
+
+
+        if (value.length < 2) {
+
+            setError(
+                name,
+                nameError,
+                "Name must be at least 2 characters."
+            );
+
+            return false;
+
+        }
+
+
+        if (!/^[A-Za-z\s.]+$/.test(value)) {
+
+            setError(
+                name,
+                nameError,
+                "Please enter a valid name."
+            );
+
+            return false;
+
+        }
+
+
+        setSuccess(name, nameError);
+
+        return true;
+
+    }
+
+
+
+    // =============================================
+    // EMAIL VALIDATION
+    // =============================================
+
+    function validateEmail() {
+
+        const value =
+            email.value.trim();
+
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+
+        if (value === "") {
+
+            setError(
+                email,
+                emailError,
+                "Please enter your email address."
+            );
+
+            return false;
+
+        }
+
+
+        if (!emailPattern.test(value)) {
+
+            setError(
+                email,
+                emailError,
+                "Please enter a valid email address."
+            );
+
+            return false;
+
+        }
+
+
+        setSuccess(email, emailError);
+
+        return true;
+
+    }
+
+
+
+    // =============================================
+    // PHONE VALIDATION
+    // =============================================
+
+    function validatePhone() {
+
+        const value =
+            phone.value.trim();
+
+
+        if (value === "") {
+
+            setError(
+                phone,
+                phoneError,
+                "Please enter your phone number."
+            );
+
+            return false;
+
+        }
+
+
+        if (!/^[6-9][0-9]{9}$/.test(value)) {
+
+            setError(
+                phone,
+                phoneError,
+                "Enter a valid 10-digit phone number."
+            );
+
+            return false;
+
+        }
+
+
+        setSuccess(phone, phoneError);
+
+        return true;
+
+    }
+
+
+
+    // =============================================
+    // INTEREST VALIDATION
+    // =============================================
+
+    function validateInterest() {
+
+        if (interest.value === "") {
+
+            setError(
+                interest,
+                interestError,
+                "Please select an option."
+            );
+
+            return false;
+
+        }
+
+
+        setSuccess(
+            interest,
+            interestError
+        );
+
+        return true;
+
+    }
+
+
+
+    // =============================================
+    // MESSAGE VALIDATION
+    // =============================================
+
+    function validateMessage() {
+
+        const value =
+            message.value.trim();
+
+
+        if (value === "") {
+
+            setError(
+                message,
+                messageError,
+                "Please enter your message."
+            );
+
+            return false;
+
+        }
+
+
+        if (value.length < 10) {
+
+            setError(
+                message,
+                messageError,
+                "Message must be at least 10 characters."
+            );
+
+            return false;
+
+        }
+
+
+        setSuccess(message, messageError);
+
+        return true;
+
+    }
+
+
+
+    // =============================================
+    // PHONE ONLY NUMBERS
+    // =============================================
+
+    phone.addEventListener("input", function () {
+
+        this.value =
+            this.value.replace(/\D/g, "");
+
+    });
+
+
+
+    // =============================================
+    // MESSAGE COUNTER
+    // =============================================
+
+    message.addEventListener("input", function () {
+
+        messageCount.textContent =
+            this.value.length + " / 500";
+
+    });
+
+
+
+    // =============================================
+    // LIVE VALIDATION
+    // =============================================
+
+    name.addEventListener(
+        "blur",
+        validateName
+    );
+
+    email.addEventListener(
+        "blur",
+        validateEmail
+    );
+
+    phone.addEventListener(
+        "blur",
+        validatePhone
+    );
+
+    interest.addEventListener(
+        "change",
+        validateInterest
+    );
+
+    message.addEventListener(
+        "blur",
+        validateMessage
+    );
+
+
+
+    // =============================================
+    // CLEAR ERROR WHILE TYPING
+    // =============================================
+
+    name.addEventListener("input", function () {
+
+        this.classList.remove(
+            "validation-error-border"
+        );
+
+        nameError.textContent = "";
+
+    });
+
+
+    email.addEventListener("input", function () {
+
+        this.classList.remove(
+            "validation-error-border"
+        );
+
+        emailError.textContent = "";
+
+    });
+
+
+    phone.addEventListener("input", function () {
+
+        this.classList.remove(
+            "validation-error-border"
+        );
+
+        phoneError.textContent = "";
+
+    });
+
+
+    message.addEventListener("input", function () {
+
+        this.classList.remove(
+            "validation-error-border"
+        );
+
+        messageError.textContent = "";
+
+    });
+
+
+
+    // =============================================
+    // FORM SUBMIT
+    // =============================================
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        success.classList.add("hidden");
+
+
+        const validName =
+            validateName();
+
+        const validEmail =
+            validateEmail();
+
+        const validPhone =
+            validatePhone();
+
+        const validInterest =
+            validateInterest();
+
+        const validMessage =
+            validateMessage();
+
+
+        // =========================================
+        // STOP IF INVALID
+        // =========================================
+
+        if (
+            !validName ||
+            !validEmail ||
+            !validPhone ||
+            !validInterest ||
+            !validMessage
+        ) {
+
+            const firstError =
+                document.querySelector(
+                    ".validation-error-border"
+                );
+
+
+            if (firstError) {
+
+                firstError.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+                firstError.focus();
+
+            }
+
+            return;
+
+        }
+
+
+        // =========================================
+        // SUCCESS
+        // =========================================
+
+        success.classList.remove("hidden");
+
+
+        // Reset form
+
+        form.reset();
+
+
+        // Reset counter
+
+        messageCount.textContent =
+            "0 / 500";
+
+
+        // Remove validation borders
+
+        document
+            .querySelectorAll(".contact-input")
+            .forEach(function (input) {
+
+                input.classList.remove(
+                    "validation-success-border",
+                    "validation-error-border"
+                );
+
+            });
+
+
+        // Hide success after 5 seconds
+
+        setTimeout(function () {
+
+            success.classList.add("hidden");
+
+        }, 5000);
+
+    });
+
+});
+
+</script>
         <!-- ============================================= -->
         <!-- QUICK CONTACT STRIP -->
         <!-- ============================================= -->
@@ -3151,733 +3871,6 @@
 
 
 
-<!-- ========================================================= -->
-<!-- CONTACT FORM -->
-<!-- ========================================================= -->
-
-<section class="bg-[#F7F4F2] dark:bg-[#0B0B0B] py-16 lg:py-24">
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-        <!-- Heading -->
-        <div class="text-center max-w-2xl mx-auto mb-12">
-
-            <span
-                class="inline-block px-4 py-2 rounded-full
-                       bg-black/5 dark:bg-white/10
-                       text-sm font-medium
-                       text-gray-700 dark:text-gray-300">
-                Get In Touch
-            </span>
-
-            <h2
-                class="mt-4 text-3xl sm:text-4xl lg:text-5xl
-                       font-semibold
-                       text-gray-900 dark:text-white">
-                Let’s Start a Conversation
-            </h2>
-
-            <p
-                class="mt-4 text-gray-600 dark:text-gray-400">
-                Have a question or want to work with us?
-                Send us a message and we'll get back to you.
-            </p>
-
-        </div>
-
-
-        <!-- Form -->
-        <div
-            class="max-w-3xl mx-auto
-                   bg-white dark:bg-[#151515]
-                   rounded-3xl
-                   p-6 sm:p-8 lg:p-10
-                   shadow-xl
-                   border border-black/5 dark:border-white/10">
-
-            <form id="contactForm" novalidate>
-
-                <!-- Name + Email -->
-                <div class="grid md:grid-cols-2 gap-6">
-
-                    <!-- Name -->
-                    <div>
-
-                        <label
-                            for="name"
-                            class="block mb-2 text-sm font-medium
-                                   text-gray-800 dark:text-gray-200">
-                            Full Name
-                            <span class="text-red-500">*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your name"
-                            autocomplete="name"
-                            class="contact-input">
-
-                        <p
-                            id="nameError"
-                            class="error-message">
-                        </p>
-
-                    </div>
-
-
-                    <!-- Email -->
-                    <div>
-
-                        <label
-                            for="email"
-                            class="block mb-2 text-sm font-medium
-                                   text-gray-800 dark:text-gray-200">
-                            Email Address
-                            <span class="text-red-500">*</span>
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            autocomplete="email"
-                            class="contact-input">
-
-                        <p
-                            id="emailError"
-                            class="error-message">
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Phone + Subject -->
-                <div class="grid md:grid-cols-2 gap-6 mt-6">
-
-                    <!-- Phone -->
-                    <div>
-
-                        <label
-                            for="phone"
-                            class="block mb-2 text-sm font-medium
-                                   text-gray-800 dark:text-gray-200">
-                            Phone Number
-                            <span class="text-red-500">*</span>
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="9876543210"
-                            maxlength="10"
-                            inputmode="numeric"
-                            autocomplete="tel"
-                            class="contact-input">
-
-                        <p
-                            id="phoneError"
-                            class="error-message">
-                        </p>
-
-                    </div>
-
-
-                    <!-- Subject -->
-                    <div>
-
-                        <label
-                            for="subject"
-                            class="block mb-2 text-sm font-medium
-                                   text-gray-800 dark:text-gray-200">
-                            Subject
-                            <span class="text-red-500">*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="Enter subject"
-                            class="contact-input">
-
-                        <p
-                            id="subjectError"
-                            class="error-message">
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Message -->
-                <div class="mt-6">
-
-                    <label
-                        for="message"
-                        class="block mb-2 text-sm font-medium
-                               text-gray-800 dark:text-gray-200">
-                        Message
-                        <span class="text-red-500">*</span>
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        maxlength="500"
-                        placeholder="Write your message..."
-                        class="contact-input resize-none"></textarea>
-
-                    <div class="flex justify-between mt-2">
-
-                        <p
-                            id="messageError"
-                            class="error-message">
-                        </p>
-
-                        <span
-                            id="messageCount"
-                            class="text-xs text-gray-400">
-                            0 / 500
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Success Message -->
-                <div
-                    id="successMessage"
-                    class="hidden mt-6 p-4 rounded-xl
-                           bg-green-50 dark:bg-green-900/20
-                           border border-green-200 dark:border-green-800
-                           text-green-700 dark:text-green-400">
-                    Your message has been submitted successfully!
-                </div>
-
-
-                <!-- Submit -->
-                <button
-                    type="submit"
-                    class="mt-8 w-full
-                           py-4 px-6
-                           rounded-xl
-                           bg-black dark:bg-white
-                           text-white dark:text-black
-                           font-semibold
-                           hover:bg-gray-800
-                           dark:hover:bg-gray-200
-                           transition duration-300">
-
-                    Send Message
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ========================================================= -->
-<!-- FORM STYLES -->
-<!-- ========================================================= -->
-
-<style>
-
-    .contact-input {
-        width: 100%;
-        padding: 14px 16px;
-        border-radius: 12px;
-        border: 1px solid #e5e7eb;
-        background: #ffffff;
-        color: #111827;
-        outline: none;
-        transition: all 0.25s ease;
-    }
-
-    .dark .contact-input {
-        border-color: #333333;
-        background: #1c1c1c;
-        color: #ffffff;
-    }
-
-    .contact-input::placeholder {
-        color: #9ca3af;
-    }
-
-    .contact-input:focus {
-        border-color: #111827;
-        box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
-    }
-
-    .dark .contact-input:focus {
-        border-color: #ffffff;
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
-    }
-
-    .contact-input.input-error {
-        border-color: #ef4444;
-    }
-
-    .contact-input.input-success {
-        border-color: #22c55e;
-    }
-
-    .error-message {
-        min-height: 20px;
-        margin-top: 6px;
-        font-size: 13px;
-        color: #ef4444;
-    }
-
-</style>
-
-
-<!-- ========================================================= -->
-<!-- FORM VALIDATION -->
-<!-- ========================================================= -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const form = document.getElementById("contactForm");
-
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const subject = document.getElementById("subject");
-    const message = document.getElementById("message");
-
-    const successMessage =
-        document.getElementById("successMessage");
-
-    const messageCount =
-        document.getElementById("messageCount");
-
-
-    // =========================================
-    // Error Elements
-    // =========================================
-
-    const errors = {
-        name: document.getElementById("nameError"),
-        email: document.getElementById("emailError"),
-        phone: document.getElementById("phoneError"),
-        subject: document.getElementById("subjectError"),
-        message: document.getElementById("messageError")
-    };
-
-
-    // =========================================
-    // Helper Function
-    // =========================================
-
-    function setError(input, errorElement, message) {
-
-        input.classList.remove("input-success");
-        input.classList.add("input-error");
-
-        errorElement.textContent = message;
-
-    }
-
-
-    function setSuccess(input, errorElement) {
-
-        input.classList.remove("input-error");
-        input.classList.add("input-success");
-
-        errorElement.textContent = "";
-
-    }
-
-
-    function clearValidation(input, errorElement) {
-
-        input.classList.remove("input-error");
-        input.classList.remove("input-success");
-
-        errorElement.textContent = "";
-
-    }
-
-
-    // =========================================
-    // Name Validation
-    // =========================================
-
-    function validateName() {
-
-        const value = name.value.trim();
-
-        if (value === "") {
-
-            setError(
-                name,
-                errors.name,
-                "Please enter your name."
-            );
-
-            return false;
-        }
-
-        if (value.length < 2) {
-
-            setError(
-                name,
-                errors.name,
-                "Name must contain at least 2 characters."
-            );
-
-            return false;
-        }
-
-        if (!/^[A-Za-z\s.]+$/.test(value)) {
-
-            setError(
-                name,
-                errors.name,
-                "Please enter a valid name."
-            );
-
-            return false;
-        }
-
-        setSuccess(name, errors.name);
-
-        return true;
-    }
-
-
-    // =========================================
-    // Email Validation
-    // =========================================
-
-    function validateEmail() {
-
-        const value = email.value.trim();
-
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-        if (value === "") {
-
-            setError(
-                email,
-                errors.email,
-                "Please enter your email address."
-            );
-
-            return false;
-        }
-
-        if (!emailPattern.test(value)) {
-
-            setError(
-                email,
-                errors.email,
-                "Please enter a valid email address."
-            );
-
-            return false;
-        }
-
-        setSuccess(email, errors.email);
-
-        return true;
-    }
-
-
-    // =========================================
-    // Phone Validation
-    // =========================================
-
-    function validatePhone() {
-
-        const value = phone.value.trim();
-
-        if (value === "") {
-
-            setError(
-                phone,
-                errors.phone,
-                "Please enter your phone number."
-            );
-
-            return false;
-        }
-
-        if (!/^[6-9]\d{9}$/.test(value)) {
-
-            setError(
-                phone,
-                errors.phone,
-                "Enter a valid 10-digit phone number."
-            );
-
-            return false;
-        }
-
-        setSuccess(phone, errors.phone);
-
-        return true;
-    }
-
-
-    // =========================================
-    // Subject Validation
-    // =========================================
-
-    function validateSubject() {
-
-        const value = subject.value.trim();
-
-        if (value === "") {
-
-            setError(
-                subject,
-                errors.subject,
-                "Please enter a subject."
-            );
-
-            return false;
-        }
-
-        if (value.length < 3) {
-
-            setError(
-                subject,
-                errors.subject,
-                "Subject must contain at least 3 characters."
-            );
-
-            return false;
-        }
-
-        setSuccess(subject, errors.subject);
-
-        return true;
-    }
-
-
-    // =========================================
-    // Message Validation
-    // =========================================
-
-    function validateMessage() {
-
-        const value = message.value.trim();
-
-        if (value === "") {
-
-            setError(
-                message,
-                errors.message,
-                "Please enter your message."
-            );
-
-            return false;
-        }
-
-        if (value.length < 10) {
-
-            setError(
-                message,
-                errors.message,
-                "Message must contain at least 10 characters."
-            );
-
-            return false;
-        }
-
-        setSuccess(message, errors.message);
-
-        return true;
-    }
-
-
-    // =========================================
-    // Phone - Only Numbers
-    // =========================================
-
-    phone.addEventListener("input", function () {
-
-        this.value = this.value.replace(/\D/g, "");
-
-        if (this.value.length > 10) {
-            this.value = this.value.slice(0, 10);
-        }
-
-    });
-
-
-    // =========================================
-    // Message Counter
-    // =========================================
-
-    message.addEventListener("input", function () {
-
-        messageCount.textContent =
-            `${this.value.length} / 500`;
-
-    });
-
-
-    // =========================================
-    // Live Validation
-    // =========================================
-
-    name.addEventListener("blur", validateName);
-
-    email.addEventListener("blur", validateEmail);
-
-    phone.addEventListener("blur", validatePhone);
-
-    subject.addEventListener("blur", validateSubject);
-
-    message.addEventListener("blur", validateMessage);
-
-
-    // =========================================
-    // Clear Error While Typing
-    // =========================================
-
-    name.addEventListener("input", function () {
-
-        if (this.value.trim() !== "") {
-            clearValidation(this, errors.name);
-        }
-
-    });
-
-
-    email.addEventListener("input", function () {
-
-        if (this.value.trim() !== "") {
-            clearValidation(this, errors.email);
-        }
-
-    });
-
-
-    phone.addEventListener("input", function () {
-
-        if (this.value.trim() !== "") {
-            clearValidation(this, errors.phone);
-        }
-
-    });
-
-
-    subject.addEventListener("input", function () {
-
-        if (this.value.trim() !== "") {
-            clearValidation(this, errors.subject);
-        }
-
-    });
-
-
-    message.addEventListener("input", function () {
-
-        if (this.value.trim() !== "") {
-            clearValidation(this, errors.message);
-        }
-
-    });
-
-
-    // =========================================
-    // Form Submit
-    // =========================================
-
-    form.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        successMessage.classList.add("hidden");
-
-
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isPhoneValid = validatePhone();
-        const isSubjectValid = validateSubject();
-        const isMessageValid = validateMessage();
-
-
-        // =====================================
-        // If Any Validation Failed
-        // =====================================
-
-        if (
-            !isNameValid ||
-            !isEmailValid ||
-            !isPhoneValid ||
-            !isSubjectValid ||
-            !isMessageValid
-        ) {
-
-            const firstError =
-                document.querySelector(".input-error");
-
-            if (firstError) {
-                firstError.focus();
-            }
-
-            return;
-        }
-
-
-        // =====================================
-        // Success
-        // =====================================
-
-        successMessage.classList.remove("hidden");
-
-        form.reset();
-
-        messageCount.textContent = "0 / 500";
-
-
-        // Remove green borders after reset
-        setTimeout(function () {
-
-            document
-                .querySelectorAll(".contact-input")
-                .forEach(function (input) {
-
-                    input.classList.remove("input-success");
-
-                });
-
-        }, 100);
-
-
-        // Hide success message after 5 seconds
-        setTimeout(function () {
-
-            successMessage.classList.add("hidden");
-
-        }, 5000);
-
-    });
-
-});
-
-</script>
 
 
 
