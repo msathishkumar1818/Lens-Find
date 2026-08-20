@@ -1441,22 +1441,25 @@
     class="bg-[#f7f5f0]
            dark:bg-black
            dark:text-white
-           py-24">
+           py-14
+           sm:py-20
+           lg:py-24">
 
     <div
         class="max-w-7xl
                mx-auto
-               px-5
+               px-4
                sm:px-6
                lg:px-8">
 
-
+        <!-- Heading -->
         <div
             class="flex
                    items-end
                    justify-between
-                   gap-6
-                   mb-10">
+                   gap-4
+                   mb-8
+                   sm:mb-10">
 
             <div>
 
@@ -1473,8 +1476,9 @@
 
                 <h2
                     class="mt-3
-                           text-3xl
-                           sm:text-4xl
+                           text-2xl
+                           sm:text-3xl
+                           md:text-4xl
                            font-semibold
                            text-gray-900
                            dark:text-white">
@@ -1497,23 +1501,28 @@
         </div>
 
 
+        <!-- Featured Story Card -->
         <article
             class="grid
+                   grid-cols-1
                    lg:grid-cols-12
                    bg-white
                    dark:bg-[#151515]
-                   rounded-[2rem]
+                   rounded-[1.5rem]
+                   sm:rounded-[2rem]
                    overflow-hidden
                    border
                    border-black/5
                    dark:border-white/10">
 
 
-            <!-- Image -->
+            <!-- ================= IMAGE ================= -->
 
             <div
                 class="lg:col-span-7
-                       h-[380px]
+                       h-[300px]
+                       sm:h-[400px]
+                       md:h-[480px]
                        lg:h-[540px]
                        overflow-hidden">
 
@@ -1523,6 +1532,10 @@
                     class="w-full
                            h-full
                            object-cover
+                           object-[center_75%]
+                           sm:object-[center_70%]
+                           md:object-[center_65%]
+                           lg:object-center
                            hover:scale-105
                            transition
                            duration-700">
@@ -1530,12 +1543,13 @@
             </div>
 
 
-            <!-- Content -->
+            <!-- ================= CONTENT ================= -->
 
             <div
                 class="lg:col-span-5
-                       p-8
-                       sm:p-10
+                       p-6
+                       sm:p-8
+                       md:p-10
                        lg:p-14
                        flex
                        flex-col
@@ -1547,31 +1561,39 @@
                         class="text-xs
                                uppercase
                                tracking-widest
-                               text-black-400">
+                               text-gray-400
+                               dark:text-gray-500">
 
                         Wedding Photography
 
                     </span>
 
+
                     <h3
-                        class="mt-6
-                               text-3xl
-                               sm:text-4xl
+                        class="mt-5
+                               sm:mt-6
+                               text-2xl
+                               sm:text-3xl
+                               lg:text-4xl
                                font-semibold
                                leading-tight
                                text-gray-900
                                dark:text-white">
 
                         The quiet moments
-                        <br>
+                        <br class="hidden sm:block">
                         tell the biggest stories.
 
                     </h3>
 
+
                     <p
-                        class="mt-6
-                               text-black-500
-                               dark:text-white
+                        class="mt-5
+                               sm:mt-6
+                               text-gray-500
+                               dark:text-gray-300
+                               text-sm
+                               sm:text-base
                                leading-7">
 
                         Great wedding photography isn't always
@@ -1579,16 +1601,43 @@
                         the glance, the smile or the silence
                         between two people.
 
+                    </p>
 
-                        Beautiful stories aren't always found in the moments everyone notices. Sometimes they're hidden in a gentle smile, a fleeting glance, or the little emotions shared between two hearts.
-Photography is more than capturing a moment. It's about preserving the feelings, the laughter, the tears, and the quiet connections that make every story unforgettable.
+
+                    <p
+                        class="mt-4
+                               text-gray-500
+                               dark:text-gray-300
+                               text-sm
+                               sm:text-base
+                               leading-7">
+
+                        Beautiful stories aren't always found
+                        in the moments everyone notices.
+                        Sometimes they're hidden in a gentle
+                        smile, a fleeting glance, or the little
+                        emotions shared between two hearts.
+
+                    </p>
+
+
+                    <p
+                        class="mt-4
+                               text-gray-500
+                               dark:text-gray-300
+                               text-sm
+                               sm:text-base
+                               leading-7">
+
+                        Photography is more than capturing a
+                        moment. It's about preserving the
+                        feelings, the laughter, the tears, and
+                        the quiet connections that make every
+                        story unforgettable.
 
                     </p>
 
                 </div>
-
-
-                
 
             </div>
 
@@ -1597,8 +1646,6 @@ Photography is more than capturing a moment. It's about preserving the feelings,
     </div>
 
 </section>
-
-
 
 <!-- ========================================================= -->
 <!-- 03. PHOTOGRAPHY JOURNAL - NEW MAGAZINE LAYOUT -->
