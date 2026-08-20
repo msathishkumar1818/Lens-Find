@@ -11,7 +11,119 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/lensfind-favicon.svg">
 </head>
 <body class="min-h-screen bg-gray-50 dark:bg-[#111827]">
-  <header class="border-b border-gray-200 bg-white dark:border-white/10 dark:bg-[#111827]"><div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5"><a href="../index.html" class="flex items-center gap-3"><span class="lensfind-logo-mark"><i class="fa-solid fa-camera-retro"></i></span><span class="font-extrabold text-gray-900 dark:text-white">Lens<span class="text-amber-500">Find</span></span></a><div class="flex gap-2"><button id="direction-toggle" class="rounded-lg border border-gray-200 px-3 text-gray-700 dark:border-white/15 dark:text-white"><i id="direction-icon" class="fa-solid fa-arrow-right-arrow-left"></i></button><button id="theme-toggle" class="rounded-lg border border-gray-200 px-3 text-gray-700 dark:border-white/15 dark:text-white"><i id="theme-icon" class="fa-solid fa-moon"></i></button></div></div></header>
+  <header
+    class="border-b
+           border-gray-200
+           bg-white
+           dark:border-white/10
+           dark:bg-[#111827]">
+
+    <div
+        class="mx-auto
+               flex
+               h-[72px]
+               max-w-7xl
+               items-center
+               justify-between
+               px-5">
+
+        <!-- Logo -->
+        <a
+            href="../index.html"
+            class="flex
+                   items-center
+                   gap-3">
+
+            <span class="lensfind-logo-mark">
+                <i class="fa-solid fa-camera-retro"></i>
+            </span>
+
+            <span
+                class="font-extrabold
+                       text-gray-900
+                       dark:text-white">
+
+                Lens<span class="text-amber-500">Find</span>
+
+            </span>
+
+        </a>
+
+
+        <!-- Actions -->
+        <div
+            class="flex
+                   items-center
+                   gap-4">
+
+            <!-- RTL / LTR -->
+            <button
+                id="direction-toggle"
+                type="button"
+                class="flex
+                       h-10
+                       w-10
+                       items-center
+                       justify-center
+                       rounded-lg
+                       border
+                       border-gray-200
+                       bg-white
+                       text-gray-700
+                       transition
+                       hover:border-amber-400
+                       hover:text-amber-500
+                       dark:border-white/15
+                       dark:bg-white/5
+                       dark:text-white
+                       dark:hover:border-amber-400
+                       dark:hover:text-amber-400">
+
+                <i
+                    id="direction-icon"
+                    class="fa-solid fa-arrow-right-arrow-left">
+                </i>
+
+            </button>
+
+
+            <!-- Dark Mode -->
+            <button
+                id="theme-toggle"
+                type="button"
+                class="flex
+                       h-10
+                       w-10
+                       items-center
+                       justify-center
+                       rounded-lg
+                       border
+                       border-gray-200
+                       bg-white
+                       text-gray-700
+                       transition
+                       hover:border-amber-400
+                       hover:text-amber-500
+                       dark:border-white/15
+                       dark:bg-white/5
+                       dark:text-white
+                       dark:hover:border-amber-400
+                       dark:hover:text-amber-400">
+
+                <i
+                    id="theme-icon"
+                    class="fa-solid fa-moon">
+                </i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+  
+  
   <main class="grid min-h-[calc(100vh-72px)] place-items-center px-5 py-12">
     
     
@@ -101,38 +213,6 @@
                 <!-- Top -->
 
                 <div class="relative z-10">
-
-                    <a
-                        href="../index.html"
-                        class="inline-flex
-                               items-center
-                               gap-3">
-
-                        <span
-                            class="flex
-                                   h-10
-                                   w-10
-                                   items-center
-                                   justify-center
-                                   rounded-xl
-                                   bg-amber-400
-                                   text-black">
-
-                            <i class="fa-solid fa-camera"></i>
-
-                        </span>
-
-                        <span
-                            class="text-lg
-                                   font-bold
-                                   tracking-tight
-                                   text-white">
-
-                            LensFind
-
-                        </span>
-
-                    </a>
 
 
                     <div class="mt-20">

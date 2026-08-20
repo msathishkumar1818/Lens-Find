@@ -1021,530 +1021,661 @@
 </header>
 
 <!-- ====================================================== -->
-<!-- HOME 1 - EDITORIAL HERO -->
+<!-- LENSFIND - ULTRA COMPACT PREMIUM HERO -->
+<!-- VISIBLE BACKGROUND IMAGE -->
 <!-- ====================================================== -->
 
-<section
+<section 
     class="relative
-           min-h-[calc(100vh)]
            overflow-hidden
-           bg-[#f5f3ef]
-           dark:bg-black
-           flex
-           items-center">
+           bg-[#F5F2EC]
+           pt-0
+           pb-0
+           dark:bg-[#0B0B0B]">
 
 
-    <!-- ================================================= -->
+    <!-- ================================================== -->
+    <!-- BACKGROUND IMAGE -->
+    <!-- ================================================== -->
+
+    <div 
+        class="pointer-events-none
+               absolute
+               inset-0
+               overflow-hidden">
+
+        <img 
+            src="assets/images/p87.jpg"
+            alt=""
+            class="h-full
+                   w-full
+                   scale-105
+                   object-cover
+                   object-center
+                   opacity-[0.28]
+                   blur-[2px]
+                   dark:opacity-[0.18]">
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- BACKGROUND OVERLAY -->
+    <!-- ================================================== -->
+
+    <div 
+        class="pointer-events-none
+               absolute
+               inset-0
+               bg-black/10
+               dark:bg-black/25">
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- SOFT GRADIENT -->
+    <!-- ================================================== -->
+
+    <div 
+        class="pointer-events-none
+               absolute
+               inset-0
+               bg-gradient-to-br
+               from-white/30
+               via-transparent
+               to-amber-100/20
+               dark:from-black/10
+               dark:via-transparent
+               dark:to-amber-500/[0.04]">
+    </div>
+
+
+    <!-- ================================================== -->
     <!-- BACKGROUND DECORATION -->
-    <!-- ================================================= -->
+    <!-- ================================================== -->
 
-    <div
-        class="absolute
-               top-0
-               right-0
-               w-[420px]
-               h-[420px]
-               rounded-full
-               bg-amber-200/30
-               dark:bg-amber-500/5
-               blur-3xl
-               pointer-events-none">
-
-    </div>
-
-
-    <div
-        class="absolute
-               bottom-0
-               left-0
-               w-[300px]
+    <div 
+        class="pointer-events-none
+               absolute
+               -right-32
+               top-5
                h-[300px]
+               w-[300px]
                rounded-full
-               bg-gray-300/30
-               dark:bg-white/5
+               bg-amber-200/15
                blur-3xl
-               pointer-events-none">
-
+               dark:bg-amber-500/5">
     </div>
 
 
-    <!-- ================================================= -->
-    <!-- MAIN CONTAINER -->
-    <!-- ================================================= -->
+    <div 
+        class="pointer-events-none
+               absolute
+               -left-32
+               bottom-0
+               h-[220px]
+               w-[220px]
+               rounded-full
+               bg-stone-300/15
+               blur-3xl
+               dark:bg-white/[0.02]">
+    </div>
 
-    <div
+
+    <!-- ================================================== -->
+    <!-- MAIN CONTAINER -->
+    <!-- ================================================== -->
+
+    <div 
         class="relative
                z-10
-               max-w-7xl
                mx-auto
-               px-5
-               sm:px-6
-               lg:px-8
                w-full
-               py-16
-               lg:py-20">
+               max-w-7xl
+               px-4
+               sm:px-6
+               lg:px-8">
 
 
-        <!-- ================================================= -->
-        <!-- EDITORIAL GRID -->
-        <!-- ================================================= -->
+        <!-- ================================================== -->
+        <!-- TOP LINE -->
+        <!-- ================================================== -->
 
-        <div
+        <div 
+            class="mb-2
+                   flex
+                   items-center
+                   justify-between
+                   border-b
+                   border-black/10
+                   pb-1
+                   dark:border-white/10">
+
+
+            <!-- LEFT -->
+
+            <div 
+                class="flex
+                       items-center
+                       gap-2">
+
+                <span 
+                    class="h-1.5
+                           w-1.5
+                           rounded-full
+                           bg-amber-500">
+                </span>
+
+
+                <span 
+                    class="text-[8px]
+                           font-semibold
+                           uppercase
+                           tracking-[3px]
+                           text-gray-600
+                           dark:text-gray-400">
+
+                    LensFind
+
+                </span>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <span 
+                class="text-[8px]
+                       uppercase
+                       tracking-[2px]
+                       text-gray-400
+                       dark:text-gray-500">
+
+                Photography Directory
+
+            </span>
+
+        </div>
+
+
+
+        <!-- ================================================== -->
+        <!-- HERO GRID -->
+        <!-- ================================================== -->
+
+        <div 
             class="grid
+                   items-center
+                   gap-4
                    lg:grid-cols-12
-                   gap-10
-                   lg:gap-8
-                   items-center">
+                   lg:gap-7">
 
 
-            <!-- ================================================= -->
+            <!-- ================================================== -->
             <!-- LEFT CONTENT -->
-            <!-- ================================================= -->
+            <!-- ================================================== -->
 
-            <div
-                class="lg:col-span-5
-                       order-2
-                       lg:order-1">
+            <div 
+                class="lg:col-span-5">
 
 
-                <!-- Small Label -->
+                <!-- LABEL -->
 
-                <div
+                <div 
                     class="flex
                            items-center
-                           gap-3
-                           mb-6">
+                           gap-2">
 
-
-                    <span
-                        class="w-10
-                               h-px
+                    <span 
+                        class="h-px
+                               w-6
                                bg-amber-500">
-
                     </span>
 
 
-                    <span
-                        class="text-xs
-                               uppercase
-                               tracking-[4px]
+                    <span 
+                        class="text-[8px]
                                font-semibold
+                               uppercase
+                               tracking-[3px]
                                text-amber-600
                                dark:text-amber-400">
 
-                        LensFind / 01
+                        Find your photographer
 
                     </span>
-
 
                 </div>
 
 
-                <!-- Main Heading -->
 
-                <h1
-                    class="text-5xl
-                           sm:text-6xl
-                           lg:text-[5xl]
-                           xl:text-[5xl]
+                <!-- ================================================== -->
+                <!-- HEADING -->
+                <!-- ================================================== -->
+
+                <h1 
+                    class="mt-2
+                           text-4xl
                            font-semibold
-                           leading-[0.95]
-                           tracking-[-3px]
+                           leading-[0.88]
+                           tracking-[-2.5px]
                            text-gray-900
+                           sm:text-5xl
+                           lg:text-6xl
                            dark:text-white">
 
+                    Photographs
 
-                    Stories
-
-
-                    <span
+                    <span 
                         class="block
-                               italic
                                font-serif
+                               italic
                                font-normal
                                text-gray-500
-                               dark:text-gray-400
-                               mt-2">
+                               dark:text-white/40">
 
-                        worth
-
-                    </span>
-
-
-                    <span
-                        class="block
-                               text-amber-500
-                               mt-1">
-
-                        capturing.
+                        begin
 
                     </span>
 
+                    with people.
 
                 </h1>
 
 
-                <!-- Description -->
 
-                <p
-                    class="mt-7
-                           max-w-lg
-                           text-base
-                           sm:text-lg
-                           leading-8
-                           text-black-600
-                           dark:text-white">
+                <!-- ================================================== -->
+                <!-- DESCRIPTION -->
+                <!-- ================================================== -->
 
+                <p 
+                    class="mt-3
+                           max-w-md
+                           text-xs
+                           leading-5
+                           text-gray-700
+                           dark:text-gray-300">
 
-                    Connect with talented freelance photographers
-                    who turn real moments into timeless visual
-                    stories.
-
+                    Discover talented photographers,
+                    explore their work and find the
+                    right creative for the moments
+                    that matter to you.
 
                 </p>
 
 
-                <!-- Buttons -->
 
-                <div
-                    class="flex
-                           flex-col
-                           sm:flex-row
-                           gap-3
-                           mt-8">
+                <!-- ================================================== -->
+                <!-- BUTTONS -->
+                <!-- ================================================== -->
+
+                <div 
+                    class="mt-4
+                           flex
+                           flex-wrap
+                           gap-2">
 
 
-                    <a
+                    <!-- PRIMARY -->
+
+                    <a 
                         href="pages/photographers.html"
-                        class="inline-flex
+                        class="group
+                               inline-flex
                                items-center
-                               justify-center
                                gap-3
-                               px-6
-                               py-3.5
-                               rounded-xl
                                bg-gray-900
-                               dark:bg-white
-                               text-white
-                               dark:text-black
-                               text-sm
+                               px-5
+                               py-2.5
+                               text-xs
                                font-semibold
+                               text-white
+                               shadow-md
+                               transition
+                               duration-300
+                               hover:-translate-y-0.5
                                hover:bg-amber-500
-                               dark:hover:bg-amber-500
-                               dark:hover:text-white
-                               transition">
+                               dark:bg-white
+                               dark:text-black
+                               dark:hover:bg-amber-400">
 
+                        Browse photographers
 
-                        Explore Photographers
-
-
-                        <i
+                        <i 
                             class="fa-solid
                                    fa-arrow-right
-                                   text-xs">
-
+                                   text-[10px]
+                                   transition
+                                   duration-300
+                                   group-hover:translate-x-1">
                         </i>
-
 
                     </a>
 
 
-                    <a
+
+                    <!-- SECONDARY -->
+
+                    <a 
                         href="pages/categories.html"
                         class="inline-flex
                                items-center
-                               justify-center
-                               gap-3
-                               px-6
-                               py-3.5
-                               rounded-xl
                                border
-                               border-gray-300
-                               dark:border-white/20
-                               text-gray-800
-                               dark:text-white
-                               text-sm
+                               border-gray-400/70
+                               bg-white/30
+                               px-5
+                               py-2.5
+                               text-xs
                                font-semibold
+                               text-gray-800
+                               backdrop-blur-sm
+                               transition
+                               duration-300
+                               hover:-translate-y-0.5
                                hover:border-amber-500
                                hover:text-amber-500
-                               transition">
+                               dark:border-white/20
+                               dark:bg-white/[0.05]
+                               dark:text-white">
 
-
-                        Explore Categories
-
+                        Explore categories
 
                     </a>
-
 
                 </div>
 
 
-                <!-- ================================================= -->
-                <!-- SMALL STATS -->
-                <!-- ================================================= -->
 
-                <div
-                    class="flex
-                           items-center
-                           gap-8
-                           mt-10
-                           pt-7
+                <!-- ================================================== -->
+                <!-- MINI STATS -->
+                <!-- ================================================== -->
+
+                <div 
+                    class="mt-4
+                           grid
+                           max-w-sm
+                           grid-cols-3
                            border-t
-                           border-gray-300
+                           border-black/10
+                           pt-2
                            dark:border-white/10">
 
 
-                    <!-- Stat 1 -->
+                    <!-- STAT 01 -->
 
                     <div>
 
-
-                        <h3
-                            class="text-2xl
-                                   font-bold
+                        <p 
+                            class="text-lg
+                                   font-semibold
                                    text-gray-900
                                    dark:text-white">
 
                             2.5K+
 
-                        </h3>
+                        </p>
 
 
-                        <p
-                            class="text-xs
+                        <p 
+                            class="mt-0.5
+                                   text-[7px]
+                                   uppercase
+                                   tracking-[1.5px]
                                    text-gray-500
-                                   dark:text-gray-400
-                                   mt-1">
+                                   dark:text-gray-400">
 
                             Photographers
 
                         </p>
 
-
                     </div>
 
 
-                    <!-- Divider -->
 
-                    <div
-                        class="w-px
-                               h-10
-                               bg-gray-300
-                               dark:bg-white/10">
+                    <!-- STAT 02 -->
 
-                    </div>
+                    <div 
+                        class="border-l
+                               border-black/10
+                               pl-4
+                               dark:border-white/10">
 
-
-                    <!-- Stat 2 -->
-
-                    <div>
-
-
-                        <h3
-                            class="text-2xl
-                                   font-bold
+                        <p 
+                            class="text-lg
+                                   font-semibold
                                    text-gray-900
                                    dark:text-white">
 
                             50+
 
-                        </h3>
+                        </p>
 
 
-                        <p
-                            class="text-xs
+                        <p 
+                            class="mt-0.5
+                                   text-[7px]
+                                   uppercase
+                                   tracking-[1.5px]
                                    text-gray-500
-                                   dark:text-gray-400
-                                   mt-1">
+                                   dark:text-gray-400">
 
                             Cities
 
                         </p>
 
-
                     </div>
 
 
-                    <!-- Divider -->
 
-                    <div
-                        class="w-px
-                               h-10
-                               bg-gray-300
-                               dark:bg-white/10">
+                    <!-- STAT 03 -->
 
-                    </div>
+                    <div 
+                        class="border-l
+                               border-black/10
+                               pl-4
+                               dark:border-white/10">
 
-
-                    <!-- Stat 3 -->
-
-                    <div>
-
-
-                        <h3
-                            class="text-2xl
-                                   font-bold
+                        <p 
+                            class="text-lg
+                                   font-semibold
                                    text-gray-900
                                    dark:text-white">
 
                             12K+
 
-                        </h3>
+                        </p>
 
 
-                        <p
-                            class="text-xs
+                        <p 
+                            class="mt-0.5
+                                   text-[7px]
+                                   uppercase
+                                   tracking-[1.5px]
                                    text-gray-500
-                                   dark:text-gray-400
-                                   mt-1">
+                                   dark:text-gray-400">
 
                             Projects
 
                         </p>
 
-
                     </div>
 
-
                 </div>
-
 
             </div>
 
 
-            <!-- ================================================= -->
-            <!-- RIGHT EDITORIAL IMAGE -->
-            <!-- ================================================= -->
 
-            <div
-                class="lg:col-span-7
-                       order-1
-                       lg:order-2
-                       relative">
+            <!-- ================================================== -->
+            <!-- RIGHT FEATURED PHOTO -->
+            <!-- ================================================== -->
+
+            <div 
+                class="relative
+                       lg:col-span-7">
 
 
-                <!-- Main Image -->
+                <!-- ================================================== -->
+                <!-- OUTER FRAME -->
+                <!-- ================================================== -->
 
-                <div
+                <div 
                     class="relative
-                           h-[520px]
-                           sm:h-[600px]
-                           lg:h-[680px]
-                           overflow-hidden
-                           rounded-[30px]
-                           lg:rounded-[40px]">
+                           ml-auto
+                           max-w-[600px]
+                           border
+                           border-black/10
+                           bg-white/20
+                           p-1.5
+                           shadow-[0_20px_45px_rgba(0,0,0,0.08)]
+                           backdrop-blur-[2px]
+                           dark:border-white/10
+                           dark:bg-white/[0.02]
+                           dark:shadow-none">
 
 
-                    <img
-                        src="assets/images/p1.jpg"
-                        alt="Wedding Photographer"
-                        class="w-full
-                               h-full
-                               object-cover
-                               transition
-                               duration-700
-                               hover:scale-105">
+                    <!-- ================================================== -->
+                    <!-- MAIN IMAGE -->
+                    <!-- ================================================== -->
+
+                    <div 
+                        class="group
+                               relative
+                               h-[300px]
+                               overflow-hidden
+                               sm:h-[360px]
+                               lg:h-[430px]">
 
 
-                    <!-- Image Overlay -->
-
-                    <div
-                        class="absolute
-                               inset-0
-                               bg-gradient-to-t
-                               from-black/60
-                               via-transparent
-                               to-transparent">
-
-                    </div>
-
-
-                    <!-- Image Caption -->
-
-                    <div
-                        class="absolute
-                               left-6
-                               right-6
-                               bottom-6
-                               sm:left-8
-                               sm:right-8
-                               sm:bottom-8">
+                        <img 
+                            src="assets/images/p1.jpg"
+                            alt="Featured Wedding Photographer"
+                            class="h-full
+                                   w-full
+                                   object-cover
+                                   transition
+                                   duration-[1000ms]
+                                   ease-out
+                                   group-hover:scale-105">
 
 
-                        <div
-                            class="flex
+
+                        <!-- ================================================== -->
+                        <!-- IMAGE OVERLAY -->
+                        <!-- ================================================== -->
+
+                        <div 
+                            class="absolute
+                                   inset-0
+                                   bg-gradient-to-t
+                                   from-black/75
+                                   via-black/10
+                                   to-transparent">
+                        </div>
+
+
+
+                        <!-- ================================================== -->
+                        <!-- TOP NUMBER -->
+                        <!-- ================================================== -->
+
+                        <span 
+                            class="absolute
+                                   right-4
+                                   top-4
+                                   text-[9px]
+                                   font-medium
+                                   tracking-[2px]
+                                   text-white/60">
+
+                            01 / FEATURED
+
+                        </span>
+
+
+
+                        <!-- ================================================== -->
+                        <!-- IMAGE CONTENT -->
+                        <!-- ================================================== -->
+
+                        <div 
+                            class="absolute
+                                   bottom-4
+                                   left-4
+                                   right-4
+                                   flex
                                    items-end
                                    justify-between
-                                   gap-4">
+                                   gap-3">
 
+
+                            <!-- TEXT -->
 
                             <div>
 
-
-                                <p
-                                    class="text-[10px]
+                                <p 
+                                    class="text-[8px]
                                            uppercase
-                                           tracking-[3px]
-                                           text-white/70
-                                           mb-2">
+                                           tracking-[2px]
+                                           text-amber-300">
 
-                                    Featured Story
+                                    Wedding Photography
 
                                 </p>
 
 
-                                <h3
-                                    class="text-2xl
-                                           sm:text-3xl
+                                <h3 
+                                    class="mt-1
+                                           text-xl
                                            font-semibold
-                                           text-white">
+                                           text-white
+                                           sm:text-2xl">
 
                                     Moments That Matter
 
                                 </h3>
 
 
-                                <p
-                                    class="text-sm
-                                           text-white/70
-                                           mt-1">
+                                <p 
+                                    class="mt-0.5
+                                           text-[11px]
+                                           text-white/60">
 
-                                    Wedding Photography · Chennai
+                                    Chennai · Tamil Nadu
 
                                 </p>
-
 
                             </div>
 
 
-                            <!-- Arrow -->
 
-                            <a
+                            <!-- ROUND BUTTON -->
+
+                            <a 
                                 href="pages/photographers.html"
-                                class="w-12
-                                       h-12
+                                class="flex
+                                       h-9
+                                       w-9
                                        shrink-0
+                                       items-center
+                                       justify-center
                                        rounded-full
                                        bg-white
                                        text-black
-                                       flex
-                                       items-center
-                                       justify-center
+                                       shadow-md
+                                       transition
+                                       duration-300
+                                       hover:-translate-y-1
                                        hover:bg-amber-500
-                                       hover:text-white
-                                       transition">
+                                       hover:text-white">
 
-
-                                <i
+                                <i 
                                     class="fa-solid
                                            fa-arrow-up-right-from-square
-                                           text-sm">
-
+                                           text-[10px]">
                                 </i>
 
-
                             </a>
-
 
                         </div>
 
@@ -1552,44 +1683,113 @@
 
                 </div>
 
-               
-
-                <!-- ================================================= -->
-                <!-- VERTICAL TEXT -->
-                <!-- ================================================= -->
-
-                <div
-                    class="hidden
-                           lg:flex
-                           absolute
-                           -right-12
-                           bottom-28
-                           rotate-90
-                           origin-center">
 
 
-                    <span
-                        class="text-[10px]
-                               uppercase
-                               tracking-[5px]
-                               text-gray-400
-                               dark:text-gray-600">
+                <!-- ================================================== -->
+                <!-- FLOATING LABEL -->
+                <!-- ================================================== -->
 
-                        FIND · CREATE · CAPTURE
+                <div 
+                    class="absolute
+                           -bottom-2
+                           left-3
+                           flex
+                           items-center
+                           gap-2
+                           border
+                           border-black/10
+                           bg-[#F5F2EC]/95
+                           px-3
+                           py-1.5
+                           shadow-[0_8px_20px_rgba(0,0,0,0.06)]
+                           backdrop-blur-md
+                           dark:border-white/10
+                           dark:bg-[#151515]/95">
+
+
+                    <!-- ICON -->
+
+                    <span 
+                        class="flex
+                               h-6
+                               w-6
+                               items-center
+                               justify-center
+                               rounded-full
+                               bg-amber-500
+                               text-black">
+
+                        <i 
+                            class="fa-solid
+                                   fa-camera
+                                   text-[9px]">
+                        </i>
 
                     </span>
 
 
+                    <!-- TEXT -->
+
+                    <div>
+
+                        <p 
+                            class="text-[7px]
+                                   uppercase
+                                   tracking-[1.5px]
+                                   text-gray-400">
+
+                            Featured
+
+                        </p>
+
+
+                        <p 
+                            class="text-[10px]
+                                   font-semibold
+                                   text-gray-900
+                                   dark:text-white">
+
+                            Visual storyteller
+
+                        </p>
+
+                    </div>
+
                 </div>
 
 
-            </div>
 
+                <!-- ================================================== -->
+                <!-- VERTICAL TEXT -->
+                <!-- ================================================== -->
+
+                <div 
+                    class="absolute
+                           -right-8
+                           top-1/2
+                           hidden
+                           -translate-y-1/2
+                           rotate-90
+                           lg:block">
+
+                    <span 
+                        class="text-[7px]
+                               uppercase
+                               tracking-[4px]
+                               text-gray-400
+                               dark:text-gray-600">
+
+                        FIND · CONNECT · CREATE
+
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
-
 
 </section>
 
