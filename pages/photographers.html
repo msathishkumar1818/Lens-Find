@@ -2428,270 +2428,312 @@
 
 
 
-    <!-- ===================================================== -->
-    <!-- PHOTOGRAPHER 06 -->
-    <!-- ===================================================== -->
+   <!-- ===================================================== -->
+<!-- PHOTOGRAPHER 06 -->
+<!-- ===================================================== -->
 
-    <article
-        class="photographer-card group
-               relative
-               bg-[#F5F2EC]
-               dark:bg-[#171717]
-               border-y
-               border-gray-200
-               dark:border-white/10
-               transition-all
-               duration-500"
-        data-name="Vikram Shah"
-        data-city="Bengaluru"
-        data-specialty="Wedding"
-        data-budget="low">
+<article 
+    class="photographer-card group
+           relative
+           overflow-hidden
+           bg-[#F5F2EC]
+           dark:bg-[#171717]
+           border-y
+           border-gray-200
+           dark:border-white/10
+           transition-all
+           duration-500">
 
-        <div
-            class="grid
-                   lg:grid-cols-[120px_280px_1fr_190px]
-                   min-h-[280px]">
+    <div 
+        class="grid
+               grid-cols-1
+               lg:grid-cols-[120px_280px_1fr_190px]
+               min-h-0
+               lg:min-h-[280px]">
 
 
-            <!-- NUMBER -->
+        <!-- ===================================================== -->
+        <!-- NUMBER -->
+        <!-- ===================================================== -->
 
-            <div
-                class="hidden
-                       lg:flex
-                       items-center
-                       justify-center
-                       border-r
-                       border-gray-200
-                       dark:border-white/10">
+        <div 
+            class="hidden
+                   lg:flex
+                   items-center
+                   justify-center
+                   border-r
+                   border-gray-200
+                   dark:border-white/10">
 
-                <span
-                    class="text-5xl
-                           font-serif
+            <span 
+                class="text-5xl
+                       font-serif
+                       italic
+                       text-gray-300
+                       dark:text-white/10">
+
+                06
+
+            </span>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- IMAGE -->
+        <!-- ===================================================== -->
+
+        <div 
+            class="relative
+                   w-full
+                   aspect-[4/3]
+                   sm:aspect-[16/10]
+                   lg:aspect-auto
+                   lg:h-auto
+                   overflow-hidden
+                   bg-gray-200
+                   dark:bg-[#111]">
+
+            <img 
+                src="../assets/images/p36.jpg"
+                alt="Vikram Shah"
+                class="absolute
+                       inset-0
+                       w-full
+                       h-full
+                       object-cover
+                       object-center
+                       transition-transform
+                       duration-700
+                       group-hover:scale-105">
+
+
+            <!-- IMAGE OVERLAY -->
+
+            <div 
+                class="absolute
+                       inset-0
+                       bg-gradient-to-t
+                       from-black/40
+                       via-transparent
+                       to-transparent
+                       pointer-events-none">
+            </div>
+
+
+            <!-- CATEGORY -->
+
+            <span 
+                class="absolute
+                       bottom-4
+                       left-4
+                       sm:bottom-5
+                       sm:left-5
+                       px-3
+                       py-2
+                       bg-black/90
+                       text-white
+                       text-[8px]
+                       uppercase
+                       tracking-[2px]">
+
+                Wedding
+
+            </span>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- CONTENT -->
+        <!-- ===================================================== -->
+
+        <div 
+            class="p-6
+                   sm:p-8
+                   lg:p-10
+                   flex
+                   flex-col
+                   justify-center">
+
+            <!-- LABEL -->
+
+            <span 
+                class="text-[9px]
+                       uppercase
+                       tracking-[3px]
+                       text-gray-400">
+
+                Documentary Wedding
+
+            </span>
+
+
+            <!-- NAME -->
+
+            <h3 
+                class="mt-3
+                       sm:mt-5
+                       text-3xl
+                       sm:text-4xl
+                       font-semibold
+                       leading-tight
+                       text-gray-900
+                       dark:text-white">
+
+                Vikram
+
+                <span 
+                    class="font-serif
                            italic
-                           text-gray-300
-                           dark:text-white/10">
+                           font-normal
+                           text-gray-500">
 
-                    06
-
-                </span>
-
-            </div>
-
-
-            <!-- IMAGE -->
-
-            <div
-                class="relative
-                       h-[280px]
-                       lg:h-auto
-                       overflow-hidden">
-
-                <img
-                    src="../assets/images/p36.jpg"
-                    alt="Vikram Shah"
-                    class="w-full
-                           h-full
-                           object-cover
-                           transition
-                           duration-700
-                           group-hover:scale-105">
-
-
-                <span
-                    class="absolute
-                           bottom-5
-                           left-5
-                           px-3
-                           py-2
-                           bg-black
-                           text-white
-                           text-[8px]
-                           uppercase
-                           tracking-[2px]">
-
-                    Wedding
+                    Shah
 
                 </span>
 
-            </div>
+            </h3>
 
 
-            <!-- CONTENT -->
+            <!-- DESCRIPTION -->
 
-            <div
-                class="p-8
-                       lg:p-10
+            <p 
+                class="mt-3
+                       max-w-md
+                       text-sm
+                       leading-6
+                       text-gray-500
+                       dark:text-gray-400">
+
+                Candid wedding stories built around
+                real emotions and authentic moments.
+
+            </p>
+
+
+            <!-- LOCATION + RATING -->
+
+            <div 
+                class="mt-5
+                       sm:mt-6
                        flex
-                       flex-col
-                       justify-center">
+                       flex-wrap
+                       items-center
+                       gap-x-6
+                       gap-y-2">
 
-                <span
-                    class="text-[9px]
+                <span 
+                    class="text-xs
+                           text-gray-500
+                           dark:text-gray-400">
+
+                    Bengaluru
+
+                </span>
+
+                <span 
+                    class="text-xs
+                           text-amber-500">
+
+                    ★ 4.8
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- ACTION / PRICE -->
+        <!-- ===================================================== -->
+
+        <div 
+            class="px-6
+                   py-5
+                   sm:px-8
+                   sm:py-6
+                   lg:p-8
+                   flex
+                   items-center
+                   justify-between
+                   lg:flex-col
+                   lg:items-end
+                   lg:justify-center
+                   gap-4
+                   border-t
+                   lg:border-t-0
+                   lg:border-l
+                   border-gray-200
+                   dark:border-white/10">
+
+
+            <!-- PRICE -->
+
+            <div 
+                class="lg:text-right">
+
+                <p 
+                    class="text-[10px]
                            uppercase
-                           tracking-[3px]
+                           tracking-[2px]
                            text-gray-400">
 
-                    Documentary Wedding
+                    From
 
-                </span>
+                </p>
 
-
-                <h3
-                    class="mt-5
-                           text-3xl
-                           sm:text-4xl
+                <p 
+                    class="mt-1
+                           text-xl
                            font-semibold
                            text-gray-900
                            dark:text-white">
 
-                    Vikram
-                    <span
-                        class="font-serif
-                               italic
-                               font-normal
-                               text-gray-500">
-
-                        Shah
-
-                    </span>
-
-                </h3>
-
-
-                <p
-                    class="mt-3
-                           max-w-md
-                           text-sm
-                           leading-6
-                           text-gray-500
-                           dark:text-gray-400">
-
-                    Candid wedding stories built around
-                    real emotions and authentic moments.
+                    ₹22K+
 
                 </p>
-
-
-                <div
-                    class="mt-6
-                           flex
-                           gap-7">
-
-                    <span
-                        class="text-xs
-                               text-gray-500
-                               dark:text-gray-400">
-
-                        Bengaluru
-
-                    </span>
-
-                    <span
-                        class="text-xs
-                               text-amber-500">
-
-                        ★ 4.8
-
-                    </span>
-
-                </div>
 
             </div>
 
 
-            <!-- ACTION -->
+            <!-- MOBILE ARROW -->
 
-            <div
-                class="p-7
-                       lg:p-8
+            <button
+                type="button"
+                aria-label="View photographer"
+                class="lg:hidden
+                       w-10
+                       h-10
+                       rounded-full
+                       border
+                       border-gray-300
+                       dark:border-white/20
                        flex
                        items-center
-                       justify-between
-                       lg:flex-col
-                       lg:items-end
-                       lg:justify-center
-                       gap-5
-                       border-t
-                       lg:border-t-0
-                       lg:border-l
-                       border-gray-200
-                       dark:border-white/10">
+                       justify-center
+                       text-gray-700
+                       dark:text-white
+                       transition-all
+                       duration-300
+                       hover:bg-black
+                       hover:text-white
+                       dark:hover:bg-white
+                       dark:hover:text-black">
 
-                <div
-                    class="lg:text-right">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
 
-                    <p
-                        class="text-[10px]
-                               uppercase
-                               tracking-[2px]
-                               text-gray-400">
+            </button>
 
-                        From
-
-                    </p>
-
-                    <p
-                        class="mt-1
-                               text-xl
-                               font-semibold
-                               text-gray-900
-                               dark:text-white">
-
-                        ₹22K+
-
-                    </p>
-
-                </div>
-
-
-              
-            </div>
 
         </div>
 
-    </article>
+    </div>
 
+</article>
 
-</div>
-
-            <!-- NO RESULTS -->
-
-            <div
-                id="noResults"
-                class="hidden
-                       text-center
-                       py-20">
-
-                <i
-                    class="fa-solid
-                           fa-camera
-                           text-3xl
-                           text-gray-300">
-
-                </i>
-
-                <h3
-                    class="mt-5
-                           text-2xl
-                           font-semibold">
-
-                    No photographers found
-
-                </h3>
-
-                <p
-                    class="mt-2
-                           text-sm
-                           text-gray-400">
-
-                    Try changing your filters.
-
-                </p>
-
-            </div>
-
-        </div>
-
+           
     </section>
 
 
@@ -5745,7 +5787,6 @@
 
 
 
-
 <!-- ========================================================= -->
 <!-- LENSFIND FOOTER -->
 <!-- ========================================================= -->
@@ -5755,8 +5796,6 @@
            dark:bg-black
            text-white">
 
-
-    
 
     <!-- ===================================================== -->
     <!-- MAIN FOOTER -->
@@ -5786,25 +5825,90 @@
 
                 <a
                     href="index.html"
-                    class="inline-flex
-                           items-center">
+                    class="group
+                           inline-flex
+                           items-center
+                           gap-3">
 
-                    <span
-                        class="text-2xl
-                               font-semibold
-                               tracking-tight">
 
-                        Lens<span
-                            class="text-amber-500">
+                    <!-- Logo Icon -->
+
+                <div
+                    class="w-11
+                           h-11
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           flex
+                           items-center
+                           justify-center
+                           shadow-lg
+                           group-hover:bg-amber-500
+                           dark:group-hover:bg-amber-500
+                           transition-all
+                           duration-300">
+
+
+                    <i
+                        class="fa-solid
+                               fa-camera
+                               text-white
+                               dark:text-black
+                               group-hover:text-white
+                               text-lg">
+
+                    </i>
+
+
+                </div>
+
+
+                <!-- Logo Text -->
+
+                <div class="block">
+
+
+                    <h1
+                        class="text-[18px]
+                               font-bold
+                               tracking-tight
+                               leading-none
+                               text-gray-900
+                               dark:text-white">
+
+
+                        Lens
+
+                        <span class="text-amber-500">
 
                             Find
 
                         </span>
 
-                    </span>
+
+                    </h1>
+
+
+                    <p
+                        class="text-[8px] sm:text-[9px]
+                               text-gray-400
+                               dark:text-gray-500
+                               uppercase
+                               tracking-[2px]
+                               mt-1">
+
+                        Photography Directory
+
+                    </p>
+
+
+                </div>
+
 
                 </a>
 
+
+                <!-- DESCRIPTION -->
 
                 <p
                     class="mt-5
@@ -5820,13 +5924,18 @@
                 </p>
 
 
+                <!-- ================================================= -->
                 <!-- SOCIAL -->
+                <!-- ================================================= -->
 
                 <div
                     class="mt-7
                            flex
                            items-center
                            gap-3">
+
+
+                    <!-- Instagram -->
 
                     <a
                         href="#"
@@ -5850,6 +5959,8 @@
                     </a>
 
 
+                    <!-- Facebook -->
+
                     <a
                         href="#"
                         aria-label="Facebook"
@@ -5872,6 +5983,8 @@
                     </a>
 
 
+                    <!-- Pinterest -->
+
                     <a
                         href="#"
                         aria-label="Pinterest"
@@ -5893,6 +6006,8 @@
 
                     </a>
 
+
+                    <!-- LinkedIn -->
 
                     <a
                         href="#"
@@ -5943,6 +6058,7 @@
                 <ul
                     class="mt-6
                            space-y-4">
+
 
                     <li>
 
@@ -6036,6 +6152,7 @@
                     class="mt-6
                            space-y-4">
 
+
                     <li>
 
                         <a
@@ -6097,6 +6214,8 @@
                            space-y-4">
 
 
+                    <!-- EMAIL -->
+
                     <a
                         href="mailto:hello@lensfind.com"
                         class="flex
@@ -6119,6 +6238,8 @@
 
                     </a>
 
+
+                    <!-- PHONE -->
 
                     <a
                         href="tel:+919876543210"
@@ -6143,6 +6264,8 @@
                     </a>
 
 
+                    <!-- LOCATION -->
+
                     <div
                         class="flex
                                items-start
@@ -6155,7 +6278,6 @@
                             class="fa-solid
                                    fa-location-dot
                                    mt-1">
-
                         </i>
 
                         <span>
@@ -6196,6 +6318,9 @@
                    justify-between
                    gap-4">
 
+
+            <!-- COPYRIGHT -->
+
             <p
                 class="text-[11px]
                        text-gray-600">
@@ -6205,10 +6330,15 @@
             </p>
 
 
+            <!-- LEGAL -->
+
             <div
                 class="flex
+                       flex-wrap
                        items-center
+                       justify-center
                        gap-5">
+
 
                 <a
                     href="#"
@@ -6265,14 +6395,6 @@
     </div>
 
 </footer>
-
-
-
-
-
-
-
-
 
 
 
