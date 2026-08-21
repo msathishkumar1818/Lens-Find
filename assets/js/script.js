@@ -13,12 +13,7 @@
 
         // The home link is "index.html" on the root page and "../index.html"
         // on every page inside /pages.
-        const logo = header.querySelector('a[href$="index.html"]');
-        if (logo) {
-            logo.className = "flex items-center gap-3 shrink-0 group";
-            logo.setAttribute("aria-label", "LensFind home");
-            logo.innerHTML = '<span class="lensfind-logo-mark"><i class="fa-solid fa-camera-retro"></i></span><span class="block"><span class="block text-[19px] font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">Lens<span class="text-amber-500">Find</span></span><span class="block mt-1 text-[8px] font-semibold uppercase tracking-[2px] text-gray-500 dark:text-gray-300">Capture what matters</span></span>';
-        }
+        
 
         header.querySelector('[aria-label="Search"]')?.remove();
         header.querySelector('input[placeholder="Search photographers..."]')?.closest(".relative")?.remove();
