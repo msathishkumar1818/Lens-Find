@@ -7,6 +7,7 @@
         const inPagesDirectory = window.location.pathname.includes("/pages/");
         const contactHref = inPagesDirectory ? "contact.html" : "pages/contact.html";
         const inspirationHref = inPagesDirectory ? "inspiration.html" : "pages/inspiration.html";
+        const photographersHref = inPagesDirectory ? "photographers.html" : "pages/photographers.html";
         const header = document.querySelector("header");
 
         if (!header) return;
@@ -20,15 +21,30 @@
 
         header.querySelectorAll("a").forEach(function (link) {
             const label = link.textContent.replace(/\s+/g, " ").trim();
-            if (label === "Find Photographer" || label === "Find a Photographer") link.remove();
+            if (label === "Login" || label === "Log in") {
+                const prev = link.previousElementSibling;
+                if (prev && prev.classList.contains("w-px")) {
+                    prev.remove();
+                }
+                link.remove();
+            }
+            if (label === "Find Photographer" || label === "Find a Photographer") {
+                link.innerHTML = 'Need a Photographer <i class="fa-solid fa-arrow-right text-xs"></i>';
+            }
         });
 
         const desktopNav = document.getElementById("desktop-nav");
+        if (desktopNav) {
+            desktopNav.querySelectorAll("a, button").forEach(function(el) {
+                el.classList.add("whitespace-nowrap", "shrink-0");
+            });
+        }
+
         if (desktopNav && !desktopNav.querySelector('[data-nav-inspiration]')) {
             const inspiration = document.createElement("a");
             inspiration.href = inspirationHref;
             inspiration.dataset.navInspiration = "true";
-            inspiration.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition";
+            inspiration.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition whitespace-nowrap shrink-0";
             inspiration.textContent = "Inspiration";
             const listServices = [...desktopNav.querySelectorAll("a")].find(function (link) {
                 return link.textContent.replace(/\s+/g, " ").trim() === "List Your Services";
@@ -40,12 +56,37 @@
             const contact = document.createElement("a");
             contact.href = contactHref;
             contact.dataset.navContact = "true";
-            contact.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition";
+            contact.className = "py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition whitespace-nowrap shrink-0";
             contact.textContent = "Contact";
             desktopNav.appendChild(contact);
         }
 
+        // Ensure strictly ONE "Need a Photographer" CTA button remains visible in desktop header
+        const desktopRight = header.querySelector(".hidden.lg\\:flex.ml-auto, .hidden.lg\\:flex");
+        if (desktopRight) {
+            const allCtas = desktopRight.querySelectorAll('a[href*="photographers.html"]');
+            if (allCtas.length === 0) {
+                const cta = document.createElement("a");
+                cta.href = photographersHref;
+                cta.className = "inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-semibold hover:bg-amber-500 dark:hover:bg-amber-500 dark:hover:text-white transition-all duration-300 whitespace-nowrap shrink-0";
+                cta.innerHTML = 'Need a Photographer <i class="fa-solid fa-arrow-right text-xs"></i>';
+                desktopRight.appendChild(cta);
+            } else {
+                allCtas[0].classList.add("whitespace-nowrap", "shrink-0");
+                for (let i = 1; i < allCtas.length; i++) {
+                    allCtas[i].remove();
+                }
+            }
+        }
+
         const mobileNav = document.getElementById("mobile-nav");
+        if (mobileNav) {
+            mobileNav.querySelectorAll("a").forEach(function (link) {
+                const label = link.textContent.replace(/\s+/g, " ").trim();
+                if (label === "Login" || label === "Log in") link.remove();
+            });
+        }
+
         if (mobileNav && !mobileNav.querySelector('[data-nav-inspiration]')) {
             const inspiration = document.createElement("a");
             inspiration.href = inspirationHref;
@@ -64,10 +105,15 @@
             contact.dataset.navContact = "true";
             contact.className = "flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium";
             contact.innerHTML = '<i class="fa-solid fa-envelope w-5 text-amber-500"></i>Contact';
-            const login = [...mobileNav.querySelectorAll("a")].find(function (link) {
-                return link.textContent.replace(/\s+/g, " ").trim() === "Login";
+            mobileNav.appendChild(contact);
+        }
+
+        // Clean up any duplicate CTA from mobile header bar so only the menu button remains
+        const mobileRight = header.querySelector(".flex.lg\\:hidden");
+        if (mobileRight) {
+            mobileRight.querySelectorAll('a[href*="photographers.html"]').forEach(function(a) {
+                a.remove();
             });
-            mobileNav.insertBefore(contact, login || null);
         }
 
         const directionButton = document.getElementById("direction-toggle");
@@ -623,7 +669,7 @@
     });
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth >= 1024) closeMobileMenu();
+        if (window.innerWidth >= 1200) closeMobileMenu();
     });
 
 
@@ -666,6 +712,100 @@
     window.location.href =
         "photographers.html?" + params.toString();
 
+}
+
+/* =========================================================
+   PHOTOGRAPHER FILTERING (City, Specialty, Budget)
+========================================================= */
+function initPhotographerFilters() {
+    const citySelect = document.getElementById("filterCity");
+    const specialtySelect = document.getElementById("filterSpecialty");
+    const budgetSelect = document.getElementById("filterBudget");
+    const resetBtn = document.getElementById("resetFiltersBtn");
+    const resultCount = document.getElementById("resultCount");
+    const grid = document.getElementById("photographerGrid");
+
+    if (!grid) return;
+    const cards = grid.querySelectorAll(".photographer-card");
+    if (!cards.length) return;
+
+    // Check URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const paramCity = params.get("city");
+    const paramSpecialty = params.get("specialty") || params.get("type");
+    const paramBudget = params.get("budget");
+
+    if (citySelect && paramCity) {
+        for (let i = 0; i < citySelect.options.length; i++) {
+            if (citySelect.options[i].value.toLowerCase() === paramCity.toLowerCase()) {
+                citySelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+    if (specialtySelect && paramSpecialty) {
+        for (let i = 0; i < specialtySelect.options.length; i++) {
+            if (specialtySelect.options[i].value.toLowerCase() === paramSpecialty.toLowerCase()) {
+                specialtySelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+    if (budgetSelect && paramBudget) {
+        budgetSelect.value = paramBudget.toLowerCase();
+    }
+
+    function applyFilters() {
+        const selectedCity = citySelect ? citySelect.value.trim().toLowerCase() : "";
+        const selectedSpecialty = specialtySelect ? specialtySelect.value.trim().toLowerCase() : "";
+        const selectedBudget = budgetSelect ? budgetSelect.value.trim().toLowerCase() : "";
+
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cardCity = (card.getAttribute("data-city") || "").trim().toLowerCase();
+            const cardSpecialty = (card.getAttribute("data-specialty") || "").trim().toLowerCase();
+            const cardBudget = (card.getAttribute("data-budget") || "").trim().toLowerCase();
+
+            const matchCity = !selectedCity || cardCity === selectedCity;
+            const matchSpecialty = !selectedSpecialty || cardSpecialty === selectedSpecialty;
+            const matchBudget = !selectedBudget || cardBudget === selectedBudget;
+
+            if (matchCity && matchSpecialty && matchBudget) {
+                card.style.display = "";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (resultCount) {
+            resultCount.textContent = visibleCount;
+        }
+    }
+
+    if (citySelect) citySelect.addEventListener("change", applyFilters);
+    if (specialtySelect) specialtySelect.addEventListener("change", applyFilters);
+    if (budgetSelect) budgetSelect.addEventListener("change", applyFilters);
+
+    if (resetBtn) {
+        resetBtn.addEventListener("click", function() {
+            if (citySelect) citySelect.value = "";
+            if (specialtySelect) specialtySelect.value = "";
+            if (budgetSelect) budgetSelect.value = "";
+            applyFilters();
+        });
+    }
+
+    applyFilters();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPhotographerFilters);
+} else {
+    initPhotographerFilters();
 }
 
 
@@ -991,7 +1131,7 @@ testimonialDots.forEach((dot, index) => {
         'pricing.html': pageRoot + 'list-services.html#plans',
         'resources.html': pageRoot + 'inspiration.html',
         'contact.html': pageRoot + 'contact.html',
-        'about.html': home + '#about',
+        'about.html': pageRoot + 'about.html',
         'careers.html': pageRoot + 'contact.html#contact-form',
         'blog.html': pageRoot + 'inspiration.html',
         'faq.html': pageRoot + 'contact.html#faq',
@@ -1039,7 +1179,9 @@ testimonialDots.forEach((dot, index) => {
         document.querySelector('#mobile-menu')?.remove();
         document.querySelector('#menu-btn')?.remove();
         document.querySelectorAll('header a').forEach(function(link) {
-            if (!link.getAttribute('href')?.includes('index.html')) link.remove();
+            const isHome = link.getAttribute('href')?.includes('index.html');
+            const isCTA = link.textContent.includes('Photographer');
+            if (!isHome && !isCTA) link.remove();
         });
     }
 })();

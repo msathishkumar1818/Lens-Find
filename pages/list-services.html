@@ -515,24 +515,6 @@
                 </div>
 
 
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="px-3
-                           py-2
-                           text-sm
-                           font-semibold
-                           text-gray-700
-                           dark:text-gray-200
-                           hover:text-amber-500
-                           transition">
-
-                    Login
-
-                </a>
-
-
                 <!-- CTA -->
 
                 <a
@@ -556,7 +538,7 @@
                            duration-300">
 
 
-                    Find Photographer
+                    Need a Photographer
 
 
                     <i
@@ -584,6 +566,7 @@
                        gap-2">
 
 
+
                 <!-- Mobile Menu -->
 
                 <button
@@ -600,7 +583,8 @@
                            dark:text-black
                            flex
                            items-center
-                           justify-center">
+                           justify-center
+                           shrink-0">
 
 
                     <i
@@ -943,40 +927,6 @@
                 </a>
 
 
-                <!-- ================================= -->
-                <!-- LOGIN -->
-                <!-- ================================= -->
-
-                <a
-                    href="login.html"
-                    class="flex
-                           items-center
-                           gap-4
-                           px-4
-                           py-3.5
-                           rounded-xl
-                           text-gray-700
-                           dark:text-gray-300
-                           hover:bg-gray-100
-                           dark:hover:bg-white/5
-                           font-medium">
-
-
-                    <i
-                        class="fa-solid
-                               fa-right-to-bracket
-                               w-5
-                               text-amber-500">
-
-                    </i>
-
-
-                    Login
-
-
-                </a>
-
-
             </nav>
 
 
@@ -1000,7 +950,7 @@
                        transition">
 
 
-                Find a Photographer
+                Need a Photographer
 
 
                 <i
@@ -1022,7 +972,49 @@
 
 
 <!-- ========================================================= -->
-<!-- LIST YOUR SERVICES -->
+<!-- 01. LIST SERVICES HERO -->
+<!-- ========================================================= -->
+
+<section class="relative overflow-hidden bg-gray-950 text-white py-16 lg:py-24 min-h-[420px] flex items-center">
+    <div class="absolute inset-0 z-0">
+        <img src="../assets/images/p24.jpg" alt="List Your Services" class="w-full h-full object-cover object-center filter brightness-[0.22]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/80"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-12 gap-10 items-end">
+            <div class="lg:col-span-8">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-amber-400/40 backdrop-blur-md text-[10px] uppercase tracking-[3px] text-amber-400 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                    Grow Your Business
+                </span>
+                <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight text-white">
+                    Share your vision. <br>
+                    <span class="font-serif italic font-normal text-amber-400">Expand your creative reach.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pb-2">
+                <div class="p-6 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md shadow-2xl">
+                    <p class="text-sm sm:text-base leading-relaxed text-white font-normal">
+                        Join thousands of elite independent photographers connecting directly with clients who value exceptional artistic craftsmanship.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/15 flex flex-col gap-2 text-xs text-amber-300 font-medium">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span>Direct Client Communication</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span>Zero Commission on Bookings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- LIST YOUR SERVICES FORM & PLANS -->
 <!-- ========================================================= -->
 
 <section id="list-services"

@@ -515,24 +515,6 @@
                 </div>
 
 
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="px-3
-                           py-2
-                           text-sm
-                           font-semibold
-                           text-gray-700
-                           dark:text-gray-200
-                           hover:text-amber-500
-                           transition">
-
-                    Login
-
-                </a>
-
-
                 <!-- CTA -->
 
                 <a
@@ -556,7 +538,7 @@
                            duration-300">
 
 
-                    Find Photographer
+                    Need a Photographer
 
 
                     <i
@@ -584,6 +566,7 @@
                        gap-2">
 
 
+
                 <!-- Mobile Menu -->
 
                 <button
@@ -600,7 +583,8 @@
                            dark:text-black
                            flex
                            items-center
-                           justify-center">
+                           justify-center
+                           shrink-0">
 
 
                     <i
@@ -943,40 +927,6 @@
                 </a>
 
 
-                <!-- ================================= -->
-                <!-- LOGIN -->
-                <!-- ================================= -->
-
-                <a
-                    href="login.html"
-                    class="flex
-                           items-center
-                           gap-4
-                           px-4
-                           py-3.5
-                           rounded-xl
-                           text-gray-700
-                           dark:text-gray-300
-                           hover:bg-gray-100
-                           dark:hover:bg-white/5
-                           font-medium">
-
-
-                    <i
-                        class="fa-solid
-                               fa-right-to-bracket
-                               w-5
-                               text-amber-500">
-
-                    </i>
-
-
-                    Login
-
-
-                </a>
-
-
             </nav>
 
 
@@ -1000,7 +950,7 @@
                        transition">
 
 
-                Find a Photographer
+                Need a Photographer
 
 
                 <i
@@ -1034,17 +984,34 @@
     <!-- ================================================== -->
 
     <section
-        class="bg-[#f5f3ee]
-               dark:bg-[#0d0d0d]
-               py-20
-               lg:py-28">
+        class="relative
+               overflow-hidden
+               bg-gray-950
+               text-white
+               py-16
+               lg:py-24
+               min-h-[420px]
+               flex
+               items-center">
+
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="../assets/images/p44.jpg" 
+                alt="Photography directory hero" 
+                class="w-full h-full object-cover object-center filter brightness-[0.22]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/80"></div>
+        </div>
 
         <div
-            class="max-w-7xl
+            class="relative
+                   z-10
+                   max-w-7xl
                    mx-auto
                    px-5
                    sm:px-6
-                   lg:px-8">
+                   lg:px-8
+                   w-full">
 
             <div
                 class="grid
@@ -1062,16 +1029,24 @@
                         class="inline-flex
                                items-center
                                gap-2
+                               px-3.5
+                               py-1.5
+                               rounded-full
+                               bg-black/60
+                               border
+                               border-amber-400/40
+                               backdrop-blur-md
                                text-[10px]
                                uppercase
-                               tracking-[4px]
-                               text-amber-500">
+                               tracking-[3px]
+                               text-amber-400
+                               font-semibold">
 
                         <span
                             class="w-2
                                    h-2
                                    rounded-full
-                                   bg-amber-500">
+                                   bg-amber-400">
 
                         </span>
 
@@ -1079,37 +1054,35 @@
 
                     </span>
 
-<h1
-    class="mt-7
-           text-4xl
-           sm:text-5xl
-           md:text-6xl
-           lg:text-7xl
-           xl:text-[5.5rem]
-           font-semibold
-           leading-[0.95]
-           tracking-[-2px]
-           sm:tracking-[-3px]
-           lg:tracking-[-4px]
-           text-gray-900
-           dark:text-white">
+                    <h1
+                        class="mt-6
+                               text-4xl
+                               sm:text-5xl
+                               md:text-6xl
+                               lg:text-7xl
+                               xl:text-[5rem]
+                               font-semibold
+                               leading-[0.98]
+                               tracking-[-2px]
+                               sm:tracking-[-3px]
+                               text-white">
 
-    Find the right
+                        Find the right
 
-    <br>
+                        <br>
 
-    <span
-        class="font-serif
-               italic
-               font-normal
-               text-gray-400
-               dark:text-gray-500">
+                        <span
+                            class="font-serif
+                                   italic
+                                   font-normal
+                                   text-amber-400">
 
-        photographer.
+                            photographer.
 
-    </span>
+                        </span>
 
-</h1>
+                    </h1>
+
                 </div>
 
 
@@ -1119,70 +1092,80 @@
                     class="lg:col-span-4
                            pb-2">
 
-                    <p
-                        class="text-sm
-                               leading-7
-                               text-gray-500
-                               dark:text-gray-400">
+                    <div class="p-6 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md shadow-2xl">
 
-                        Discover independent photographers
-                        by city, specialty and budget.
-                        Compare portfolios and connect
-                        directly with the creative behind
-                        the camera.
+                        <p
+                            class="text-sm sm:text-base
+                                   leading-relaxed
+                                   text-white
+                                   font-normal">
 
-                    </p>
+                            Discover independent photographers
+                            by city, specialty and budget.
+                            Compare portfolios and connect
+                            directly with the creative behind
+                            the camera.
 
-
-                    <div
-                        class="mt-7
-                               flex
-                               gap-8">
-
-                        <div>
-
-                            <strong
-                                class="text-2xl
-                                       font-semibold">
-
-                                12K+
-
-                            </strong>
-
-                            <p
-                                class="mt-1
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]
-                                       text-gray-400">
-
-                                Photographers
-
-                            </p>
-
-                        </div>
+                        </p>
 
 
-                        <div>
+                        <div
+                            class="mt-6 pt-5
+                                   border-t
+                                   border-white/15
+                                   flex
+                                   gap-8">
 
-                            <strong
-                                class="text-2xl
-                                       font-semibold">
+                            <div>
 
-                                120+
+                                <strong
+                                    class="text-2xl sm:text-3xl
+                                           font-bold
+                                           text-white">
 
-                            </strong>
+                                    12K+
 
-                            <p
-                                class="mt-1
-                                       text-[9px]
-                                       uppercase
-                                       tracking-[2px]
-                                       text-gray-400">
+                                </strong>
 
-                                Cities
+                                <p
+                                    class="mt-1
+                                           text-[10px]
+                                           uppercase
+                                           tracking-[2px]
+                                           font-semibold
+                                           text-amber-400">
 
-                            </p>
+                                    Photographers
+
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong
+                                    class="text-2xl sm:text-3xl
+                                           font-bold
+                                           text-white">
+
+                                    120+
+
+                                </strong>
+
+                                <p
+                                    class="mt-1
+                                           text-[10px]
+                                           uppercase
+                                           tracking-[2px]
+                                           font-semibold
+                                           text-amber-400">
+
+                                    Cities
+
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -1297,12 +1280,65 @@
 
 
 
-            <div class="directory-toolbar mb-10 grid gap-4 rounded-3xl border border-gray-200 bg-white p-5 sm:grid-cols-[1fr_auto] sm:items-center dark:border-white/10 dark:bg-white/5">
-                <div>
-                    <p class="text-sm font-semibold text-gray-900 dark:text-white">Find a creative match</p>
-                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Compare portfolios, specialties and locations at a glance.</p>
+            <!-- ========================================================= -->
+            <!-- INTERACTIVE FILTER TOOLBAR (City, Specialty, Budget) -->
+            <!-- ========================================================= -->
+            <div class="directory-toolbar mb-10 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#151515]">
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">Filter Photographers</h3>
+                        <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Filter talent by city, specialty and budget to find your ideal visual storyteller.</p>
+                    </div>
+                    <button id="resetFiltersBtn" type="button" class="self-start sm:self-auto inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-white/10 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-amber-500 transition">
+                        <i class="fa-solid fa-arrow-rotate-left text-[10px]"></i> Reset filters
+                    </button>
                 </div>
-                <a href="categories.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-600">Explore categories <i class="fa-solid fa-arrow-right"></i></a>
+
+                <div class="mt-5 grid gap-4 sm:grid-cols-3">
+                    <!-- City Filter -->
+                    <div>
+                        <label for="filterCity" class="block text-[11px] font-semibold uppercase tracking-[1.5px] text-gray-500 dark:text-gray-400 mb-1.5">City</label>
+                        <div class="relative">
+                            <select id="filterCity" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 py-3 pl-4 pr-10 text-sm font-medium text-gray-900 focus:border-amber-500 focus:bg-white focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-amber-400">
+                                <option value="">All Cities</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Specialty Filter -->
+                    <div>
+                        <label for="filterSpecialty" class="block text-[11px] font-semibold uppercase tracking-[1.5px] text-gray-500 dark:text-gray-400 mb-1.5">Specialty</label>
+                        <div class="relative">
+                            <select id="filterSpecialty" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 py-3 pl-4 pr-10 text-sm font-medium text-gray-900 focus:border-amber-500 focus:bg-white focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-amber-400">
+                                <option value="">All Specialties</option>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Food">Food</option>
+                                <option value="Corporate">Corporate</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Budget Filter -->
+                    <div>
+                        <label for="filterBudget" class="block text-[11px] font-semibold uppercase tracking-[1.5px] text-gray-500 dark:text-gray-400 mb-1.5">Budget</label>
+                        <div class="relative">
+                            <select id="filterBudget" class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 py-3 pl-4 pr-10 text-sm font-medium text-gray-900 focus:border-amber-500 focus:bg-white focus:outline-none dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-amber-400">
+                                <option value="">All Budgets</option>
+                                <option value="low">Under ₹10,000 (Budget-friendly)</option>
+                                <option value="medium">₹10,000 – ₹20,000 (Standard)</option>
+                                <option value="high">Above ₹20,000 (Premium / Luxury)</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- ========================================================= -->
@@ -1556,6 +1592,32 @@
 
                 </div>
 
+                <a
+                    href="photographer-profile.html?photographer=arjun"
+                    class="inline-flex
+                           items-center
+                           gap-2
+                           px-5
+                           py-2.5
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           text-white
+                           dark:text-black
+                           text-xs
+                           font-semibold
+                           hover:bg-amber-500
+                           dark:hover:bg-amber-400
+                           dark:hover:text-black
+                           transition-all
+                           whitespace-nowrap">
+
+                    View Profile
+
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+                </a>
+
 
 
             </div>
@@ -1743,17 +1805,22 @@
                     </span>
 
                     <a
-                        href="portfolio.html"
+                        href="photographer-profile.html?photographer=maya"
                         class="inline-flex
                                items-center
                                gap-2
+                               px-4
+                               py-2
+                               rounded-xl
+                               bg-amber-500
+                               text-white
                                text-xs
                                font-semibold
-                               text-amber-600
-                               dark:text-amber-400
-                               hover:text-amber-500">
+                               hover:bg-amber-600
+                               transition-all
+                               whitespace-nowrap">
 
-                        View portfolio
+                        View Profile
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
 
                     </a>
@@ -2040,8 +2107,26 @@
 
                     </p>
 
+                    <a
+                        href="photographer-profile.html?photographer=nisha"
+                        class="mt-4 inline-flex
+                               items-center
+                               gap-2
+                               px-4
+                               py-2
+                               rounded-xl
+                               bg-white
+                               text-black
+                               text-xs
+                               font-semibold
+                               hover:bg-amber-400
+                               transition-all
+                               whitespace-nowrap">
 
-                    
+                        View Profile
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+                    </a>
 
                 </div>
 
@@ -2219,10 +2304,9 @@
             </div>
 
 
-            <!-- ACTION -->
-
             <div
-                class="flex
+                class="p-6
+                       flex
                        items-center
                        justify-center
                        border-t
@@ -2231,7 +2315,30 @@
                        border-gray-200
                        dark:border-white/10">
 
-                
+                <a
+                    href="photographer-profile.html?photographer=rahul"
+                    class="inline-flex
+                           items-center
+                           gap-2
+                           px-5
+                           py-2.5
+                           rounded-xl
+                           bg-black
+                           dark:bg-white
+                           text-white
+                           dark:text-black
+                           text-xs
+                           font-semibold
+                           hover:bg-amber-500
+                           dark:hover:bg-amber-400
+                           dark:hover:text-black
+                           transition-all
+                           whitespace-nowrap">
+
+                    View Profile
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+                </a>
 
             </div>
 
@@ -2371,8 +2478,26 @@
 
                     </div>
 
+                    <a
+                        href="photographer-profile.html?photographer=ananya"
+                        class="inline-flex
+                               items-center
+                               gap-2
+                               px-5
+                               py-2.5
+                               rounded-xl
+                               bg-amber-400
+                               text-black
+                               text-xs
+                               font-semibold
+                               hover:bg-amber-300
+                               transition-all
+                               whitespace-nowrap">
 
-                    
+                        View Profile
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+                    </a>
 
                 </div>
 
@@ -2442,7 +2567,11 @@
            border-gray-200
            dark:border-white/10
            transition-all
-           duration-500">
+           duration-500"
+    data-name="Vikram Shah"
+    data-city="Bengaluru"
+    data-specialty="Wedding"
+    data-budget="medium">
 
     <div 
         class="grid
@@ -2698,33 +2827,30 @@
             </div>
 
 
-            <!-- MOBILE ARROW -->
-
-            <button
-                type="button"
-                aria-label="View photographer"
-                class="lg:hidden
-                       w-10
-                       h-10
-                       rounded-full
-                       border
-                       border-gray-300
-                       dark:border-white/20
-                       flex
+            <a
+                href="photographer-profile.html?photographer=vikram"
+                class="inline-flex
                        items-center
-                       justify-center
-                       text-gray-700
-                       dark:text-white
+                       gap-2
+                       px-5
+                       py-2.5
+                       rounded-xl
+                       bg-black
+                       dark:bg-white
+                       text-white
+                       dark:text-black
+                       text-xs
+                       font-semibold
+                       hover:bg-amber-500
+                       dark:hover:bg-amber-400
+                       dark:hover:text-black
                        transition-all
-                       duration-300
-                       hover:bg-black
-                       hover:text-white
-                       dark:hover:bg-white
-                       dark:hover:text-black">
+                       whitespace-nowrap">
 
-                <i class="fa-solid fa-arrow-right text-xs"></i>
+                View Profile
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
 
-            </button>
+            </a>
 
 
         </div>
@@ -3866,93 +3992,7 @@
 
 </script>
 
-    <!-- ================================================== -->
-    <!-- 05. FINAL MATCH SECTION -->
-    <!-- ================================================== -->
 
-    <section
-        class="py-24
-               bg-[#f5f3ee]
-               dark:bg-[#0d0d0d]">
-
-        <div
-            class="max-w-5xl
-                   mx-auto
-                   px-5
-                   text-center">
-
-
-            <span
-                class="text-[10px]
-                       uppercase
-                       tracking-[4px]
-                       text-amber-500">
-
-                Still looking?
-
-            </span>
-
-
-            <h2
-                class="mt-6
-                       text-4xl
-                       sm:text-6xl
-                       font-semibold
-                       leading-tight">
-
-                Let us help you find
-                your perfect match.
-
-            </h2>
-
-
-            <p
-                class="max-w-xl
-                       mx-auto
-                       mt-6
-                       text-sm
-                       leading-7
-                       text-gray-500">
-
-                Tell us what you're shooting,
-                where you're shooting and what
-                you're looking to spend.
-
-            </p>
-
-
-            <a
-                href="contact.html"
-                class="inline-flex
-                       items-center
-                       gap-4
-                       mt-9
-                       px-7
-                       py-4
-                       bg-black
-                       dark:bg-white
-                       text-white
-                       dark:text-black
-                       text-sm
-                       font-semibold
-                       hover:bg-amber-500
-                       dark:hover:bg-amber-400
-                       transition">
-
-                Get Photographer Recommendations
-
-                <i
-                    class="fa-solid
-                           fa-arrow-right
-                           text-xs">
-
-                </i>
-
-            </a>
-
-        </div>
-
-    </section>
 
 
     
@@ -5760,19 +5800,94 @@
 
     </div>
 
-</section>
+    <!-- ================================================== -->
+    <!-- 05. FINAL MATCH SECTION (STILL LOOKING?) -->
+    <!-- ================================================== -->
+
+    <section
+        class="py-24
+               bg-[#f5f3ee]
+               dark:bg-[#0d0d0d]">
+
+        <div
+            class="max-w-5xl
+                   mx-auto
+                   px-5
+                   text-center">
 
 
+            <span
+                class="text-[10px]
+                       uppercase
+                       tracking-[4px]
+                       text-amber-500 font-semibold">
+
+                Still looking?
+
+            </span>
 
 
+            <h2
+                class="mt-6
+                       text-4xl
+                       sm:text-6xl
+                       font-semibold
+                       leading-tight text-gray-900 dark:text-white">
+
+                Let us help you find
+                your perfect match.
+
+            </h2>
 
 
+            <p
+                class="max-w-xl
+                       mx-auto
+                       mt-6
+                       text-sm
+                       leading-7
+                       text-gray-500 dark:text-gray-400">
+
+                Tell us what you're shooting,
+                where you're shooting and what
+                you're looking to spend.
+
+            </p>
 
 
+            <a
+                href="contact.html"
+                class="inline-flex
+                       items-center
+                       gap-4
+                       mt-9
+                       px-7
+                       py-4
+                       bg-black
+                       dark:bg-white
+                       text-white
+                       dark:text-black
+                       text-sm
+                       font-semibold
+                       hover:bg-amber-500
+                       dark:hover:bg-amber-400
+                       transition">
 
+                Get Photographer Recommendations
 
+                <i
+                    class="fa-solid
+                           fa-arrow-right
+                           text-xs">
 
-    
+                </i>
+
+            </a>
+
+        </div>
+
+    </section>
+
 </main>
 
 

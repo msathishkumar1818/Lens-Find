@@ -515,24 +515,6 @@
                 </div>
 
 
-                <!-- LOGIN -->
-
-                <a
-                    href="login.html"
-                    class="px-3
-                           py-2
-                           text-sm
-                           font-semibold
-                           text-gray-700
-                           dark:text-gray-200
-                           hover:text-amber-500
-                           transition">
-
-                    Login
-
-                </a>
-
-
                 <!-- CTA -->
 
                 <a
@@ -556,7 +538,7 @@
                            duration-300">
 
 
-                    Find Photographer
+                    Need a Photographer
 
 
                     <i
@@ -584,6 +566,7 @@
                        gap-2">
 
 
+
                 <!-- Mobile Menu -->
 
                 <button
@@ -600,7 +583,8 @@
                            dark:text-black
                            flex
                            items-center
-                           justify-center">
+                           justify-center
+                           shrink-0">
 
 
                     <i
@@ -943,40 +927,6 @@
                 </a>
 
 
-                <!-- ================================= -->
-                <!-- LOGIN -->
-                <!-- ================================= -->
-
-                <a
-                    href="login.html"
-                    class="flex
-                           items-center
-                           gap-4
-                           px-4
-                           py-3.5
-                           rounded-xl
-                           text-gray-700
-                           dark:text-gray-300
-                           hover:bg-gray-100
-                           dark:hover:bg-white/5
-                           font-medium">
-
-
-                    <i
-                        class="fa-solid
-                               fa-right-to-bracket
-                               w-5
-                               text-amber-500">
-
-                    </i>
-
-
-                    Login
-
-
-                </a>
-
-
             </nav>
 
 
@@ -1000,7 +950,7 @@
                        transition">
 
 
-                Find a Photographer
+                Need a Photographer
 
 
                 <i
@@ -1019,12 +969,41 @@
     </div>
 
 </header>
-<section class="bg-gray-50 dark:bg-[#090909] min-h-[calc(100vh-76px)] py-16 sm:py-20">
+
+<section class="relative overflow-hidden bg-gray-950 text-white py-16 lg:py-24 min-h-[420px] flex items-center">
+    <div class="absolute inset-0 z-0">
+        <img src="../assets/images/p12.jpg" alt="Portfolio" class="w-full h-full object-cover object-center filter brightness-[0.22]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/80"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-12 gap-10 items-end">
+            <div class="lg:col-span-8">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-amber-400/40 backdrop-blur-md text-[10px] uppercase tracking-[3px] text-amber-400 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                    Curated Showcase
+                </span>
+                <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight text-white">
+                    Masterpieces in every <br>
+                    <span class="font-serif italic font-normal text-amber-400">single frame.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pb-2">
+                <div class="p-6 rounded-2xl bg-black/60 border border-white/15 backdrop-blur-md shadow-2xl">
+                    <p class="text-sm sm:text-base leading-relaxed text-white font-normal">
+                        A curated collection of celebrations, editorials, architectural landmarks, and brand stories captured across the globe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-[#090909] py-16 sm:py-20">
   <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
     <div class="max-w-2xl text-center mx-auto">
       <p class="text-xs font-semibold tracking-[0.25em] uppercase text-amber-500">Portfolio</p>
-      <h1 class="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">All Work</h1>
-      <p class="mt-5 text-gray-600 dark:text-gray-400 leading-relaxed">A curated collection of stories, celebrations, flavours, and brand moments.</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">All Work</h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">A curated collection of stories, celebrations, flavours, and brand moments.</p>
     </div>
     <div class="mt-10 flex flex-wrap items-center justify-center gap-3"><a href="portfolio.html" class="px-5 py-2.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-black text-xs font-semibold transition">All Work</a>
 <a href="weddings.html" class="px-5 py-2.5 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 text-xs font-medium hover:border-amber-500 hover:text-amber-500 transition">Weddings</a>
