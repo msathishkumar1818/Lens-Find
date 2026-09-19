@@ -1318,3 +1318,64 @@ function showMatch(type) {
     );
 
 }
+
+/* ======================================================
+   FAST CARD & IMAGE ENTRANCE ANIMATION OBSERVER
+====================================================== */
+(function initFastAnimations() {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    const cardSelectors = [
+        ".photographer-card",
+        "article",
+        ".process-card",
+        "#photographerGrid > *",
+        "#portfolioGrid > *",
+        ".city-item",
+        "section > div > div.grid > div"
+    ].join(",");
+
+    function applyCardAnimations() {
+        if (!("IntersectionObserver" in window)) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, idx) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    // Fast stagger: 40ms per item capped at 200ms for ultra responsiveness
+                    const delay = Math.min((idx % 6) * 40, 200);
+                    setTimeout(() => {
+                        el.classList.add("is-visible");
+                    }, delay);
+                    observer.unobserve(el);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: "0px 0px -30px 0px"
+        });
+
+        const cards = document.querySelectorAll(cardSelectors);
+        cards.forEach((card) => {
+            if (!card.classList.contains("fade-in-up-ready")) {
+                card.classList.add("fade-in-up-ready");
+                // If card is already in viewport on load, show immediately
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.classList.add("is-visible");
+                } else {
+                    observer.observe(card);
+                }
+            }
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", applyCardAnimations);
+    } else {
+        applyCardAnimations();
+    }
+})();
+

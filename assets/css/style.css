@@ -38,14 +38,89 @@
         .dark .text-gray-100,
         .dark .text-gray-200,
         .dark .text-gray-300,
-        .dark .text-gray-400 { color: #cbd5e1 !important; }
+        .dark .text-gray-400,
+        .dark .text-slate-400,
+        .dark .text-slate-300 { color: #cbd5e1 !important; }
+
         .dark .text-gray-500,
         .dark .text-gray-600,
         .dark .text-gray-700,
         .dark .text-gray-800,
         .dark .text-gray-900,
+        .dark .text-slate-700,
+        .dark .text-slate-800,
+        .dark .text-slate-900,
         .dark .text-black { color: #ffffff !important; }
+
         .dark input, .dark select, .dark textarea { color: #f9fafb; }
+        .dark select option { background-color: #1a1a1a; color: #ffffff; }
+
+        /* Ensure dark text remains sharp and visible ONLY on surfaces that are genuinely light/white in dark mode */
+        .dark a.dark\:bg-white,
+        .dark a.dark\:bg-white *,
+        .dark button.dark\:bg-white,
+        .dark button.dark\:bg-white *,
+        .dark span.dark\:bg-white,
+        .dark span.dark\:bg-white *,
+        .dark div.dark\:bg-white,
+        .dark div.dark\:bg-white *,
+        .dark .rounded-full.dark\:bg-white,
+        .dark .rounded-full.dark\:bg-white *,
+        .dark .photographer-card a.bg-white,
+        .dark .photographer-card a.bg-white *,
+        .dark .photographer-card span.bg-white,
+        .dark .photographer-card span.bg-white *,
+        .dark [class*="bg-amber"].text-black,
+        .dark [class*="bg-amber"] .text-black,
+        .dark [class*="bg-amber"].dark\:text-black,
+        .dark [class*="bg-amber"] .dark\:text-black,
+        .dark [class*="bg-yellow"].text-black,
+        .dark [class*="bg-yellow"] .text-black,
+        .dark .dark\:text-black,
+        .dark [class*="dark:text-black"],
+        .dark a.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]),
+        .dark a.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]) *,
+        .dark button.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]),
+        .dark button.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]) *,
+        .dark div.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]):not([class*="bg-white/"]),
+        .dark div.bg-white:not([class*="dark:bg-"]):not([class*="dark:text-white"]):not([class*="bg-white/"]) * {
+            color: #000000 !important;
+        }
+
+        /* Elements explicitly asking for white text in dark mode must always be bright white */
+        .dark .dark\:text-white,
+        .dark [class*="dark:text-white"],
+        .dark [class*="dark:text-white"] * {
+            color: #ffffff !important;
+        }
+
+        /* Category card arrow buttons on dark cards - crisp black icon on white circle, white icon on hover */
+        .group .rounded-full.bg-white i,
+        .group .rounded-full.dark\:bg-white i,
+        .dark .group .rounded-full.bg-white i,
+        .dark .group .rounded-full.dark\:bg-white i {
+            color: #000000 !important;
+        }
+
+        .group:hover .rounded-full.bg-white i,
+        .group:hover .rounded-full.dark\:bg-white i,
+        .dark .group:hover .rounded-full.bg-white i,
+        .dark .group:hover .rounded-full.dark\:bg-white i,
+        .dark .group:hover .group-hover\:text-white,
+        .dark .group:hover [class*="group-hover:text-white"],
+        .dark .group:hover .dark\:group-hover\:text-white,
+        .dark .group:hover [class*="dark:group-hover:text-white"] {
+            color: #ffffff !important;
+        }
+
+        .dark .dark\:hover\:text-black:hover,
+        .dark .hover\:text-black:hover,
+        .dark a.dark\:bg-white:hover,
+        .dark a.dark\:bg-white:hover *,
+        .dark button.dark\:bg-white:hover,
+        .dark button.dark\:bg-white:hover * {
+            color: #000000 !important;
+        }
 
         .faq-trigger { width: 100%; text-align: start; cursor: pointer; }
         .faq-panel[hidden] { display: none; }
@@ -1105,6 +1180,35 @@
 
 
 
+
+
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-33.333%);
+    }
+
+}
+
+
+.writing-mode-vertical {
+
+    writing-mode: vertical-rl;
+
+}
+
+
+/* <!-- ====================================================== -->
+<!-- HIDE SCROLLBAR -->
+<!-- ====================================================== --> */
+
+
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
@@ -1114,3 +1218,76 @@
     scrollbar-width: none;
 }
 
+/* ======================================================
+   FAST & FLUID GLOBAL CARD & IMAGE ANIMATIONS
+====================================================== */
+
+/* Hardware-accelerated hover elevation for cards */
+.photographer-card,
+article,
+.process-card,
+[class*="rounded-3xl"].bg-white,
+[class*="rounded-3xl"].bg-black,
+[class*="rounded-2xl"].bg-white,
+[class*="rounded-2xl"].dark\:bg-\[\#151515\],
+[class*="rounded-\[30px\]"] {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease !important;
+    will-change: transform;
+}
+
+.photographer-card:hover,
+article:hover,
+.process-card:hover {
+    transform: translateY(-5px) translateZ(0) !important;
+}
+
+/* Fluid hardware-accelerated transitions for all images */
+img {
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+                filter 0.3s ease !important;
+    backface-visibility: hidden;
+}
+
+/* Smooth zoom when hovering cards or image containers */
+.group:hover img,
+.photographer-card:hover img,
+article:hover img,
+a:hover > img,
+div.overflow-hidden:hover > img {
+    transform: scale(1.05) translateZ(0) !important;
+}
+
+/* Fast scroll entrance animations */
+.fade-in-up-ready {
+    opacity: 0;
+    transform: translateY(20px) translateZ(0);
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: opacity, transform;
+}
+
+.fade-in-up-ready.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) translateZ(0) !important;
+}
+
+/* Fast click feedback micro-interaction */
+button:active, 
+a.rounded-xl:active, 
+a.rounded-2xl:active, 
+a.rounded-full:active {
+    transform: scale(0.96) !important;
+    transition: transform 0.1s ease !important;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
