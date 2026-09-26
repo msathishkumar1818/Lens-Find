@@ -476,48 +476,103 @@ a[href^="tel:"] span.bg-gray-900 i,
         }
 
         /* ================================================
-           HOW IT WORKS: LIGHT / DARK MODE
+           HOW IT WORKS: LIGHT / DARK MODE CONTRAST & RESPONSIVE
         ================================================= */
 
         .how-it-works-section h2,
-        .how-it-works-section h3,
-        .how-it-works-section p:not(.text-xs),
-        .how-it-works-section .text-7xl,
-        .how-it-works-section .text-8xl {
-            color: #111827;
+        .how-it-works-section h3 {
+            color: #0f172a;
+        }
+
+        .how-it-works-section p:not(.text-xs) {
+            color: #334155;
         }
 
         .how-it-works-section p.text-xs,
         .how-it-works-section .text-gray-400,
         .how-it-works-section .text-gray-500 {
-            color: #4b5563;
+            color: #475569;
         }
 
         .how-it-works-section .text-7xl,
         .how-it-works-section .text-8xl {
-            color: rgba(17, 24, 39, 0.08);
+            color: rgba(15, 23, 42, 0.08) !important;
         }
 
         .how-it-works-section .process-card {
-            background: #f8fafc;
-            border-color: #e5e7eb;
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .how-it-works-section .process-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+        }
+
+        .how-it-works-section .process-card p.text-white,
+        .how-it-works-section .process-card span.text-white:not([class*="bg-amber"]),
+        .how-it-works-section .process-card h3.text-white,
+        .how-it-works-section .process-card h4.text-white {
+            color: #0f172a !important;
+        }
+
+        /* Buttons & Badges inside Process Card */
+        .how-it-works-section .process-card button.w-full,
+        .how-it-works-section .process-card button[class*="py-3"] {
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border: none !important;
+            font-weight: 600 !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .how-it-works-section .process-card button.w-full:hover,
+        .how-it-works-section .process-card button[class*="py-3"]:hover {
+            background-color: #f59e0b !important;
+            color: #0f172a !important;
+        }
+
+        .how-it-works-section .process-card .bg-amber-500,
+        .how-it-works-section .process-card .bg-amber-500 i,
+        .how-it-works-section .process-card button.bg-amber-500 i {
+            color: #ffffff !important;
         }
 
         .how-it-works-section .process-card .border-b,
         .how-it-works-section .border-t,
-        .how-it-works-section .bg-white\/10,
-        .how-it-works-section .bg-white\/5 {
-            border-color: #e5e7eb;
+        .how-it-works-section .process-card .border-white\/10 {
+            border-color: #e2e8f0 !important;
         }
 
-        .how-it-works-section .bg-white\/5 {
-            background-color: #f3f4f6;
+        .how-it-works-section .h-px.bg-white\/10 {
+            background-color: #e2e8f0 !important;
         }
 
         .how-it-works-section .bg-white\/10 {
-            background-color: #e5e7eb;
+            background-color: #f1f5f9 !important;
+            color: #0f172a !important;
+            border-color: #cbd5e1 !important;
+            font-weight: 500;
         }
 
+        .how-it-works-section .bg-white\/5 {
+            background-color: #f8fafc !important;
+            color: #334155 !important;
+        }
+
+        .how-it-works-section .bg-amber-500\/10 {
+            background-color: #fef3c7 !important;
+            color: #b45309 !important;
+            font-weight: 600;
+        }
+
+        .how-it-works-section .text-amber-400 {
+            color: #d97706 !important;
+        }
+
+        /* DARK MODE */
         .dark .how-it-works-section h2,
         .dark .how-it-works-section h3,
         .dark .how-it-works-section p:not(.text-xs) {
@@ -532,26 +587,69 @@ a[href^="tel:"] span.bg-gray-900 i,
 
         .dark .how-it-works-section .text-7xl,
         .dark .how-it-works-section .text-8xl {
-            color: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.06) !important;
         }
 
         .dark .how-it-works-section .process-card {
             background: rgba(255, 255, 255, 0.03);
             border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+
+        .dark .how-it-works-section .process-card:hover {
+            border-color: rgba(245, 158, 11, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark .how-it-works-section .process-card p.text-white,
+        .dark .how-it-works-section .process-card span.text-white,
+        .dark .how-it-works-section .process-card h3.text-white,
+        .dark .how-it-works-section .process-card h4.text-white {
+            color: #ffffff !important;
+        }
+
+        .dark .how-it-works-section .process-card button.w-full,
+        .dark .how-it-works-section .process-card button[class*="py-3"] {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .dark .how-it-works-section .process-card button.w-full:hover,
+        .dark .how-it-works-section .process-card button[class*="py-3"]:hover {
+            background-color: #f59e0b !important;
+            color: #0f172a !important;
+            border-color: #f59e0b !important;
         }
 
         .dark .how-it-works-section .process-card .border-b,
         .dark .how-it-works-section .border-t,
+        .dark .how-it-works-section .process-card .border-white\/10 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .dark .how-it-works-section .h-px.bg-white\/10 {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
         .dark .how-it-works-section .bg-white\/10 {
-            border-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
         }
 
         .dark .how-it-works-section .bg-white\/5 {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            color: #cbd5e1 !important;
         }
 
-        .dark .how-it-works-section .bg-white\/10 {
-            background-color: rgba(255, 255, 255, 0.1);
+        .dark .how-it-works-section .bg-amber-500\/10 {
+            background-color: rgba(245, 158, 11, 0.12) !important;
+            color: #fbbf24 !important;
+        }
+
+        .dark .how-it-works-section .text-amber-400 {
+            color: #fbbf24 !important;
         }
 
         /* ================================================
@@ -1166,6 +1264,35 @@ a[href^="tel:"] span.bg-gray-900 i,
             main > section, body > section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
             .back-to-top { right: 1rem; bottom: 1rem; width: 2.75rem; height: 2.75rem; }
             .page-index > section:first-of-type .flex.items-center.gap-8 { gap: 1rem !important; }
+            footer .border-t { padding-bottom: 2rem !important; }
+        }
+
+        /* ================================================
+           GLOBAL FOOTER CONTRAST & TYPOGRAPHY
+        ================================================= */
+        footer {
+            background-color: #111111 !important;
+            color: #ffffff;
+        }
+
+        .dark footer {
+            background-color: #000000 !important;
+        }
+
+        footer p.text-gray-600,
+        footer span.text-gray-600,
+        footer .text-gray-500 {
+            color: #9ca3af !important;
+        }
+
+        footer a.text-gray-600,
+        footer a.text-gray-500,
+        footer a.text-gray-400 {
+            color: #9ca3af !important;
+        }
+
+        footer a:hover {
+            color: #f59e0b !important;
         }
 
 
