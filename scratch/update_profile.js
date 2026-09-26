@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+
+// 1. UPDATE pages/photographer-profile.html
+const profileHtmlContent = `<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -40,60 +46,52 @@
         </a>
 
         <!-- DESKTOP NAV -->
-        <nav id="desktop-nav" class="hidden lg:flex items-center gap-6 xl:gap-8 mx-auto justify-center whitespace-nowrap">
-                    <!-- HOME DROPDOWN -->
-                    <div class="relative home-wrapper">
-                        <button id="home-btn" type="button" aria-expanded="false" aria-controls="home-dropdown" class="flex items-center gap-2 py-2 text-sm font-medium text-gray-900 dark:text-white hover:text-amber-500 transition">
-                            Home <i class="fa-solid fa-chevron-down text-[9px]"></i>
-                        </button>
-                        <div id="home-dropdown" class="home-dropdown absolute left-0 top-full pt-4">
-                            <div class="w-52 p-2 rounded-2xl bg-white dark:bg-[#151515] border border-gray-200 dark:border-white/10 shadow-2xl">
-                                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-amber-500 transition">
-                                    <i class="fa-solid fa-house w-5 text-amber-500"></i> Home 1
-                                </a>
-                                <a href="home2.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-amber-500 transition">
-                                    <i class="fa-solid fa-house-chimney w-5 text-amber-500"></i> Home 2
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <nav id="desktop-nav" class="hidden lg:flex items-center gap-4 xl:gap-6 ml-6 xl:ml-8 whitespace-nowrap">
+          
+          <!-- HOME DROPDOWN -->
+          <div class="relative home-wrapper">
+            <button id="home-btn" type="button" aria-expanded="false" aria-controls="home-dropdown" class="flex items-center gap-2 py-2 text-sm font-medium text-gray-900 dark:text-white hover:text-amber-500 transition">
+              Home <i class="fa-solid fa-chevron-down text-[9px]"></i>
+            </button>
+            <div id="home-dropdown" class="home-dropdown absolute left-0 top-full pt-4">
+              <div class="w-52 p-2 rounded-2xl bg-white dark:bg-[#151515] border border-gray-200 dark:border-white/10 shadow-2xl">
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-amber-500 transition">
+                  <i class="fa-solid fa-house w-5 text-amber-500"></i> Home 1
+                </a>
+                <a href="home2.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-amber-500 transition">
+                  <i class="fa-solid fa-house-chimney w-5 text-amber-500"></i> Home 2
+                </a>
+              </div>
+            </div>
+          </div>
 
-                    <a href="photographers.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">
-                        Browse Photographers
-                    </a>
-
-                    <a href="categories.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">
-                        Categories
-                    </a>
-
-                    <a href="inspiration.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">
-                        Inspiration
-                    </a>
-
-                    <a href="about.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">
-                        About
-                    </a>
-
-                    <a href="contact.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">
-                        Contact
-                    </a>
-                </nav>
+          <a href="photographers.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition nav-current">Browse Photographers</a>
+          <a href="categories.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">Categories</a>
+          <a href="inspiration.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">Inspiration</a>
+          <a href="portfolio.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">Portfolios</a>
+          <a href="about.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">About</a>
+          <a href="contact.html" class="py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-amber-500 transition">Contact</a>
+        </nav>
 
         <!-- DESKTOP RIGHT -->
-        <div class="hidden lg:flex items-center gap-2.5 shrink-0">
+        <div class="hidden lg:flex items-center gap-2 ml-auto">
+          <a id="contact-photographer" href="#contact-photographer-section" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-gray-200 dark:border-white/20 text-xs font-semibold text-gray-800 dark:text-white hover:border-amber-500 hover:text-amber-500 transition shadow-sm whitespace-nowrap">
+            Contact Photographer
+          </a>
+
           <!-- RTL / LTR -->
-          <button id="direction-toggle" type="button" aria-label="Toggle RTL LTR" title="RTL / LTR" class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-amber-500 hover:bg-gray-100 dark:hover:bg-white/5 transition shrink-0">
+          <button id="direction-toggle" type="button" aria-label="Toggle RTL LTR" title="RTL / LTR" class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-amber-500 hover:bg-gray-100 dark:hover:bg-white/5 transition">
             <i id="direction-icon" class="fa-solid fa-arrow-right-arrow-left"></i>
           </button>
 
           <!-- DARK MODE -->
-          <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme" class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-amber-500 hover:bg-gray-100 dark:hover:bg-white/5 transition shrink-0">
+          <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme" class="w-10 h-10 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-amber-500 hover:bg-gray-100 dark:hover:bg-white/5 transition">
             <i id="theme-icon" class="fa-solid fa-moon"></i>
           </button>
 
-          <div class="h-7 w-px bg-gray-200 dark:bg-white/10 mx-1 shrink-0"></div>
+          <div class="h-7 w-px bg-gray-200 dark:bg-white/10 mx-1"></div>
 
-          <a href="photographers.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-semibold hover:bg-amber-500 dark:hover:bg-amber-500 dark:hover:text-white transition-all duration-300 whitespace-nowrap shrink-0">
+          <a href="photographers.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-semibold hover:bg-amber-500 dark:hover:bg-amber-500 dark:hover:text-white transition-all duration-300 whitespace-nowrap">
             Need a Photographer <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
@@ -144,6 +142,9 @@
           </a>
           <a href="inspiration.html" class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium">
             <i class="fa-solid fa-lightbulb w-5 text-amber-500"></i> Inspiration
+          </a>
+          <a href="portfolio.html" class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium">
+            <i class="fa-solid fa-images w-5 text-amber-500"></i> Portfolios
           </a>
           <a href="about.html" class="flex items-center gap-4 px-4 py-3.5 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5 font-medium">
             <i class="fa-solid fa-info-circle w-5 text-amber-500"></i> About
@@ -231,39 +232,39 @@
           </div>
 
           <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            <figure class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md sm:col-span-2 flex flex-col h-full">
-              <div class="h-64 sm:h-72 md:h-80 w-full overflow-hidden bg-gray-950 shrink-0">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-100 dark:bg-[#181818] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md sm:col-span-2 flex flex-col h-full">
+              <div class="h-64 sm:h-72 md:h-80 w-full overflow-hidden bg-black">
                 <img id="gallery-image-1" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="../assets/images/p82.jpg" alt="Portfolio piece 1">
               </div>
-              <figcaption id="gallery-caption-1" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold leading-snug text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 min-h-[72px] sm:min-h-[76px] flex items-start mt-auto">Ceremonial Moments — Feature Shoot</figcaption>
+              <figcaption id="gallery-caption-1" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 mt-auto">Ceremonial Moments — Feature Shoot</figcaption>
             </figure>
             
-            <figure class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
-              <div class="h-64 sm:h-72 md:h-80 w-full overflow-hidden bg-gray-950 shrink-0">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-100 dark:bg-[#181818] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
+              <div class="h-64 sm:h-72 md:h-80 w-full overflow-hidden bg-black">
                 <img id="gallery-image-2" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="../assets/images/p48.jpg" alt="Portfolio piece 2">
               </div>
-              <figcaption id="gallery-caption-2" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold leading-snug text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 min-h-[72px] sm:min-h-[76px] flex items-start mt-auto">Golden Hour Harmony</figcaption>
+              <figcaption id="gallery-caption-2" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 mt-auto">Golden Hour Harmony</figcaption>
             </figure>
 
-            <figure class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
-              <div class="h-64 sm:h-72 w-full overflow-hidden bg-gray-950 shrink-0">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-100 dark:bg-[#181818] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
+              <div class="h-64 sm:h-72 w-full overflow-hidden bg-black">
                 <img id="gallery-image-3" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="../assets/images/p51.jpg" alt="Portfolio piece 3">
               </div>
-              <figcaption id="gallery-caption-3" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold leading-snug text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 min-h-[72px] sm:min-h-[76px] flex items-start mt-auto">Tradition & Atmosphere</figcaption>
+              <figcaption id="gallery-caption-3" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 mt-auto">Tradition & Atmosphere</figcaption>
             </figure>
 
-            <figure class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
-              <div class="h-64 sm:h-72 w-full overflow-hidden bg-gray-950 shrink-0">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-100 dark:bg-[#181818] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
+              <div class="h-64 sm:h-72 w-full overflow-hidden bg-black">
                 <img id="gallery-image-4" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="../assets/images/p39.jpg" alt="Portfolio piece 4">
               </div>
-              <figcaption id="gallery-caption-4" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold leading-snug text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 min-h-[72px] sm:min-h-[76px] flex items-start mt-auto">Editorial Framing</figcaption>
+              <figcaption id="gallery-caption-4" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 mt-auto">Editorial Framing</figcaption>
             </figure>
 
-            <figure class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
-              <div class="h-64 sm:h-72 w-full overflow-hidden bg-gray-950 shrink-0">
+            <figure class="group overflow-hidden rounded-2xl bg-slate-100 dark:bg-[#181818] border border-gray-200 dark:border-white/10 shadow-sm transition hover:shadow-md flex flex-col h-full">
+              <div class="h-64 sm:h-72 w-full overflow-hidden bg-black">
                 <img id="gallery-image-5" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" src="../assets/images/p26.jpg" alt="Portfolio piece 5">
               </div>
-              <figcaption id="gallery-caption-5" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold leading-snug text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 min-h-[72px] sm:min-h-[76px] flex items-start mt-auto">Quiet Vows Story</figcaption>
+              <figcaption id="gallery-caption-5" class="bg-white dark:bg-[#1a1a1a] p-4 sm:p-5 text-sm font-semibold text-gray-900 dark:text-white border-t border-gray-100 dark:border-white/10 mt-auto">Quiet Vows Story</figcaption>
             </figure>
           </div>
         </section>
@@ -461,7 +462,7 @@
               image: "../assets/images/p11.jpg",
               heroBg: "../assets/images/p44.jpg",
               specialties: ["Weddings", "Engagements", "Couples", "Pre-wedding", "Candid Documentary"],
-              aboutHeading: "Documentary wedding stories built around <span class=\"serif italic\">real feelings.</span>",
+              aboutHeading: "Documentary wedding stories built around <span class=\\"serif italic\\">real feelings.</span>",
               about1: "I capture weddings as unscripted celebrations of love, family, and joy. With over 9 years of documentary experience across South India and destination ceremonies, I focus on candid emotional truth over stiff poses.",
               about2: "From early morning preparations to midnight dancing, my team and I blend into the crowd so you can experience your celebration while we preserve every precious memory.",
               packages: [
@@ -490,7 +491,7 @@
               image: "../assets/images/p32.jpg",
               heroBg: "../assets/images/p40.jpg",
               specialties: ["Fashion", "Editorial", "Lookbooks", "Campaigns", "Styling Direction"],
-              aboutHeading: "Fashion narratives that push <span class=\"serif italic\">boundaries.</span>",
+              aboutHeading: "Fashion narratives that push <span class=\\"serif italic\\">boundaries.</span>",
               about1: "Based in Mumbai, I collaborate with luxury labels, independent designers, and top modeling agencies to create cinematic fashion imagery with distinctive lighting and bold visual styling.",
               about2: "Every session is meticulously conceptualized from moodboard to lighting design, ensuring your brand aesthetic commands attention across print, runway, and digital platforms.",
               packages: [
@@ -519,7 +520,7 @@
               image: "../assets/images/p33.jpg",
               heroBg: "../assets/images/p41.jpg",
               specialties: ["Food", "Restaurants", "Beverages", "Culinary Menus", "Commercial Packaging"],
-              aboutHeading: "Flavors and texture captured in <span class=\"serif italic\">every frame.</span>",
+              aboutHeading: "Flavors and texture captured in <span class=\\"serif italic\\">every frame.</span>",
               about1: "I bring dishes, drinks, and dining atmospheres alive through authentic food styling and natural lighting that highlights appetizing textures and rich aromas.",
               about2: "Working with boutique cafes, Michelin-star chefs, and consumer packaged food brands across Bengaluru, I craft visuals that make audiences hungry at first glance.",
               packages: [
@@ -548,7 +549,7 @@
               image: "../assets/images/p14.jpg",
               heroBg: "../assets/images/p43.jpg",
               specialties: ["Corporate", "Executive Headshots", "Conferences", "Workplace Culture", "Annual Reports"],
-              aboutHeading: "Elevating enterprise stories with <span class=\"serif italic\">clarity & confidence.</span>",
+              aboutHeading: "Elevating enterprise stories with <span class=\\"serif italic\\">clarity & confidence.</span>",
               about1: "I collaborate with startups, tech enterprises, and leadership teams to create modern, polished business imagery that establishes credibility and brand trust.",
               about2: "From seamless on-site executive headshot days to multi-day international tech summits, I ensure minimal disruption to your workday while delivering world-class corporate assets.",
               packages: [
@@ -577,7 +578,7 @@
               image: "../assets/images/p35.jpg",
               heroBg: "../assets/images/p40.jpg",
               specialties: ["Editorial", "Fashion", "Portraits", "Creative Direction", "Magazines"],
-              aboutHeading: "Expressive editorial vision that tells <span class=\"serif italic\">unforgettable stories.</span>",
+              aboutHeading: "Expressive editorial vision that tells <span class=\\"serif italic\\">unforgettable stories.</span>",
               about1: "I specialize in conceptual portraiture and fashion stories where light, texture, and posture tell a deeper personal narrative. My work has appeared in leading national publications and curated gallery spaces.",
               about2: "Every collaboration is tailored to bring out your natural charisma with gentle direction, artistic lighting, and evocative compositions.",
               packages: [
@@ -606,7 +607,7 @@
               image: "../assets/images/p13.jpg",
               heroBg: "../assets/images/p39.jpg",
               specialties: ["Weddings", "Travel", "Culture", "Candid", "Destination"],
-              aboutHeading: "Raw emotions and authentic stories <span class=\"serif italic\">unfolding naturally.</span>",
+              aboutHeading: "Raw emotions and authentic stories <span class=\\"serif italic\\">unfolding naturally.</span>",
               about1: "I document weddings, cultural festivals, and travel adventures with a candid photojournalistic eye. I avoid forced smiles and formulaic setups, prioritizing real tears, loud laughs, and spontaneous moments.",
               about2: "Equipped to travel anywhere across India and abroad, I ensure your life milestones are memorialized with warmth, depth, and cinematic artistry.",
               packages: [
@@ -642,23 +643,23 @@
       const firstName = profile.name.split(" ")[0];
       const lastName = profile.name.split(" ").slice(1).join(" ");
 
-      document.title = `${profile.name} | LensFind`;
+      document.title = \`\${profile.name} | LensFind\`;
 
       // Update Hero
       const profileNameEl = document.getElementById("profile-name");
-      if (profileNameEl) profileNameEl.innerHTML = `${firstName} <span class="serif italic text-amber-400">${lastName}</span>`;
+      if (profileNameEl) profileNameEl.innerHTML = \`\${firstName} <span class="serif italic text-amber-400">\${lastName}</span>\`;
       
       const profileRoleEl = document.getElementById("profile-role");
-      if (profileRoleEl) profileRoleEl.textContent = `${profile.role} based in ${profile.location.split(",")[0]}, crafting memorable imagery.`;
+      if (profileRoleEl) profileRoleEl.textContent = \`\${profile.role} based in \${profile.location.split(",")[0]}, crafting memorable imagery.\`;
       
       const profileLocEl = document.getElementById("profile-location");
-      if (profileLocEl) profileLocEl.innerHTML = `<i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>${profile.location}`;
+      if (profileLocEl) profileLocEl.innerHTML = \`<i class="fa-solid fa-location-dot mr-2 text-amber-400"></i>\${profile.location}\`;
       
       const profileRatingEl = document.getElementById("profile-rating");
-      if (profileRatingEl) profileRatingEl.innerHTML = `<i class="fa-solid fa-star mr-2 text-amber-400"></i>${profile.rating} (${profile.reviews} reviews)`;
+      if (profileRatingEl) profileRatingEl.innerHTML = \`<i class="fa-solid fa-star mr-2 text-amber-400"></i>\${profile.rating} (\${profile.reviews} reviews)\`;
       
       const profileExpEl = document.getElementById("profile-experience");
-      if (profileExpEl) profileExpEl.innerHTML = `<i class="fa-solid fa-camera mr-2 text-amber-400"></i>${profile.experience}`;
+      if (profileExpEl) profileExpEl.innerHTML = \`<i class="fa-solid fa-camera mr-2 text-amber-400"></i>\${profile.experience}\`;
       
       const profilePhotoEl = document.getElementById("profile-photo");
       if (profilePhotoEl) {
@@ -682,19 +683,19 @@
       // Update Specialties
       const specContainer = document.getElementById("profile-specialties");
       if (specContainer) {
-          specContainer.innerHTML = profile.specialties.map(s => `
-              <span class="rounded-lg bg-gray-100 dark:bg-white/10 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-white">${s}</span>
-          `).join("");
+          specContainer.innerHTML = profile.specialties.map(s => \`
+              <span class="rounded-lg bg-gray-100 dark:bg-white/10 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-white">\${s}</span>
+          \`).join("");
       }
 
       // Update Price in Sidebar
       const priceEl = document.getElementById("profile-price");
-      if (priceEl) priceEl.innerHTML = `${profile.price} <span class="text-sm font-medium text-gray-400">/ session</span>`;
+      if (priceEl) priceEl.innerHTML = \`\${profile.price} <span class="text-sm font-medium text-gray-400">/ session</span>\`;
 
       // Update Gallery
       profile.gallery.forEach((g, idx) => {
-          const imgEl = document.getElementById(`gallery-image-${idx + 1}`);
-          const capEl = document.getElementById(`gallery-caption-${idx + 1}`);
+          const imgEl = document.getElementById(\`gallery-image-\${idx + 1}\`);
+          const capEl = document.getElementById(\`gallery-caption-\${idx + 1}\`);
           if (imgEl) {
               imgEl.src = g.image;
               imgEl.alt = g.alt;
@@ -711,35 +712,35 @@
       // Render Pricing & Services Packages
       const pkgContainer = document.getElementById("pricing-cards-container");
       if (pkgContainer && profile.packages) {
-          pkgContainer.innerHTML = profile.packages.map(pkg => `
-              <div class="rounded-2xl border ${pkg.popular ? 'border-amber-500 shadow-md ring-1 ring-amber-500' : 'border-gray-200 dark:border-white/10'} bg-white dark:bg-[#1a1a1a] p-6 flex flex-col justify-between transition hover:shadow-lg">
+          pkgContainer.innerHTML = profile.packages.map(pkg => \`
+              <div class="rounded-2xl border \${pkg.popular ? 'border-amber-500 shadow-md ring-1 ring-amber-500' : 'border-gray-200 dark:border-white/10'} bg-white dark:bg-[#1a1a1a] p-6 flex flex-col justify-between transition hover:shadow-lg">
                 <div>
-                  ${pkg.popular ? '<span class="inline-block rounded-full bg-amber-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white mb-3">Most Popular</span>' : ''}
-                  <h3 class="text-lg font-bold text-gray-900 dark:text-white">${pkg.name}</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 font-medium">${pkg.duration}</p>
-                  <p class="mt-4 text-3xl font-extrabold text-gray-900 dark:text-white">${pkg.price}</p>
+                  \${pkg.popular ? '<span class="inline-block rounded-full bg-amber-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white mb-3">Most Popular</span>' : ''}
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white">\${pkg.name}</h3>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 font-medium">\${pkg.duration}</p>
+                  <p class="mt-4 text-3xl font-extrabold text-gray-900 dark:text-white">\${pkg.price}</p>
                   <ul class="mt-6 space-y-2.5 text-xs text-gray-600 dark:text-gray-300">
-                    ${pkg.deliverables.map(d => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> ${d}</li>`).join("")}
+                    \${pkg.deliverables.map(d => \`<li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> \${d}</li>\`).join("")}
                   </ul>
                 </div>
-                <button type="button" onclick="selectPackageAndScroll('${pkg.name}')" class="mt-8 w-full rounded-xl py-3 text-center text-xs font-semibold ${pkg.popular ? 'bg-amber-500 text-white hover:bg-amber-600' : 'border border-gray-200 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'} transition">
-                  Book ${pkg.name}
+                <button type="button" onclick="selectPackageAndScroll('\${pkg.name}')" class="mt-8 w-full rounded-xl py-3 text-center text-xs font-semibold \${pkg.popular ? 'bg-amber-500 text-white hover:bg-amber-600' : 'border border-gray-200 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10'} transition">
+                  Book \${pkg.name}
                 </button>
               </div>
-          `).join("");
+          \`).join("");
       }
 
       // Update Contact section headers and buttons
       const contactBtn = document.getElementById("contact-photographer");
-      if (contactBtn) contactBtn.textContent = `Contact ${firstName}`;
+      if (contactBtn) contactBtn.textContent = \`Contact \${firstName}\`;
       
       const contactFormName = document.getElementById("contact-form-name");
       if (contactFormName) contactFormName.textContent = profile.name;
 
       const waNumber = "919876543210";
-      const waText = encodeURIComponent(`Hi ${profile.name}, I found your portfolio on LensFind and would like to inquire about booking your photography services.`);
+      const waText = encodeURIComponent(\`Hi \${profile.name}, I found your portfolio on LensFind and would like to inquire about booking your photography services.\`);
       const waDirect = document.getElementById("whatsapp-direct");
-      if (waDirect) waDirect.href = `https://wa.me/${waNumber}?text=${waText}`;
+      if (waDirect) waDirect.href = \`https://wa.me/\${waNumber}?text=\${waText}\`;
 
       // Handle Direct Contact Form Submit
       const form = document.getElementById("direct-contact-form");
@@ -784,4 +785,7 @@
   </script>
   <script src="../assets/js/script.js"></script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync(path.join(rootDir, 'pages', 'photographer-profile.html'), profileHtmlContent, 'utf8');
+console.log('photographer-profile.html successfully updated!');
