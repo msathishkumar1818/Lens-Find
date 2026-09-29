@@ -186,7 +186,6 @@
             "fashion.html",
             "food.html",
             "corporate.html",
-            "photographers.html",
             "categories.html",
             "inspiration.html",
             "home2.html",
