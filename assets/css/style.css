@@ -101,10 +101,10 @@
             color: #000000 !important;
         }
 
-        .group:hover .rounded-full.bg-white i,
-        .group:hover .rounded-full.dark\:bg-white i,
-        .dark .group:hover .rounded-full.bg-white i,
-        .dark .group:hover .rounded-full.dark\:bg-white i,
+        .group:hover .rounded-full.bg-white:not(.contact-hero-icon) i,
+        .group:hover .rounded-full.dark\:bg-white:not(.contact-hero-icon) i,
+        .dark .group:hover .rounded-full.bg-white:not(.contact-hero-icon) i,
+        .dark .group:hover .rounded-full.dark\:bg-white:not(.contact-hero-icon) i,
         .dark .group:hover .group-hover\:text-white,
         .dark .group:hover [class*="group-hover:text-white"],
         .dark .group:hover .dark\:group-hover\:text-white,
@@ -276,40 +276,65 @@ body.menu-open {
     object-position: center 10% !important;
 }
 
-/* Contact page hero section icon contrast in Light & Dark Mode */
+/* Contact page hero section right-side icon contrast in Light & Dark Mode */
+.contact-hero-icon {
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Light mode defaults: white icon on black circle */
 .contact-hero-icon,
 .contact-hero-icon i,
 .contact-hero-icon *,
-a .contact-hero-icon,
 a .contact-hero-icon i,
-a .contact-hero-icon *,
-a:hover .contact-hero-icon i,
-.group .contact-hero-icon i,
-.group:hover .contact-hero-icon i,
-a[href^="mailto:"] .contact-hero-icon i,
-a[href^="tel:"] .contact-hero-icon i,
-a[href^="mailto:"] span.bg-gray-900 i,
-a[href^="tel:"] span.bg-gray-900 i,
-.bg-gray-900.text-white i,
-.bg-gray-900 > i,
-.bg-black.text-white i {
+.group .contact-hero-icon i {
     color: #ffffff !important;
 }
 
-.dark .contact-hero-icon,
+/* Light mode hover: amber circle with deep black icon for 10.5:1 contrast */
+.group:hover .contact-hero-icon,
+a:hover .contact-hero-icon,
+.contact-hero-icon:hover {
+    background-color: #f59e0b !important;
+    transform: scale(1.08);
+}
+
+.group:hover .contact-hero-icon i,
+.group:hover .contact-hero-icon *,
+a:hover .contact-hero-icon i,
+a:hover .contact-hero-icon *,
+.contact-hero-icon:hover i,
+.contact-hero-icon:hover * {
+    color: #000000 !important;
+}
+
+/* Dark mode defaults: deep black icon on crisp white circle */
+.dark .contact-hero-icon {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
 .dark .contact-hero-icon i,
 .dark .contact-hero-icon *,
-.dark a .contact-hero-icon,
 .dark a .contact-hero-icon i,
-.dark a .contact-hero-icon *,
-.dark a:hover .contact-hero-icon i,
-.dark .group .contact-hero-icon i,
+.dark .group .contact-hero-icon i {
+    color: #000000 !important;
+}
+
+/* Dark mode hover: amber circle with deep black icon (never white on amber/white) */
+.dark .group:hover .contact-hero-icon,
+.dark a:hover .contact-hero-icon,
+.dark .contact-hero-icon:hover {
+    background-color: #f59e0b !important;
+    color: #000000 !important;
+    transform: scale(1.08);
+}
+
 .dark .group:hover .contact-hero-icon i,
-.dark a[href^="mailto:"] .contact-hero-icon i,
-.dark a[href^="tel:"] .contact-hero-icon i,
-.dark a[href^="mailto:"] span.dark\:bg-white i,
-.dark a[href^="tel:"] span.dark\:bg-white i,
-.dark .dark\:bg-white.dark\:text-black i {
+.dark .group:hover .contact-hero-icon *,
+.dark a:hover .contact-hero-icon i,
+.dark a:hover .contact-hero-icon *,
+.dark .contact-hero-icon:hover i,
+.dark .contact-hero-icon:hover * {
     color: #000000 !important;
 }
 
@@ -436,73 +461,133 @@ a[href^="tel:"] span.bg-gray-900 i,
         }
 
         /* =========================================================
-           RESPONSIVE PHOTOGRAPHER DIRECTORY CARDS (NO CROPPING)
+           RESPONSIVE PHOTOGRAPHER DIRECTORY CARDS (REFERENCE MODEL)
         ========================================================= */
-        #photographerGrid .photographer-card {
-            max-width: 100%;
+        #photographerGrid {
+            display: grid !important;
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            gap: 1.5rem !important;
         }
 
-        /* Mobile View (< 640px): Full card width, tall generous image container ensuring faces are never cut */
-        @media (max-width: 639px) {
-            #photographerGrid .photographer-card > div {
-                min-height: 0 !important;
-                display: flex !important;
-                flex-direction: column !important;
-            }
-            #photographerGrid .photographer-card > div > div.relative {
-                width: 100% !important;
-                height: clamp(320px, 85vw, 400px) !important;
-                min-height: 320px !important;
+        @media (min-width: 640px) {
+            #photographerGrid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 1.75rem !important;
             }
         }
 
-        /* Tablet View (640px to 1023px): Two-column layout with portrait left image and neat right content */
-        @media (min-width: 640px) and (max-width: 1023px) {
-            #photographerGrid .photographer-card > div {
-                display: grid !important;
-                grid-template-columns: 280px 1fr !important;
-                grid-template-rows: 1fr auto !important;
-                min-height: 280px !important;
-            }
-            #photographerGrid .photographer-card > div > div.relative {
-                grid-row: 1 / 3 !important;
-                grid-column: 1 !important;
-                height: 100% !important;
-                min-height: 100% !important;
-            }
-            #photographerGrid .photographer-card > div > div:nth-child(3) {
-                grid-row: 1 !important;
-                grid-column: 2 !important;
-            }
-            #photographerGrid .photographer-card > div > div:nth-child(4) {
-                grid-row: 2 !important;
-                grid-column: 2 !important;
-                border-top: 1px solid rgba(229, 231, 235, 0.8) !important;
-            }
-            .dark #photographerGrid .photographer-card > div > div:nth-child(4) {
-                border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-            }
-        }
-
-        /* Desktop View (>= 1024px): Four-column film strip with full height image */
         @media (min-width: 1024px) {
-            #photographerGrid .photographer-card > div {
-                min-height: 270px !important;
+            #photographerGrid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 2rem !important;
             }
-            #photographerGrid .photographer-card > div > div.relative {
-                height: 100% !important;
-                min-height: 100% !important;
-            }
-            #photographerGrid .photographer-card .lg\:p-10 { padding: 1.75rem !important; }
-            #photographerGrid .photographer-card .lg\:p-12 { padding: 2rem !important; }
-            #photographerGrid .photographer-card .lg\:p-14 { padding: 2.25rem !important; }
-            #photographerGrid .photographer-card .lg\:p-8 { padding: 1.5rem !important; }
         }
 
-        /* Exact photographer image focal points - guaranteed face & subject visibility */
+        #photographerGrid .photographer-card {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+            background-color: #ffffff;
+            border-radius: 1.5rem !important;
+            overflow: hidden !important;
+            border: 1px solid rgba(229, 231, 235, 0.8) !important;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        .dark #photographerGrid .photographer-card {
+            background-color: #161616;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #photographerGrid .photographer-card:hover {
+            transform: translateY(-6px) !important;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .dark #photographerGrid .photographer-card:hover {
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        #photographerGrid .photographer-card h3 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+            letter-spacing: -0.01em;
+        }
+
+        #photographerGrid .card-image-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .dark #photographerGrid .card-image-wrap {
+            background-color: #0d0d0d;
+        }
+
         #photographerGrid .photographer-card img {
+            width: 100% !important;
+            height: 100% !important;
             object-fit: cover !important;
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        #photographerGrid .photographer-card:hover img {
+            transform: scale(1.05) !important;
+        }
+
+        #photographerGrid .card-badge {
+            position: absolute;
+            top: 0.875rem;
+            left: 0.875rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            font-size: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #9d502d;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            z-index: 10;
+        }
+
+        .dark #photographerGrid .card-badge {
+            background: rgba(18, 18, 18, 0.85);
+            color: #fbbf24;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #photographerGrid .card-inquire-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            background-color: #edf2ed;
+            color: #2c4236;
+            padding: 0.375rem 1.125rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+            text-decoration: none;
+        }
+
+        .dark #photographerGrid .card-inquire-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #e5e7eb;
+        }
+
+        #photographerGrid .card-inquire-btn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .dark #photographerGrid .card-inquire-btn:hover {
+            background-color: #f59e0b;
+            color: #000000;
         }
 
         #photographerGrid .photographer-card[data-name="Arjun Mehta"] img {
@@ -1542,7 +1627,7 @@ a.rounded-full:active {
     }
 }
 
-/* Ensure Portfolio Gallery images fill containers edge-to-edge with no gaps */
+/* Portfolio Gallery 3x2 Grid and Edge-to-Edge Image Styling */
 #portfolio-gallery figure {
     background-color: #ffffff;
     display: flex;
@@ -1554,13 +1639,25 @@ a.rounded-full:active {
 #portfolio-gallery figure > div {
     width: 100%;
     position: relative;
+    display: block !important;
+    background: #f3f4f6 !important;
+    overflow: hidden !important;
+}
+.dark #portfolio-gallery figure > div {
+    background: #18181b !important;
 }
 #portfolio-gallery figure img {
     width: 100% !important;
     height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
     object-fit: cover !important;
-    object-position: center center !important;
+    object-position: center 15% !important;
     display: block !important;
+}
+
+#profile-photo {
+    object-position: center 15% !important;
 }
 
 
